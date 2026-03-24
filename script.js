@@ -1,10 +1,10 @@
 // Handle contact form submission
-const contactForm = document.querySelector("#contact form");
+const contactForm = document.querySelector("form"); // adjust selector if needed
 if (contactForm) {
   contactForm.addEventListener("submit", (e) => {
     e.preventDefault();
     alert("Thank you for contacting Estcourt Waste Collectors!");
-    contactForm.reset(); // optional: clears the form after submission
+    contactForm.reset();
   });
 }
 
@@ -34,3 +34,55 @@ document.querySelectorAll("#impact .arrow").forEach((arrow) => {
     updateImpactText();
   });
 });
+
+// Impact counter animation
+const counter = document.querySelector("#impact-counter");
+if (counter) {
+  let count = 0;
+  const target = 10000;
+  const speed = 50;
+
+  const updateCounter = () => {
+    if (count < target) {
+      count += 100;
+      counter.textContent = `Over ${count.toLocaleString()} tons recycled since 2010.`;
+      setTimeout(updateCounter, speed);
+    }
+  };
+
+  updateCounter();
+}
+
+// Call-to-action button
+const ctaButton = document.querySelector("#cta button");
+if (ctaButton) {
+  ctaButton.addEventListener("click", () => {
+    alert("Thank you for joining our mission! Together we can build a cleaner Estcourt.");
+  });
+}
+
+// Smooth scroll for navigation links
+document.querySelectorAll("nav a[href^='#']").forEach(link => {
+  link.addEventListener("click", function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute("href"));
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
+    }
+  });
+});
+
+// WhatsApp Help Center button
+const whatsappBtn = document.querySelector(".whatsapp-btn");
+if (whatsappBtn) {
+  whatsappBtn.addEventListener("click", () => {
+    window.open("https://wa.me/27828497869", "_blank"); 
+  });
+}
+
+// Highlight seasonal stock dynamically
+const seasonalSection = document.querySelector("#seasonal p");
+if (seasonalSection) {
+  const seasonalItems = ["Garden Tools", "Harvest Chicory", "Winter Clothing"];
+  seasonalSection.textContent += ` Current highlights: ${seasonalItems.join(", ")}.`;
+}

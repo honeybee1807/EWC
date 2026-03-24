@@ -137,3 +137,208 @@ footer {
   border-top: 3px solid #1565c0; /* polished divider */
   font-size: 0.9rem;
 }
+
+section {
+  padding: 2rem;
+  margin: 1rem auto;
+  max-width: 900px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+section h2 {
+  color: #1565c0;
+  margin-bottom: 1rem;
+}
+
+#cta {
+  text-align: center;
+  background: #c8e6c9;
+}
+
+#cta button {
+  background: #2e7d32;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#cta button:hover {
+  background: #1b5e20;
+}
+
+.contact-section {
+  padding: 2rem;
+  margin: 1rem auto;
+  max-width: 900px;
+  border-radius: 8px;
+  color: #333;
+}
+
+.form-section { background: #e8f5e9; }       /* light green */
+.faq-section { background: #e3f2fd; }        /* light blue */
+.hours-section { background: #fff9c4; }      /* light yellow */
+.emergency-section { background: #ffebee; }  /* light red */
+.quote-section { background: #f3e5f5; }      /* light purple */
+.partnership-section { background: #c8e6c9; }/* pale green */
+.volunteer-section { background: #bbdefb; }  /* pale blue */
+.location-section { background: #f0f4c3; }   /* pale lime */
+.social-section { background: #ffe0b2; }     /* pale orange */
+
+.contact-section h2 {
+  color: #1565c0;
+  margin-bottom: 1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+input, textarea {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background: #2e7d32;
+  color: white;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #1b5e20;
+}
+
+.salvage-section {
+  padding: 2rem;
+  margin: 1rem auto;
+  max-width: 900px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.salvage-section h2 {
+  color: #2e7d32; /* eco-friendly green highlight */
+  margin-bottom: 1rem;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.product-item {
+  background: #e8f5e9;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 6px;
+  font-weight: bold;
+  color: #2e7d32;
+}
+
+.cta-section {
+  text-align: center;
+  background: #c8e6c9;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 1rem;
+  background: #2e7d32;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.cta-button:hover {
+  background: #1b5e20;
+}
+
+
+footer {
+  background: #7cb67e; /* green */
+  color: #2e7d32;      /* change text to green */
+  padding: 2rem 1rem;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-column {
+  flex: 1 1 300px;
+}
+
+.footer-column h2, .footer-column h3 {
+  color: #2e7d32; /* green highlight */
+  margin-bottom: 0.8rem;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-column a {
+  color: #2e7d32; /* links also green */
+  text-decoration: none;
+}
+
+.footer-column a:hover {
+  color: #f5f5f5; /* hover turns white */
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.whatsapp-btn {
+  background: #2e7d32;
+  color: #ffffff; /* button text white for contrast */
+  border: none;
+  padding: 0.8rem 1rem;
+  margin-top: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.whatsapp-btn:hover {
+  background: #1b5e20;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #444;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  font-size: 0.9rem;
+  color: #2e7d32; /* bottom text green */
+}
+
