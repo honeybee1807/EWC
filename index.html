@@ -5,11 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Estcourt Waste Collectors</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
   <!-- Header -->
   <header>
-    <h1>♻️ Estcourt Waste Collectors</h1>
+    <div class="nav-logo">
+      <a href="index.html">
+        <img src="ewc logo nexus.png" alt="EWC Nexus Logo" class="logo">
+      </a>
+    </div>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -23,9 +28,39 @@
 
   <!-- Hero Section -->
   <section id="hero">
-    <h2>Environmental Awareness</h2>
+    <h2>Turn Your Trash Into Cash — Fast, Reliable Recycling in Estcourt</h2>
     <p>Family-owned recycling business aiming to maintain a cleaner town, minimize landfill waste, and contribute positively to the well-being of our community through responsible waste management.</p>
+    <button class="cta-quote">Get a Free Quote</button>
+
+    <h1>♻️ Reliable Recycling Services — Cleaner Estcourt, Better Community</h1>
+    <p>We help households and businesses reduce waste, recycle responsibly, and contribute to a greener future.</p>
+    <button class="cta-primary">Request a Pickup</button>
   </section>
+
+  <!-- WOW Feature Section -->
+  <section id="wow-feature" class="wow-feature">
+    <h2>♻️ Recycling Value Calculator</h2>
+    <p>Estimate how much your recyclables are worth instantly.</p>
+    <form id="calculator-form">
+      <label for="weight">Enter weight (kg):</label>
+      <input type="number" id="weight" placeholder="e.g. 10" required>
+      
+      <label for="material">Select material type:</label>
+      <select id="material" required>
+        <option value="paper">Paper</option>
+        <option value="plastic">Plastic</option>
+        <option value="metal">Metal</option>
+        <option value="glass">Glass</option>
+      </select>
+      
+      <button type="submit">Calculate Value</button>
+    </form>
+    <p id="result" class="result"></p>
+  </section>
+
+  <a href="https://wa.me/27828497869" class="whatsapp-float" target="_blank">
+  💬 Get a Quote Instantly
+</a>
 
   <!-- Our Impact -->
   <section id="impact">
@@ -37,27 +72,10 @@
     </div>
   </section>
 
-  <!-- Our Mission -->
-  <section id="mission">
-    <h2>Our Mission</h2>
-    <p>To provide sustainable recycling solutions, support local communities, and promote environmental awareness.</p>
-  </section>
-
-  <!-- Our Recycling Facilities -->
-  <section id="facilities">
-    <h2>Our Recycling Facilities</h2>
-    <p>We handle paper, plastics, metals, glass, e-waste, salvaged goods, and chicory by-products.</p>
-  </section>
-
-  <!-- About Us -->
-  <section id="about">
-    <h2>About Us</h2>
-    <p>We are a family-owned business serving Estcourt with recycling, salvaged goods, and chicory production. Our mission is sustainability, service excellence, and community empowerment.</p>
-  </section>
-
   <!-- Services -->
   <section id="services">
     <h2>Our Services</h2>
+    <p class="trust-badge">♻️ Proudly serving Estcourt for 15+ years</p>
     <ul>
       <li>Household & Business Waste Collection</li>
       <li>Recycling Depot (paper, plastics, metals, glass, e-waste)</li>
@@ -65,37 +83,34 @@
     </ul>
   </section>
 
-  <!-- Salvaged Goods & Chicory -->
-  <section id="salvage">
-    <h2>Salvaged Goods & Chicory</h2>
-    <p>We recover and resell salvaged goods such as furniture, appliances, and building materials. We also process chicory and agricultural by-products to support local sustainability.</p>
+  <section id="gallery">
+  <h2>Our Work in Action</h2>
+  <div class="photo-gallery">
+    <img src="images/recycling-truck.jpg" alt="Recycling truck in Estcourt">
+    <img src="images/community-work.jpg" alt="Community recycling outreach">
+    <img src="images/salvaged-goods.jpg" alt="Reselling salvaged goods">
+  </div>
   </section>
 
-  <!-- Community -->
-  <section id="community">
-    <h2>Community & Sustainability</h2>
-    <p>Our goal is to reduce landfill waste and empower Estcourt.</p>
-  </section>
+<section id="trust">
+  <h2>Why Choose Us?</h2>
+  <p class="trust-badge">Serving Estcourt for 15+ years</p>
 
-  <!-- Trading Hours -->
-  <section id="hours">
-    <h2>Trading Hours</h2>
-    <table>
-      <tr><th>Day</th><th>Hours</th></tr>
-      <tr><td>Monday</td><td>7:30 am – 4:30 pm</td></tr>
-      <tr><td>Tuesday</td><td>7:30 am – 4:30 pm</td></tr>
-      <tr><td>Wednesday</td><td>7:30 am – 4:30 pm</td></tr>
-      <tr><td>Thursday</td><td>7:30 am – 4:30 pm</td></tr>
-      <tr><td>Friday</td><td>7:30 am – 4:30 pm</td></tr>
-      <tr><td>Saturday</td><td>7:30 am – 11:00 am</td></tr>
-      <tr><td>Sunday</td><td>Closed</td></tr>
-      <tr><td>Public Holidays</td><td>Closed</td></tr>
-    </table>
-  </section>
+  <div class="testimonials">
+    <blockquote>“Reliable service and a real commitment to sustainability.” – Local Business</blockquote>
+    <blockquote>“Estcourt Waste Collectors made recycling easy and affordable.” – Resident</blockquote>
+  </div>
+
+  <div class="trusted-by">
+    <h3>Trusted by Local Businesses</h3>
+    <img src="images/business-logo1.png" alt="Partner 1">
+    <img src="images/business-logo2.png" alt="Partner 2">
+  </div>
+</section>
 
   <!-- Contact -->
   <section id="contact">
-    <h2>Contact Us</h2>
+    <h2 data-aos="fade-up">Contact Us</h2>
     <p><strong>Address:</strong> Estcourt, KwaZulu-Natal</p>
     <p><strong>Phone:</strong> +27 82 849 7869</p>
     <p><strong>Email:</strong> info@estcourtwaste.co.za</p>
@@ -107,51 +122,67 @@
     </form>
   </section>
 
+  <!-- Footer -->
   <footer>
-  <div class="footer-container">
-    
-    <!-- Column 1: Navigation -->
-    <section class="footer-column">
-      <h2>Navigation</h2>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="news.html">News</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-    </section>
-
-    <!-- Column 2: Contact Details -->
-    <section class="footer-column">
-      <h2>Contact Details</h2>
-      <p><strong>Postal Address:</strong> P.O. Box 123, Estcourt, 3310</p>
-      <p><strong>Physical Address:</strong> 45 Recycling Road, Estcourt</p>
-      <p><strong>Phone:</strong> +27 82 849 7869</p>
-      <p><strong>Email:</strong> info@estcourtwaste.co.za</p>
-      <h3>Trading Hours</h3>
-      <p>Mon–Fri: 7:30 am – 4:30 pm</p>
-      <p>Saturday: 7:30 am – 11:00 am</p>
-      <p>Sunday & Public Holidays: Closed</p>
-    </section>
-
-    <!-- Column 3: Stay Connected -->
-    <section class="footer-column">
-      <h2>Stay Connected</h2>
-      <div class="social-links">
-        <a href="#" class="social facebook">Facebook</a>
-        <a href="#" class="social instagram">Instagram</a>
-      </div>
-      <button class="whatsapp-btn">💬 Need Help? Chat with us</button>
-    </section>
-
-  </div>
-  <div class="footer-bottom">
-    <p>&copy; 2026 Estcourt Waste Collectors. All rights reserved.</p>
-  </div>
-</footer>
-
+    <div class="footer-container">
+      <section class="footer-column">
+        <h2>Navigation</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </section>
+      <section class="footer-column">
+        <h2>Contact Details</h2>
+        <p><strong>Postal Address:</strong> P.O. Box 123, Estcourt, 3310</p>
+        <p><strong>Physical Address:</strong> 45 Recycling Road, Estcourt</p>
+        <p><strong>Phone:</strong> +27 82 849 7869</p>
+        <p><strong>Email:</strong> info@estcourtwaste.co.za</p>
+      </section>
+      <section class="footer-column">
+        <h2>Stay Connected</h2>
+        <div class="social-links">
+          <a href="#" class="social facebook">Facebook</a>
+          <a href="#" class="social instagram">Instagram</a>
+        </div>
+        <button class="whatsapp-btn">💬 Need Help? Chat with us</button>
+      </section>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Estcourt Waste Collectors. All rights reserved.</p>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+
+    // WOW Feature: Recycling Calculator
+    const calculatorForm = document.getElementById('calculator-form');
+    const result = document.getElementById('result');
+
+    const rates = {
+      paper: 1.5,   // R per kg
+      plastic: 2.0,
+      metal: 5.0,
+      glass: 1.0
+    };
+
+    calculatorForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const weight = parseFloat(document.getElementById('weight').value);
+      const material = document.getElementById('material').value;
+      if (!isNaN(weight) && rates[material]) {
+        const value = weight * rates[material];
+        result.textContent = `Estimated Value: R${value.toFixed(2)}`;
+      } else {
+        result.textContent = 'Please enter valid inputs.';
+      }
+    });
+  </script>
 </body>
 </html>
