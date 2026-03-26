@@ -5,113 +5,105 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Estcourt Waste Collectors</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-  <!-- Header -->
-  <header>
+  <!-- Header/Navbar -->
+  <header class="navbar">
     <div class="nav-logo">
       <a href="index.html">
         <img src="ewc logo nexus.png" alt="EWC Nexus Logo" class="logo">
       </a>
     </div>
     <nav>
-      <ul>
+      <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
-        <li><a href="services.html">Our Services</a></li>
+        <li><a href="services.html">Services</a></li>
         <li><a href="salvage.html">Salvaged Goods</a></li>
         <li><a href="contact.html">Contact</a></li>
-      </ul>
+      </ul>      
     </nav>
   </header>
 
   <!-- Hero Section -->
-  <section id="hero">    
-    <h2>Turn Your Trash Into Cash — Fast, Reliable Recycling in Estcourt</h2>
-    <p>Family-owned recycling business aiming to maintain a cleaner town, minimize landfill waste, and contribute positively to the well-being of our community through responsible waste management.</p>
-    <button class="cta-quote">Get a Free Quote</button>
-    
-    <h1>♻️ Reliable Recycling Services — Cleaner Estcourt, Better Community</h1>
-    <p>We help households and businesses reduce waste, recycle responsibly, and contribute to a greener future.</p>
-    <button class="cta-primary">Request a Pickup</button>    
-  </section>
-
-  <!-- WOW Feature Section -->
-  <section id="wow-feature" class="wow-feature">
-    <h2>♻️ Recycling Value Calculator</h2>
-    <p>Estimate how much your recyclables are worth instantly.</p>
-    <form id="calculator-form">
-      <label for="weight">Enter weight (kg):</label>
-      <input type="number" id="weight" placeholder="e.g. 10" required>
-      
-      <label for="material">Select material type:</label>
-      <select id="material" required>
-        <option value="paper">Paper</option>
-        <option value="plastic">Plastic</option>
-        <option value="metal">Metal</option>
-        <option value="glass">Glass</option>
-      </select>
-      
-      <button type="submit">Calculate Value</button>
-    </form>
-    <p id="result" class="result"></p>
-  </section>
-
-  <a href="https://wa.me/27828497869" class="whatsapp-float" target="_blank">
-  💬 Get a Quote Instantly
-</a>
-
-  <!-- Our Impact -->
-  <section id="impact">
-    <h2>Our Impact</h2>
-    <div class="impact-slider">
-      <button class="arrow left">&#8592;</button>
-      <p>We recycle thousands of tons annually, reducing landfill waste and creating jobs in Estcourt.</p>
-      <button class="arrow right">&#8594;</button>
+  <section id="hero" class="hero">
+    <div class="hero-text">
+      <h1>♻️ Reliable <span class="highlight">Recycling</span> Services</h1>
+      <p>Cleaner Estcourt, Better Community. We help households and businesses reduce waste, recycle responsibly, and contribute to a greener future.</p>
+      <div class="hero-buttons">
+        <a href="contact.html" class="btn-primary">Get a FREE Quote</a>
+        <a href="services.html" class="btn-secondary">Request a Service</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="images/recycling-truck.jpg" alt="Recycling Truck">
     </div>
   </section>
+  
+  <a href="https://wa.me/27828497869" class="whatsapp-float" target="_blank">
+  💬 Chat With Assistant 
+  </a>
 
-  <!-- Services -->
-  <section id="services">
-    <h2>Our Services</h2>
-    <p class="trust-badge">♻️ Proudly serving Estcourt for 15+ years</p>
-    <ul>
-      <li>Household & Business Waste Collection</li>
-      <li>Recycling Depot (paper, plastics, metals, glass, e-waste)</li>
-      <li>Buy-Back Centre</li>
-    </ul>
-  </section>
-
-  <section id="gallery">
-  <h2>Our Work in Action</h2>
-  <div class="photo-gallery">
-    <img src="images/recycling-truck.jpg" alt="Recycling truck in Estcourt">
-    <img src="images/community-work.jpg" alt="Community recycling outreach">
-    <img src="images/salvaged-goods.jpg" alt="Reselling salvaged goods">
+  <!-- Who We Are Section -->
+<section id="about" class="about-section">
+  <div class="about-text">
+    <h2>Who We Are</h2>
+    <p>
+      Estcourt Waste Collectors (EWC) is a family‑owned recycling company dedicated to keeping our town clean, reducing landfill waste, and empowering the community through sustainable practices. 
+      For over 15 years, we’ve provided reliable collection services, eco‑friendly recycling solutions, and community outreach programs that make a real difference.
+    </p>
+    <p>
+      Our mission is simple: to transform waste into opportunity, protect the environment, and build a greener future for Estcourt and beyond.
+    </p>
+    <a href="about.html" class="btn-primary">Learn More</a>
   </div>
-  </section>
-
-<section id="trust">
-  <h2>Why Choose Us?</h2>
-  <p class="trust-badge">Serving Estcourt for 15+ years</p>
-
-  <div class="testimonials">
-    <blockquote>“Reliable service and a real commitment to sustainability.” – Local Business</blockquote>
-    <blockquote>“Estcourt Waste Collectors made recycling easy and affordable.” – Resident</blockquote>
-  </div>
-
-  <div class="trusted-by">
-    <h3>Trusted by Local Businesses</h3>
-    <img src="images/business-logo1.png" alt="Partner 1">
-    <img src="images/business-logo2.png" alt="Partner 2">
+  <div class="about-image">
+    <img src="images/community-work.jpg" alt="EWC team working in the community">
   </div>
 </section>
 
-<!-- Customer Reviews Section -->
-<section id="reviews" class="reviews-section">
+
+  <!-- Trust Bar -->
+  <section class="trust-bar">
+    <ul>
+      <li>✔ Serving Estcourt</li>
+      <li>✔ Fast Collection</li>
+      <li>✔ Eco Friendly</li>
+    </ul>
+  </section>
+
+  <!-- Why Choose EWC Section -->
+<section id="why-choose" class="why-choose">
+  <h2>Why Choose EWC?</h2>
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="icon">📍</div>
+      <h3>Local Expertise</h3>
+      <p>We understand Estcourt’s waste management needs and operate with community focus.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">🚚</div>
+      <h3>Fast & Reliable Service</h3>
+      <p>Our team ensures timely pickups and dependable recycling solutions.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">♻️</div>
+      <h3>Comprehensive Solutions</h3>
+      <p>From household recycling to commercial waste collection, we cover it all.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">🌱</div>
+      <h3>Eco-Friendly Disposal</h3>
+      <p>We prioritize sustainable recycling methods to protect the environment.</p>
+    </div>
+      </div>
+</section>
+
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="testimonials-section">
   <h2>Customer Reviews</h2>
-  
+
   <!-- Overall Rating -->
   <div class="overall-rating">
     <span class="stars">★★★★★</span>
@@ -119,34 +111,32 @@
     <button class="review-btn">Write a Review</button>
   </div>
 
-  <!-- Review Filters -->
-  <div class="review-filters">
-    <button class="filter active">All Reviews</button>
-    <button class="filter">Yelp</button>
-    <button class="filter">Google</button>
+  <!-- Review Tabs -->
+  <div class="review-tabs">
+    <button class="tab active">All Reviews 4.9</button>
   </div>
 
-  <!-- Sample Testimonials -->
+  <!-- Review Cards -->
   <div class="reviews-grid">
     <div class="review-card">
-      <h3>Jane M. <span class="date">– Feb 2026</span></h3>
+      <h3>Jessica Montalvo <span class="date">– 7 days ago</span></h3>
       <p class="stars">★★★★★</p>
-      <p>“EWC made recycling simple and reliable. Highly recommend their pickup service!”</p>
+      <p>“Easy to schedule and service was excellent.”</p>
     </div>
     <div class="review-card">
-      <h3>Thabo K. <span class="date">– Jan 2026</span></h3>
-      <p class="stars">★★★★☆</p>
-      <p>“Professional team and great community impact. My business trusts them fully.”</p>
+      <h3>Denise Quirion <span class="date">– 8 days ago</span></h3>
+      <p class="stars">★★★★★</p>
+      <p>“Excellent! The team was friendly, knowledgeable, and professional.”</p>
     </div>
     <div class="review-card">
-      <h3>Sarah L. <span class="date">– Dec 2025</span></h3>
+      <h3>Daniel Ryan <span class="date">– 9 days ago</span></h3>
       <p class="stars">★★★★★</p>
-      <p>“Fast service and eco‑friendly approach. They helped us reduce waste significantly.”</p>
+      <p>“EWC is my go‑to for personal and business recycling. Always reliable and communicative.”</p>
     </div>
     <div class="review-card">
-      <h3>David P. <span class="date">– Nov 2025</span></h3>
+      <h3>Patrick Stapleton <span class="date">– 10 days ago</span></h3>
       <p class="stars">★★★★★</p>
-      <p>“Trusted by our company for years. Always reliable and efficient.”</p>
+      <p>“They removed old materials efficiently and with no mess. Highly recommend.”</p>
     </div>
   </div>
 
@@ -156,22 +146,9 @@
   </div>
 </section>
 
-  <!-- Contact -->
-  <section id="contact">
-    <h2 data-aos="fade-up">Contact Us</h2>
-    <p><strong>Address:</strong> Estcourt, KwaZulu-Natal</p>
-    <p><strong>Phone:</strong> +27 82 849 7869</p>
-    <p><strong>Email:</strong> info@estcourtwaste.co.za</p>
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message"></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </section>
 
   <!-- Footer -->
-  <footer>
+  <footer class="footer">
     <div class="footer-container">
       <section class="footer-column">
         <h2>Navigation</h2>
@@ -179,64 +156,27 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About Us</a></li>
           <li><a href="services.html">Services</a></li>
-          <li><a href="news.html">News</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="salvage.html">Salvaged Goods</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </section>
       <section class="footer-column">
         <h2>Contact Details</h2>
-        <p><strong>Postal Address:</strong> P.O. Box 123, Estcourt, 3310</p>
-        <p><strong>Physical Address:</strong> 45 Recycling Road, Estcourt</p>
+        <p><strong>Address:</strong> 45 Recycling Road, Estcourt</p>
         <p><strong>Phone:</strong> +27 82 849 7869</p>
         <p><strong>Email:</strong> info@estcourtwaste.co.za</p>
       </section>
       <section class="footer-column">
         <h2>Stay Connected</h2>
         <div class="social-links">
-          <a href="#" class="social facebook">Facebook</a>
-          <a href="#" class="social instagram">Instagram</a>
+          <a href="#">Facebook</a>
+          <a href="#">Instagram</a>
         </div>
-        <button class="whatsapp-btn">💬 Need Help? Chat with us</button>
       </section>
     </div>
     <div class="footer-bottom">
       <p>&copy; 2026 Estcourt Waste Collectors. All rights reserved.</p>
     </div>
   </footer>
-
-  <script src="script.js"></script>
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init({ duration: 1000, once: true });
-
-    // WOW Feature: Recycling Calculator
-    const calculatorForm = document.getElementById('calculator-form');
-    const result = document.getElementById('result');
-
-    const rates = {
-      paper: 1.5,   // R per kg
-      plastic: 2.0,
-      metal: 5.0,
-      glass: 1.0
-    };
-
-    calculatorForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-      const weight = parseFloat(document.getElementById('weight').value);
-      const material = document.getElementById('material').value;
-      if (!isNaN(weight) && rates[material]) {
-        const value = weight * rates[material];
-        result.textContent = `Estimated Value: R${value.toFixed(2)}`;
-      } else {
-        result.textContent = 'Please enter valid inputs.';
-      }
-    });
-  </script>
-  <!-- Anime.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-
-<!-- GSAP -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="script.js"></script>
 </body>
 </html>
