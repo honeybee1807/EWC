@@ -86,3 +86,21 @@ if (seasonalSection) {
   const seasonalItems = ["Garden Tools", "Harvest Chicory", "Winter Clothing"];
   seasonalSection.textContent += ` Current highlights: ${seasonalItems.join(", ")}.`;
 }
+
+anime({
+  targets: 'h1',
+  color: '#2e7d32',
+  duration: 2000
+});
+
+gsap.from('h1', { duration: 1, opacity: 0, y: -50 });
+
+// Pulse animation
+gsap.to(".cta-quote", {
+  scale: 1.1,
+  duration: 1,
+  repeat: -1,
+  yoyo: true,
+  ease: "power1.inOut"
+});
+
