@@ -1,25 +1,49 @@
+/* Root Variables */
+:root {
+  --background: #FFFFFF;   /* site background */
+  --primary: #22A886;      /* Jungle Green */
+  --secondary: #9CCB06;    /* Bahia */
+  --neutral: #4A514C;      /* Corduroy */
+  --light: #F2F4F4;        /* Azure */
+}
+
 /* Global Styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   line-height: 1.6;
-  background: #0B0F0C; /* dark base */
-  color: #F9FAFB;      /* light text */
+  background: var(--background);
+  color: var(--neutral);
 }
 
 /* Header/Navbar */
 header {
-  background: #0B0F0C;
-  color: #F9FAFB;
+  background: var(--light);
+  color: var(--neutral);
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem;
 }
-.logo {
-  width: 120px;
-  height: auto;
+/* Logo container */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* space between words and icon */
+  text-decoration: none;
 }
+
+.logo-words {
+  height: 60px;   /* adjust as needed */
+  width: auto;
+  margin-top: -8px; 
+}
+
+.logo-icon {
+  height: 70px;   /* same height for alignment */
+  width: auto;
+}
+
 header nav ul {
   list-style: none;
   display: flex;
@@ -28,16 +52,16 @@ header nav ul {
   padding: 0;
 }
 header nav a {
-  color: #F9FAFB;
+  color: var(--neutral);
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 header nav a:hover {
-  color: #A3E635; /* highlight green */
+  color: var(--primary);
 }
 .cta-nav {
-  background: #16A34A;
+  background: var(--primary);
   color: #fff;
   padding: 0.6rem 1.2rem;
   border-radius: 4px;
@@ -45,7 +69,7 @@ header nav a:hover {
   font-weight: bold;
 }
 .cta-nav:hover {
-  background: #065F46;
+  background: var(--secondary);
 }
 
 /* Hero Section */
@@ -55,15 +79,16 @@ header nav a:hover {
   align-items: center;
   justify-content: space-between;
   padding: 3rem 2rem;
-  background: linear-gradient(135deg, #0B0F0C, #065F46);
+  background: linear-gradient(135deg, var(--light), var(--secondary));
 }
 #hero h1 {
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 1rem;
+  color: var(--secondary);
 }
 .highlight {
-  color: #A3E635;
+  color: var(--primary);
 }
 #hero p {
   max-width: 500px;
@@ -72,7 +97,7 @@ header nav a:hover {
   margin-top: 1.5rem;
 }
 .btn-primary {
-  background: #16A34A;
+  background: var(--primary);
   color: #fff;
   padding: 0.8rem 1.5rem;
   border-radius: 4px;
@@ -82,11 +107,11 @@ header nav a:hover {
   transition: background 0.3s ease;
 }
 .btn-primary:hover {
-  background: #065F46;
+  background: var(--secondary);
 }
 .btn-secondary {
-  border: 2px solid #16A34A;
-  color: #16A34A;
+  border: 2px solid var(--primary);
+  color: var(--primary);
   padding: 0.8rem 1.5rem;
   border-radius: 4px;
   text-decoration: none;
@@ -94,7 +119,7 @@ header nav a:hover {
   transition: all 0.3s ease;
 }
 .btn-secondary:hover {
-  background: #16A34A;
+  background: var(--primary);
   color: #fff;
 }
 .hero-image img {
@@ -104,7 +129,7 @@ header nav a:hover {
 
 /* Trust Bar */
 .trust-bar {
-  background: #0B0F0C;
+  background: var(--light);
   padding: 1rem;
   text-align: center;
 }
@@ -117,7 +142,7 @@ header nav a:hover {
   padding: 0;
 }
 .trust-bar li {
-  color: #F9FAFB;
+  color: var(--neutral);
   font-weight: bold;
 }
 
@@ -125,11 +150,11 @@ header nav a:hover {
 .about-section {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;   /* align text and image at the top */
   justify-content: space-between;
   padding: 3rem 2rem;
-  background: #f9f9f9;
-  color: #333;
+  background: var(--light);  /* Azure background */
+  color: var(--neutral);     /* Corduroy text */
   border-radius: 8px;
   margin: 2rem auto;
   max-width: 1100px;
@@ -142,13 +167,18 @@ header nav a:hover {
 }
 
 .about-text h2 {
-  color: #1565c0;
+  color: var(--secondary);   /* Bahia accent */
   margin-bottom: 1rem;
 }
 
 .about-text p {
   margin-bottom: 1rem;
   line-height: 1.6;
+}
+
+.about-text .btn-primary {
+  display: inline-block;
+  margin-top: 1rem;
 }
 
 .about-image {
@@ -178,7 +208,7 @@ header nav a:hover {
 
 /* Why Choose EWC Section */
 .why-choose {
-  background: #f9f9f9;
+  background: var(--light);
   padding: 3rem 2rem;
   text-align: center;
   border-radius: 8px;
@@ -186,7 +216,7 @@ header nav a:hover {
   max-width: 1100px;
 }
 .why-choose h2 {
-  color: #1565c0;
+  color: var(--secondary);
   margin-bottom: 2rem;
 }
 .features-grid {
@@ -195,8 +225,8 @@ header nav a:hover {
   gap: 1.5rem;
 }
 .feature-card {
-  background: #fff;
-  border: 1px solid #ddd;
+  background: var(--background);
+  border: 1px solid var(--neutral);
   border-radius: 8px;
   padding: 1.5rem;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
@@ -208,107 +238,148 @@ header nav a:hover {
 }
 .icon {
   font-size: 2rem;
-  color: #16A34A;
+  color: var(--primary);
   margin-bottom: 1rem;
 }
 .feature-card h3 {
-  color: #2e7d32;
-  margin-bottom: 0.5rem;
+  color: var(--secondary);
 }
-.feature-card p {
-  color: #333;
-  font-size: 0.95rem;
-  line-height: 1.4;
-}
-
 
 /* Testimonials Section */
 .testimonials-section {
-  background: #f9f9f9;
+  background: var(--light);       /* Azure background */
   padding: 2rem;
   margin-top: 2rem;
-  border-top: 3px solid #16A34A;
+  border-top: 3px solid var(--primary);
   border-radius: 8px;
+  text-align: center;             /* centralise all content */
 }
 
 .testimonials-section h2 {
-  text-align: center;
-  color: #1565c0;
+  color: var(--secondary);        /* Bahia headings */
   margin-bottom: 1.5rem;
 }
 
-.overall-rating {
-  text-align: center;
-  margin-bottom: 1rem;
-}
-.stars {
-  color: #fbc02d; /* gold stars */
-  font-size: 1.2rem;
-}
-.review-btn {
-  background: #16A34A;
-  color: #fff;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-top: 0.3rem;
-}
-.review-btn:hover {
-  background: #065F46;
-}
-
-/* Tabs */
-.review-tabs {
-  text-align: center;
-  margin-bottom: 1rem;
-}
-.tab {
-  background: #e3f2fd;
-  border: none;
-  padding: 0.4rem 0.8rem;
-  margin: 0 0.2rem;
-  border-radius: 4px;
-  cursor: pointer
-  font-size: 0.9rem;
-}
-.tab.active {
-  background: #1565c0;
-  color: #fff;
-}
-
-/* Review Cards */
+/* Reviews Grid */
 .reviews-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
-  margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;        /* centre cards horizontally */
 }
+
 .review-card {
-  background: #fff;
-  border: 1px solid #ddd;
+  flex: 1 1 220px;
+  max-width: 250px;
+  background: var(--background);  /* white background */
+  border: 1px solid var(--neutral);
   border-radius: 6px;
   padding: 1rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+  text-align: center;             /* centre text inside cards */
 }
+
 .review-card h3 {
-  color: #2e7d32;
+  color: var(--secondary);
   margin-bottom: 0.3rem;
+  font-size: 1rem;
 }
+
 .review-card .date {
-  font-size: 0.9rem;
-  color: #666;
+  font-size: 0.8rem;
+  color: var(--neutral);
 }
+
 .review-card p {
-  margin: 0.5rem 0;
+  margin: 0.4rem 0;
+  font-size: 0.9rem;
+  color: var(--neutral);
+  word-wrap: break-word;
 }
 
 /* CTA */
 .reviews-cta {
-  text-align: right;
+  margin-top: 1rem;
+  text-align: center;             /* centre CTA button */
 }
 .reviews-cta .cta-primary {
-  background: #16A34A;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.reviews-cta .cta-primary:hover {
+  background: var(--secondary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .reviews-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .review-card {
+    max-width: 100%;
+  }
+}
+
+
+/* Reviews Grid */
+.reviews-grid {
+  display: flex;
+  text-align: center;                  /* flexbox for side-by-side */
+  flex-wrap: wrap;                /* wrap on smaller screens */
+  gap: 1rem;                      /* spacing between cards */
+  justify-content: center;        /* center alignment */
+}
+
+.review-card {
+  flex: 1 1 250px;                /* uniform width, shrink/grow */
+  max-width: 280px;               /* prevent stretching */
+  background: var(--background);  /* white background */
+  border: 1px solid var(--neutral);
+  border-radius: 6px;
+  padding: 1rem;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.review-card h3 {
+  color: var(--secondary);        /* Bahia accent */
+  margin-bottom: 0.3rem;
+  font-size: 1rem;
+}
+
+.review-card .date {
+  font-size: 0.8rem;
+  color: var(--neutral);
+}
+
+.review-card p {
+  margin: 0.4rem 0;
+  font-size: 0.9rem;
+  color: var(--neutral);
+  word-wrap: break-word;          /* prevent overflow */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .reviews-grid {
+    flex-direction: column;       /* stack vertically on mobile */
+    align-items: center;
+  }
+  .review-card {
+    max-width: 100%;              /* full width on mobile */
+  }
+}
+
+
+/* CTA */
+.reviews-cta .cta-primary {
+  background: var(--primary);
   color: #fff;
   border: none;
   padding: 0.8rem 1.5rem;
@@ -317,53 +388,66 @@ header nav a:hover {
   cursor: pointer;
 }
 .reviews-cta .cta-primary:hover {
-  background: #065F46;
+  background: var(--secondary);
 }
-
 
 /* Footer */
 footer {
-  background: #020617;
-  color: #9CA3AF;
+  background: var(--neutral);   /* Corduroy #4A514C for strong contrast */
+  color: #FFFFFF;               /* white text for readability */
   padding: 2rem;
+  margin-top: 2rem;
 }
+
 .footer-container {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
 }
+
 .footer-column h2 {
-  color: #F9FAFB;
+  color: var(--secondary);      /* Bahia #9CCB06 for headings */
   margin-bottom: 1rem;
 }
+
 .footer-column ul {
   list-style: none;
   padding: 0;
 }
+
 .footer-column ul li {
   margin-bottom: 0.5rem;
 }
+
 .footer-column a {
-  color: #9CA3AF;
+  color: #F2F4F4;               /* Azure for links */
   text-decoration: none;
   transition: color 0.3s ease;
 }
 .footer-column a:hover {
-  color: #A3E635;
+  color: var(--primary);        /* Jungle Green hover */
 }
+
 .footer-bottom {
   text-align: center;
+  border-top: 1px solid #9CCB06; /* Bahia divider */
   margin-top: 2rem;
+  padding-top: 1rem;
   font-size: 0.9rem;
+  color: #F2F4F4;
 }
+
+
 
 /* WhatsApp Floating Button */
 .whatsapp-float {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: #25d366;
+  background: var(--primary);   /* Jungle Green */
   color: #fff;
   padding: 0.8rem 1rem;
   border-radius: 50px;
@@ -371,20 +455,19 @@ footer {
   text-decoration: none;
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
   transition: background 0.3s ease;
+  z-index: 9999;                /* ensures it stays on top */
 }
+
 .whatsapp-float:hover {
-  background: #128c7e;
+  background: var(--secondary); /* Bahia hover */
 }
+
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   #hero {
     flex-direction: column;
     text-align: center;
-  }
-  .hero-text {
-    margin-right: 0;
-    margin-bottom: 2rem;
   }
   .hero-image img {
     max-width: 100%;
