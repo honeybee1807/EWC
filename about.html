@@ -1,23 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us - Estcourt Waste Collectors</title>
+  <title>Estcourt Waste Collectors</title>
   <link rel="stylesheet" href="style.css">
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <h1>♻️ Estcourt Waste Collectors</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="services.html">Our Services</a></li>
-        <li><a href="index.html#salvage">Salvaged Goods</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
-      </ul>
+
+  <!-- Header/Navbar -->
+  <header class="navbar" data-aos="fade-down">
+    <div class="nav-logo" data-aos="zoom-in">
+      <a href="index.html">
+        <img src="TRANSPARENT.png" alt="EWC Icon Logo" class="logo-icon">
+        <img src="ewc transparent words.png" alt="EWC Words Logo" class="logo-words">
+      </a>
+    </div>
+    <nav data-aos="fade-left">
+      <ul class="nav-links">
+        <li><a href="index.html" data-aos="fade-up">Home</a></li>
+        <li><a href="about.html" data-aos="fade-up" data-aos-delay="100">About Us</a></li>
+        <li><a href="services.html" data-aos="fade-up" data-aos-delay="200">Services</a></li>
+        <li><a href="salvage.html" data-aos="fade-up" data-aos-delay="300">Salvaged Goods</a></li>
+        <li><a href="contact.html" data-aos="fade-up" data-aos-delay="400">Contact</a></li>
+      </ul>      
     </nav>
   </header>
 
@@ -112,51 +121,47 @@
     <p>Join us by recycling at home, supporting salvaged goods, and spreading awareness. Together, we can build a cleaner future.</p>
     <button>Get Involved</button>
   </section>
-<footer>
-  <div class="footer-container">
-    
-    <!-- Column 1: Navigation -->
-    <section class="footer-column">
-      <h2>Navigation</h2>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="news.html">News</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-    </section>
 
-    <!-- Column 2: Contact Details -->
-    <section class="footer-column">
-      <h2>Contact Details</h2>
-      <p><strong>Postal Address:</strong> P.O. Box 123, Estcourt, 3310</p>
-      <p><strong>Physical Address:</strong> 45 Recycling Road, Estcourt</p>
-      <p><strong>Phone:</strong> +27 82 849 7869</p>
-      <p><strong>Email:</strong> info@estcourtwaste.co.za</p>
-      <h3>Trading Hours</h3>
-      <p>Mon–Fri: 7:30 am – 4:30 pm</p>
-      <p>Saturday: 7:30 am – 11:00 am</p>
-      <p>Sunday & Public Holidays: Closed</p>
-    </section>
+<!-- Footer -->
+  <footer class="footer" data-aos="fade-up">
+    <div class="footer-container">
+      <section class="footer-column" data-aos="fade-right">
+        <h2>Navigation</h2>
+        <ul>
+          <li><a href="index.html" data-aos="fade-up" data-aos-delay="100">Home</a></li>
+          <li><a href="about.html" data-aos="fade-up" data-aos-delay="200">About Us</a></li>
+          <li><a href="services.html" data-aos="fade-up" data-aos-delay="300">Services</a></li>
+          <li><a href="salvage.html" data-aos="fade-up" data-aos-delay="400">Salvaged Goods</a></li>
+          <li><a href="contact.html" data-aos="fade-up" data-aos-delay="500">Contact</a></li>
+        </ul>
+      </section>
+      <section class="footer-column" data-aos="fade-up" data-aos-delay="200">
+        <h2>Contact Details</h2>
+        <p><strong>Address:</strong> 26 Industria Road, Estcourt</p>
+        <p><strong>Phone:</strong> +27 82 849 7869</p>
+        <p><strong>Email:</strong> estcourtwaste@gmail.com</p>
+      </section>
+      <section class="footer-column" data-aos="fade-left" data-aos-delay="300">
+        <h2>Stay Connected</h2>
+        <div class="social-links" data-aos="zoom-in">
+          <a href="#">Facebook</a>
+          <a href="#">Instagram</a>
+        </div>
+      </section>
+    </div>
+    <div class="footer-bottom" data-aos="fade-up" data-aos-delay="400">
+      <p>&copy; 2026 Estcourt Waste Collectors. All rights reserved.</p>
+    </div>
+  </footer>
 
-    <!-- Column 3: Stay Connected -->
-    <section class="footer-column">
-      <h2>Stay Connected</h2>
-      <div class="social-links">
-        <a href="#" class="social facebook">Facebook</a>
-        <a href="#" class="social instagram">Instagram</a>
-      </div>
-      <button class="whatsapp-btn">💬 Need Help? Chat with us</button>
-    </section>
-
-  </div>
-  <div class="footer-bottom">
-    <p>&copy; 2026 Estcourt Waste Collectors. All rights reserved.</p>
-  </div>
-</footer>
-
-
-  <script src="about.js"></script>
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,  // animation duration
+      once: true,      // animate only once
+      offset: 100      // trigger offset
+    });
+  </script>
 </body>
 </html>
