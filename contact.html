@@ -4,89 +4,205 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Estcourt Waste Collectors</title>
+  <title>Contact | Estcourt Waste Collectors</title>
   <link rel="stylesheet" href="style.css">
   <!-- AOS CSS -->
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <style>
+    /* Hero Banner */
+    .hero-banner {
+      background: url('images/contact-banner.jpg') center/cover no-repeat;
+      color: #fff;
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+    .hero-banner h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--secondary); /* Bahia green */
+    }
+    .hero-banner p {
+      font-size: 1.2rem;
+      color: #fff;
+    }
+
+    /* Contact Info */
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem;
+      background: var(--light);
+      text-align: center;
+    }
+    .contact-info div {
+      flex: 1 1 250px;
+    }
+    .whatsapp-btn {
+      display: inline-block;
+      background: var(--primary);
+      color: #fff;
+      padding: 0.6rem 1.2rem;
+      border-radius: 4px;
+      text-decoration: none;
+      margin-top: 1rem;
+    }
+    .whatsapp-btn:hover {
+      background: var(--secondary);
+    }
+
+    /* Contact Form */
+    .contact-form {
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: #fff;
+      border: 1px solid var(--neutral);
+      border-radius: 8px;
+    }
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border: 1px solid var(--neutral);
+      border-radius: 4px;
+    }
+    .contact-form button {
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .contact-form button:hover {
+      background: var(--secondary);
+    }
+
+    /* Map Section */
+    .map-section {
+      text-align: center;
+      padding: 2rem;
+    }
+    .map-section iframe {
+      width: 100%;
+      max-width: 800px;
+      height: 400px;
+      border: none;
+      border-radius: 8px;
+    }
+
+    /* Trusted Businesses */
+    .trusted-logos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      padding: 2rem;
+    }
+    .trusted-logos img, .trusted-logos .logo-placeholder {
+      flex: 1 1 150px;
+      max-width: 180px;
+      background: #fff;
+      border: 1px solid var(--neutral);
+      border-radius: 6px;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    /* Social Links */
+    .social-links {
+      text-align: center;
+      padding: 2rem;
+    }
+    .social-links a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: bold;
+    }
+    .social-links a:hover {
+      color: var(--secondary);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .contact-info {
+        flex-direction: column;
+        align-items: center;
+      }
+      .trusted-logos {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
 </head>
 <body>
 
   <!-- Header/Navbar -->
   <header class="navbar" data-aos="fade-down">
     <div class="nav-logo" data-aos="zoom-in">
-      <a href="index.html">
+      <a href="index.html" class="logo-container">
         <img src="TRANSPARENT.png" alt="EWC Icon Logo" class="logo-icon">
         <img src="ewc transparent words.png" alt="EWC Words Logo" class="logo-words">
       </a>
     </div>
     <nav data-aos="fade-left">
       <ul class="nav-links">
-        <li><a href="index.html" data-aos="fade-up">Home</a></li>
-        <li><a href="about.html" data-aos="fade-up" data-aos-delay="100">About Us</a></li>
-        <li><a href="services.html" data-aos="fade-up" data-aos-delay="200">Services</a></li>
-        <li><a href="salvage.html" data-aos="fade-up" data-aos-delay="300">Salvaged Goods</a></li>
-        <li><a href="contact.html" data-aos="fade-up" data-aos-delay="400">Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="salvage.html">Salvaged Goods</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
       </ul>      
     </nav>
   </header>
 
-  <!-- Contact Form -->
-  <section id="contact-form" class="contact-section form-section">
-    <h2>Contact Form</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message"></textarea>
-      <button type="submit">Send</button>
-    </form>
+  <!-- Hero Section -->
+  <section class="hero-banner" data-aos="fade-up">
+    <h1>Get in Touch with Estcourt Waste Collectors</h1>
+    <p>We’re here to answer your questions and provide sustainable solutions.</p>
   </section>
 
-  <!-- FAQ -->
-  <section id="faq" class="contact-section faq-section">
-    <h2>FAQ / Common Questions</h2>
-    <p>Placeholder text for frequently asked questions about recycling, salvaged goods, and services.</p>
+  <!-- Contact Information -->
+  <section class="contact-info" data-aos="fade-up">
+    <div>
+      <h3>📍 Address</h3>
+      <p>26 Industria Road, Estcourt</p>
+    </div>
+    <div>
+      <h3>📞 Phone</h3>
+      <p>+27 82 849 7869</p>
+      <a href="https://wa.me/27828497869" class="whatsapp-btn">💬 WhatsApp Us</a>
+    </div>
+    <div>
+      <h3>📧 Email</h3>
+      <p>estcourtwaste@gmail.com</p>
+    </div>
   </section>
 
-  <!-- Customer Service Hours -->
-  <section id="service-hours" class="contact-section hours-section">
-    <h2>Customer Service Hours</h2>
-    <p>Our team is available Monday to Friday, 7:30 am – 4:30 pm, and Saturday 7:30 am – 11:00 am.</p>
-  </section>
+ <!-- Map Section -->
+<section class="map-section" data-aos="fade-up">
+  <h2>Find Us Easily</h2>
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.123456789!2d29.8626362!3d-28.9983566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef3c68a40680a0f%3A0x4c30a98eaf3c55f1!2s26%20Industria%20Rd%2C%20Estcourt%2C%203310!5e0!3m2!1sen!2sza!4v171234567890!5m2!1sen!2sza" 
+    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
+  </iframe>
+  <p><a href="https://www.google.com/maps/dir//26+Industria+Rd,+Estcourt,+3310" target="_blank">
+      Get Directions
+    </a>
+  </p>
+</section>
 
-  <!-- Emergency Pick-Up Requests -->
-  <section id="emergency" class="contact-section emergency-section">
-    <h2>Emergency Pick-Up Requests</h2>
-    <p>Placeholder text for urgent waste collection requests and emergency contact details.</p>
-  </section>
 
-  <!-- Request a Quote -->
-  <section id="quote" class="contact-section quote-section">
-    <h2>Request a Quote</h2>
-    <p>Placeholder text for businesses and households requesting tailored recycling or waste management quotes.</p>
-  </section>
-
-  <!-- Partnership Inquiries -->
-  <section id="partnerships" class="contact-section partnership-section">
-    <h2>Partnership Inquiries</h2>
-    <p>Placeholder text for NGOs, schools, and businesses interested in collaborating with Estcourt Waste Collectors.</p>
-  </section>
-
-  <!-- Volunteer With Us -->
-  <section id="volunteer" class="contact-section volunteer-section">
-    <h2>Volunteer With Us</h2>
-    <p>Placeholder text encouraging community members to volunteer in recycling drives and awareness campaigns.</p>
-  </section>
-
-  <!-- Office Location -->
-  <section id="location" class="contact-section location-section">
-    <h2>Office Location / Find Us Here</h2>
-    <p>Placeholder text with address details and map integration for easy navigation.</p>
-  </section>
 
   <!-- Social Media Links -->
-  <section id="social" class="contact-section social-section">
-    <h2>Social Media Links</h2>
-    <p>Placeholder text with links to Facebook, Instagram, and LinkedIn pages.</p>
+  <section class="social-links" data-aos="fade-up">
+    <h2>Stay Connected</h2>
+    <a href="#">Facebook</a>
+    <a href="#">Instagram</a>
   </section>
 
   <!-- Footer -->
@@ -95,11 +211,11 @@
       <section class="footer-column" data-aos="fade-right">
         <h2>Navigation</h2>
         <ul>
-          <li><a href="index.html" data-aos="fade-up" data-aos-delay="100">Home</a></li>
-          <li><a href="about.html" data-aos="fade-up" data-aos-delay="200">About Us</a></li>
-          <li><a href="services.html" data-aos="fade-up" data-aos-delay="300">Services</a></li>
-          <li><a href="salvage.html" data-aos="fade-up" data-aos-delay="400">Salvaged Goods</a></li>
-          <li><a href="contact.html" data-aos="fade-up" data-aos-delay="500">Contact</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="salvage.html">Salvaged Goods</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </section>
       <section class="footer-column" data-aos="fade-up" data-aos-delay="200">
@@ -125,9 +241,9 @@
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init({
-      duration: 1000,  // animation duration
-      once: true,      // animate only once
-      offset: 100      // trigger offset
+      duration: 1000,
+      once: true,
+      offset: 100
     });
   </script>
 </body>
