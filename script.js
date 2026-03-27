@@ -1,5 +1,5 @@
 // Handle contact form submission
-const contactForm = document.querySelector("form"); // adjust selector if needed
+const contactForm = document.querySelector("form"); 
 if (contactForm) {
   contactForm.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -17,7 +17,6 @@ const messages = [
 ];
 
 let currentIndex = 0;
-
 const updateImpactText = () => {
   if (impactText) {
     impactText.textContent = messages[currentIndex];
@@ -35,22 +34,25 @@ document.querySelectorAll("#impact .arrow").forEach((arrow) => {
   });
 });
 
-// Impact counter animation
+// Impact counter animation (GSAP version)
 const counter = document.querySelector("#impact-counter");
 if (counter) {
-  let count = 0;
-  const target = 10000;
-  const speed = 50;
-
-  const updateCounter = () => {
-    if (count < target) {
-      count += 100;
-      counter.textContent = `Over ${count.toLocaleString()} tons recycled since 2010.`;
-      setTimeout(updateCounter, speed);
+  gsap.fromTo(counter, 
+    { innerText: 0 }, 
+    {
+      innerText: 10000,
+      duration: 3,
+      ease: "power1.out",
+      snap: { innerText: 1 },
+      onUpdate: function () {
+        counter.textContent = `Over ${Math.floor(counter.innerText).toLocaleString()} tons recycled since 2010.`;
+      },
+      scrollTrigger: {
+        trigger: "#impact-counter",
+        start: "top 80%",
+      }
     }
-  };
-
-  updateCounter();
+  );
 }
 
 // Call-to-action button
@@ -87,20 +89,103 @@ if (seasonalSection) {
   seasonalSection.textContent += ` Current highlights: ${seasonalItems.join(", ")}.`;
 }
 
-anime({
-  targets: 'h1',
-  color: '#2e7d32',
-  duration: 2000
+/* ============================
+   GSAP Cinematic Animations
+   ============================ */
+gsap.registerPlugin(ScrollTrigger);
+
+// Hero animations
+gsap.from(".hero-text h1", { opacity: 0, y: -50, duration: 1 });
+gsap.from(".hero-text p", { opacity: 0, y: 30, duration: 1, delay: 0.5 });
+gsap.from(".hero-buttons a", { opacity: 0, scale: 0.8, stagger: 0.2, duration: 0.8, delay: 1 });
+gsap.from(".hero-image img", { opacity: 0, x: 100, duration: 1.2, delay: 0.8 });
+
+// About section
+gsap.from("#about .about-text", {
+  scrollTrigger: "#about",
+  opacity: 0,
+  x: -100,
+  duration: 1
+});
+gsap.from("#about .about-image img", {
+  scrollTrigger: "#about",
+  opacity: 0,
+  x: 100,
+  duration: 1
 });
 
-gsap.from('h1', { duration: 1, opacity: 0, y: -50 });
+// Trust bar
+gsap.from(".trust-bar li", {
+  scrollTrigger: ".trust-bar",
+  opacity: 0,
+  y: 30,
+  stagger: 0.2,
+  duration: 0.8
+});
 
-// Pulse animation
-gsap.to(".cta-quote", {
-  scale: 1.1,
+// Why Choose section
+gsap.from("#why-choose h2", {
+  scrollTrigger: "#why-choose",
+  opacity: 0,
+  y: -50,
+  duration: 1
+});
+gsap.from(".feature-card", {
+  scrollTrigger: ".features-grid",
+  opacity: 0,
+  scale: 0.8,
+  stagger: 0.2,
+  duration: 0.8
+});
+
+// Testimonials section
+gsap.from("#testimonials h2", {
+  scrollTrigger: "#testimonials",
+  opacity: 0,
+  y: -50,
+  duration: 1
+});
+gsap.from(".overall-rating", {
+  scrollTrigger: "#testimonials",
+  opacity: 0,
+  scale: 0.9,
+  duration: 1
+});
+gsap.from(".review-card", {
+  scrollTrigger: ".reviews-grid",
+  opacity: 0,
+  y: 50,
+  stagger: 0.2,
+  duration: 0.8
+});
+gsap.from(".reviews-cta", {
+  scrollTrigger: ".reviews-cta",
+  opacity: 0,
+  y: 30,
+  duration: 1
+});
+
+// Footer
+gsap.from("footer .footer-column", {
+  scrollTrigger: "footer",
+  opacity: 0,
+  y: 50,
+  stagger: 0.3,
+  duration: 1
+});
+gsap.from("footer .footer-bottom", {
+  scrollTrigger: "footer",
+  opacity: 0,
+  y: 30,
+  duration: 1,
+  delay: 0.5
+});
+
+// Pulse animation for CTA quote or button
+gsap.to(".cta-quote, #cta button", {
+  scale: 1.05,
   duration: 1,
   repeat: -1,
   yoyo: true,
   ease: "power1.inOut"
 });
-

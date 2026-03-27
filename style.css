@@ -9,11 +9,21 @@
 
 /* Global Styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Arial, sans-serif;
   margin: 0;
   line-height: 1.6;
   background: var(--background);
   color: var(--neutral);
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  margin: 0;
+}
+
+p {
+  margin: 0 0 1rem;
 }
 
 /* Header/Navbar */
@@ -24,23 +34,27 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
-/* Logo container */
+
 .logo-container {
   display: flex;
   align-items: center;
-  gap: 0.5rem; /* space between words and icon */
+  gap: 0.5rem;
   text-decoration: none;
 }
 
 .logo-words {
-  height: 60px;   /* adjust as needed */
+  height: 60px;
   width: auto;
   margin-top: -8px; 
 }
 
 .logo-icon {
-  height: 70px;   /* same height for alignment */
+  height: 70px;
   width: auto;
 }
 
@@ -51,25 +65,16 @@ header nav ul {
   margin: 0;
   padding: 0;
 }
+
 header nav a {
   color: var(--neutral);
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
 }
+
 header nav a:hover {
   color: var(--primary);
-}
-.cta-nav {
-  background: var(--primary);
-  color: #fff;
-  padding: 0.6rem 1.2rem;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: bold;
-}
-.cta-nav:hover {
-  background: var(--secondary);
 }
 
 /* Hero Section */
@@ -78,53 +83,84 @@ header nav a:hover {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 3rem 2rem;
+  padding: 4rem 2rem;
   background: linear-gradient(135deg, var(--light), var(--secondary));
 }
+
 #hero h1 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   font-weight: bold;
   margin-bottom: 1rem;
   color: var(--secondary);
 }
+
 .highlight {
   color: var(--primary);
 }
+
 #hero p {
   max-width: 500px;
+  font-size: 1.1rem;
 }
+
 .hero-buttons {
   margin-top: 1.5rem;
 }
-.btn-primary {
-  background: var(--primary);
-  color: #fff;
-  padding: 0.8rem 1.5rem;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: bold;
-  margin-right: 1rem;
-  transition: background 0.3s ease;
-}
-.btn-primary:hover {
-  background: var(--secondary);
-}
+
+.btn-primary,
 .btn-secondary {
-  border: 2px solid var(--primary);
-  color: var(--primary);
   padding: 0.8rem 1.5rem;
   border-radius: 4px;
   text-decoration: none;
   font-weight: bold;
   transition: all 0.3s ease;
 }
+
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+  margin-right: 1rem;
+}
+
+.btn-primary:hover {
+  background: var(--secondary);
+}
+
+.btn-secondary {
+  border: 2px solid var(--primary);
+  color: var(--primary);
+}
+
 .btn-secondary:hover {
   background: var(--primary);
   color: #fff;
 }
+
 .hero-image img {
-  max-width: 400px;
-  border-radius: 8px;
+  max-width: 420px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--primary);
+  color: #fff;
+  padding: 0.8rem 1rem;
+  border-radius: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: background 0.3s ease, transform 0.3s ease;
+  z-index: 9999;
+}
+
+.whatsapp-float:hover {
+  background: var(--secondary);
+  transform: scale(1.05);
 }
 
 /* Trust Bar */
@@ -133,6 +169,7 @@ header nav a:hover {
   padding: 1rem;
   text-align: center;
 }
+
 .trust-bar ul {
   list-style: none;
   display: flex;
@@ -141,20 +178,20 @@ header nav a:hover {
   margin: 0;
   padding: 0;
 }
+
 .trust-bar li {
   color: var(--neutral);
   font-weight: bold;
 }
 
-/* Who We Are Section */
+/* About Section */
 .about-section {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;   /* align text and image at the top */
+  align-items: flex-start;
   justify-content: space-between;
   padding: 3rem 2rem;
-  background: var(--light);  /* Azure background */
-  color: var(--neutral);     /* Corduroy text */
+  background: var(--light);
   border-radius: 8px;
   margin: 2rem auto;
   max-width: 1100px;
@@ -167,18 +204,8 @@ header nav a:hover {
 }
 
 .about-text h2 {
-  color: var(--secondary);   /* Bahia accent */
+  color: var(--secondary);
   margin-bottom: 1rem;
-}
-
-.about-text p {
-  margin-bottom: 1rem;
-  line-height: 1.6;
-}
-
-.about-text .btn-primary {
-  display: inline-block;
-  margin-top: 1rem;
 }
 
 .about-image {
@@ -190,23 +217,10 @@ header nav a:hover {
 .about-image img {
   max-width: 100%;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .about-section {
-    flex-direction: column;
-    text-align: center;
-  }
-  .about-text {
-    margin-right: 0;
-    margin-bottom: 2rem;
-  }
-}
-
-
-/* Why Choose EWC Section */
+/* Why Choose Section */
 .why-choose {
   background: var(--light);
   padding: 3rem 2rem;
@@ -215,15 +229,18 @@ header nav a:hover {
   margin: 2rem auto;
   max-width: 1100px;
 }
+
 .why-choose h2 {
   color: var(--secondary);
   margin-bottom: 2rem;
 }
+
 .features-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
 }
+
 .feature-card {
   background: var(--background);
   border: 1px solid var(--neutral);
@@ -232,51 +249,67 @@ header nav a:hover {
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .feature-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.2);
 }
+
 .icon {
   font-size: 2rem;
   color: var(--primary);
   margin-bottom: 1rem;
 }
+
 .feature-card h3 {
   color: var(--secondary);
 }
 
 /* Testimonials Section */
 .testimonials-section {
-  background: var(--light);       /* Azure background */
-  padding: 2rem;
+  background: var(--light);
+  padding: 3rem 2rem;
   margin-top: 2rem;
   border-top: 3px solid var(--primary);
   border-radius: 8px;
-  text-align: center;             /* centralise all content */
+  text-align: center;
 }
 
 .testimonials-section h2 {
-  color: var(--secondary);        /* Bahia headings */
+  color: var(--secondary);
   margin-bottom: 1.5rem;
 }
 
-/* Reviews Grid */
+.overall-rating {
+  margin-bottom: 2rem;
+}
+
+.stars {
+  font-size: 1.5rem;
+  color: var(--secondary);
+}
+
 .reviews-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  justify-content: center;        /* centre cards horizontally */
+  justify-content: center;
 }
 
 .review-card {
   flex: 1 1 220px;
   max-width: 250px;
-  background: var(--background);  /* white background */
+  background: var(--background);
   border: 1px solid var(--neutral);
   border-radius: 6px;
   padding: 1rem;
   box-sizing: border-box;
-  text-align: center;             /* centre text inside cards */
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
 }
 
 .review-card h3 {
@@ -294,91 +327,13 @@ header nav a:hover {
   margin: 0.4rem 0;
   font-size: 0.9rem;
   color: var(--neutral);
-  word-wrap: break-word;
 }
 
-/* CTA */
 .reviews-cta {
-  margin-top: 1rem;
-  text-align: center;             /* centre CTA button */
-}
-.reviews-cta .cta-primary {
-  background: var(--primary);
-  color: #fff;
-  border: none;
-  padding: 0.6rem 1.2rem;
-  border-radius: 4px;
-  font-weight: bold;
-  cursor: pointer;
-}
-.reviews-cta .cta-primary:hover {
-  background: var(--secondary);
+  margin-top: 2rem;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .reviews-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-  .review-card {
-    max-width: 100%;
-  }
-}
-
-
-/* Reviews Grid */
-.reviews-grid {
-  display: flex;
-  text-align: center;                  /* flexbox for side-by-side */
-  flex-wrap: wrap;                /* wrap on smaller screens */
-  gap: 1rem;                      /* spacing between cards */
-  justify-content: center;        /* center alignment */
-}
-
-.review-card {
-  flex: 1 1 250px;                /* uniform width, shrink/grow */
-  max-width: 280px;               /* prevent stretching */
-  background: var(--background);  /* white background */
-  border: 1px solid var(--neutral);
-  border-radius: 6px;
-  padding: 1rem;
-  box-sizing: border-box;
-  text-align: left;
-}
-
-.review-card h3 {
-  color: var(--secondary);        /* Bahia accent */
-  margin-bottom: 0.3rem;
-  font-size: 1rem;
-}
-
-.review-card .date {
-  font-size: 0.8rem;
-  color: var(--neutral);
-}
-
-.review-card p {
-  margin: 0.4rem 0;
-  font-size: 0.9rem;
-  color: var(--neutral);
-  word-wrap: break-word;          /* prevent overflow */
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .reviews-grid {
-    flex-direction: column;       /* stack vertically on mobile */
-    align-items: center;
-  }
-  .review-card {
-    max-width: 100%;              /* full width on mobile */
-  }
-}
-
-
-/* CTA */
-.reviews-cta .cta-primary {
+.reviews-cta .btn-primary {
   background: var(--primary);
   color: #fff;
   border: none;
@@ -387,14 +342,15 @@ header nav a:hover {
   font-weight: bold;
   cursor: pointer;
 }
-.reviews-cta .cta-primary:hover {
+
+.reviews-cta .btn-primary:hover {
   background: var(--secondary);
 }
 
 /* Footer */
 footer {
-  background: var(--neutral);   /* Corduroy #4A514C for strong contrast */
-  color: #FFFFFF;               /* white text for readability */
+  background: var(--neutral);
+  color: #FFFFFF;
   padding: 2rem;
   margin-top: 2rem;
 }
@@ -409,7 +365,7 @@ footer {
 }
 
 .footer-column h2 {
-  color: var(--secondary);      /* Bahia #9CCB06 for headings */
+  color: var(--secondary);
   margin-bottom: 1rem;
 }
 
@@ -427,50 +383,52 @@ footer {
   text-decoration: none;
   transition: color 0.3s ease;
 }
+
 .footer-column a:hover {
   color: var(--primary);        /* Jungle Green hover */
 }
 
 .footer-bottom {
   text-align: center;
-  border-top: 1px solid #9CCB06; /* Bahia divider */
+  border-top: 1px solid var(--secondary); /* Bahia divider */
   margin-top: 2rem;
   padding-top: 1rem;
   font-size: 0.9rem;
   color: #F2F4F4;
 }
 
-
-
-/* WhatsApp Floating Button */
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: var(--primary);   /* Jungle Green */
+/* Buttons inside footer */
+.footer-column .btn-primary {
+  background: var(--primary);
   color: #fff;
-  padding: 0.8rem 1rem;
-  border-radius: 50px;
-  font-weight: bold;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
   text-decoration: none;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  font-weight: bold;
   transition: background 0.3s ease;
-  z-index: 9999;                /* ensures it stays on top */
 }
 
-.whatsapp-float:hover {
-  background: var(--secondary); /* Bahia hover */
+.footer-column .btn-primary:hover {
+  background: var(--secondary);
 }
-
 
 /* Responsive Adjustments */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   #hero {
     flex-direction: column;
     text-align: center;
   }
   .hero-image img {
     max-width: 100%;
+    margin-top: 2rem;
+  }
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-text {
+    margin-right: 0;
+    margin-bottom: 2rem;
   }
   .trust-bar ul {
     flex-direction: column;
@@ -479,5 +437,27 @@ footer {
   .footer-container {
     flex-direction: column;
     align-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  header nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .btn-primary,
+  .btn-secondary {
+    display: block;
+    margin: 0.5rem auto;
+    width: 80%;
+    text-align: center;
+  }
+  .reviews-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .review-card {
+    max-width: 100%;
   }
 }
