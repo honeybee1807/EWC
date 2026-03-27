@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Estcourt Waste Collectors</title>
+  <title>About Us | Estcourt Waste Collectors</title>
   <link rel="stylesheet" href="style.css">
   <!-- AOS CSS -->
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
@@ -14,7 +14,7 @@
   <!-- Header/Navbar -->
   <header class="navbar" data-aos="fade-down">
     <div class="nav-logo" data-aos="zoom-in">
-      <a href="index.html">
+      <a href="index.html" class="logo-container">
         <img src="TRANSPARENT.png" alt="EWC Icon Logo" class="logo-icon">
         <img src="ewc transparent words.png" alt="EWC Words Logo" class="logo-words">
       </a>
@@ -22,7 +22,7 @@
     <nav data-aos="fade-left">
       <ul class="nav-links">
         <li><a href="index.html" data-aos="fade-up">Home</a></li>
-        <li><a href="about.html" data-aos="fade-up" data-aos-delay="100">About Us</a></li>
+        <li><a href="about.html" class="active" data-aos="fade-up" data-aos-delay="100">About Us</a></li>
         <li><a href="services.html" data-aos="fade-up" data-aos-delay="200">Services</a></li>
         <li><a href="salvage.html" data-aos="fade-up" data-aos-delay="300">Salvaged Goods</a></li>
         <li><a href="contact.html" data-aos="fade-up" data-aos-delay="400">Contact</a></li>
@@ -30,109 +30,94 @@
     </nav>
   </header>
 
-  <!-- Story -->
-  <section id="story">
+  <!-- Our Story -->
+  <section id="story" class="about-section light-bg" data-aos="fade-up">
     <h2>Our Story</h2>
-    <p>Founded as a family business, Estcourt Waste Collectors grew from humble beginnings into a trusted recycling and salvaged goods provider serving KwaZulu-Natal.</p>
+    <p>Started as a small family initiative in Estcourt, EWC has grown into a trusted recycling partner. From one truck in 2010 to serving hundreds of households and businesses today, our journey is rooted in community and sustainability.</p>
   </section>
 
   <!-- Mission & Vision -->
-  <section id="mission">
+  <section id="mission" class="about-section alt-bg" data-aos="fade-right">
     <h2>Our Mission & Vision</h2>
-    <p>We aim to transform waste into opportunity, building a cleaner Estcourt while empowering communities through recycling and sustainability.</p>
+    <p>We aim to transform waste into opportunity — building a cleaner Estcourt while empowering communities through recycling and sustainability.</p>
   </section>
 
   <!-- Why Recycling Matters -->
-  <section id="why-recycling">
+  <section id="why-recycling" class="about-section light-bg" data-aos="fade-left">
     <h2>Why Recycling Matters</h2>
-    <p>Recycling reduces landfill waste, conserves resources, and creates jobs. It’s not just about waste — it’s about building a sustainable future.</p>
+    <p>Recycling reduces landfill waste, conserves resources, and creates jobs. For Estcourt, it means cleaner streets, healthier families, and new opportunities.</p>
   </section>
 
   <!-- Values -->
-  <section id="values">
+  <section id="values" class="about-section alt-bg" data-aos="zoom-in">
     <h2>Our Values</h2>
-    <ul>
-      <li>Sustainability</li>
-      <li>Community Empowerment</li>
-      <li>Integrity & Reliability</li>
-      <li>Innovation</li>
-    </ul>
+    <div class="value-cards">
+      <div class="card">♻ Sustainability</div>
+      <div class="card">🤝 Community Empowerment</div>
+      <div class="card">✔ Integrity & Reliability</div>
+      <div class="card">💡 Innovation</div>
+    </div>
   </section>
-
-  
 
   <!-- Team Members -->
-  <section id="team">
-    <h2>Our Team Members</h2>
-    <p>We are proud of our dedicated staff who make recycling possible every day.</p>
-  </section>
-
-  <!-- Leadership Team -->
-  <section id="leadership">
-    <h2>Leadership Team</h2>
-    <p>Our leadership team combines decades of experience in waste management, community development, and sustainable innovation.</p>
+  <section id="team" class="about-section light-bg" data-aos="fade-up">
+    <h2>Meet Our Team</h2>
+    <p>From drivers to sorters, our staff are the heartbeat of EWC. <em>“Jabu has been with us for 8 years and is known for never missing a pickup — even in the rain.”</em></p>
   </section>
 
   <!-- Community Partnerships -->
-  <section id="community-partnerships">
+  <section id="community-partnerships" class="about-section alt-bg" data-aos="fade-left">
     <h2>Community Partnerships</h2>
-    <p>We collaborate with schools, local businesses, and NGOs to promote recycling awareness and community empowerment.</p>
+    <p>We collaborate with Estcourt Primary School, local SPAR, and NGOs to run monthly recycling drives and awareness campaigns.</p>
   </section>
 
   <!-- Customer Stories -->
-  <section id="customer-stories">
+  <section id="customer-stories" class="about-section light-bg" data-aos="fade-up">
     <h2>Customer Stories</h2>
-    <p>Families and businesses in Estcourt share how recycling and salvaged goods have made a difference in their lives.</p>
+    <blockquote>“EWC’s collection service made recycling easy for our family. We feel proud knowing our waste is turned into something valuable.” – The Naidoo Family</blockquote>
+    <blockquote>“As a business, partnering with EWC reduced our costs and boosted our sustainability profile.” – Estcourt Hardware</blockquote>
   </section>
 
   <!-- Impact in Numbers -->
-  <section id="impact-numbers">
+  <section id="impact-numbers" class="about-section alt-bg" data-aos="zoom-in">
     <h2>Impact in Numbers</h2>
-    <p id="impact-counter">Over 10,000 tons recycled since 2010.</p>
+    <div class="impact-grid">
+      <div class="impact-card"><strong>10,000+</strong><br>Tons recycled since 2010</div>
+      <div class="impact-card"><strong>500+</strong><br>Families served</div>
+      <div class="impact-card"><strong>50+</strong><br>Local businesses supported</div>
+    </div>
   </section>
 
   <!-- Awards & Recognition -->
-  <section id="awards">
+  <section id="awards" class="about-section light-bg" data-aos="fade-up">
     <h2>Awards & Recognition</h2>
-    <p>We are proud members of the Institute of Waste Management of Southern Africa and recipients of local sustainability awards.</p>
-  </section>
-
-  <!-- Commitment to Sustainability -->
-  <section id="sustainability">
-    <h2>Commitment to Sustainability</h2>
-    <p>We continuously improve our processes to minimize environmental impact and maximize community benefit.</p>
-  </section>
-
-  <!-- Innovation in Recycling -->
-  <section id="innovation">
-    <h2>Innovation in Recycling</h2>
-    <p>From chicory by-products to salvaged goods, we innovate by finding new uses for materials that would otherwise go to waste.</p>
+    <p>Members of the Institute of Waste Management of Southern Africa and recipients of local sustainability awards.</p>
   </section>
 
   <!-- Future Goals -->
-  <section id="future">
+  <section id="future" class="about-section alt-bg" data-aos="fade-up">
     <h2>Future Goals</h2>
-    <p>Our vision is to expand recycling facilities, create more jobs, and lead the way in sustainable waste management in South Africa.</p>
+    <p>We plan to expand recycling facilities, create more jobs, and lead the way in sustainable waste management in South Africa.</p>
   </section>
 
   <!-- Call to Action -->
-  <section id="cta">
-    <h2>How You Can Help</h2>
-    <p>Join us by recycling at home, supporting salvaged goods, and spreading awareness. Together, we can build a cleaner future.</p>
-    <button>Get Involved</button>
+  <section id="cta" class="about-section light-bg" data-aos="zoom-in">
+    <h2>Join the Estcourt Recycling Movement</h2>
+    <p>Book your first pickup, support salvaged goods, or spread awareness. Together, we can build a cleaner future.</p>
+    <button class="btn-primary">Get Started Today</button>
   </section>
 
-<!-- Footer -->
+  <!-- Footer -->
   <footer class="footer" data-aos="fade-up">
     <div class="footer-container">
       <section class="footer-column" data-aos="fade-right">
         <h2>Navigation</h2>
         <ul>
-          <li><a href="index.html" data-aos="fade-up" data-aos-delay="100">Home</a></li>
-          <li><a href="about.html" data-aos="fade-up" data-aos-delay="200">About Us</a></li>
-          <li><a href="services.html" data-aos="fade-up" data-aos-delay="300">Services</a></li>
-          <li><a href="salvage.html" data-aos="fade-up" data-aos-delay="400">Salvaged Goods</a></li>
-          <li><a href="contact.html" data-aos="fade-up" data-aos-delay="500">Contact</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="salvage.html">Salvaged Goods</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </section>
       <section class="footer-column" data-aos="fade-up" data-aos-delay="200">
@@ -158,9 +143,9 @@
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init({
-      duration: 1000,  // animation duration
-      once: true,      // animate only once
-      offset: 100      // trigger offset
+      duration: 1000,
+      once: true,
+      offset: 100
     });
   </script>
 </body>

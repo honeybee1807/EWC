@@ -3,17 +3,96 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Estcourt Waste Collectors</title>
+  <title>Services | Estcourt Waste Collectors</title>
   <link rel="stylesheet" href="style.css">
   <!-- AOS CSS -->
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <style>
+    /* Services Grid */
+    .services-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin: 2rem 0;
+    }
+    .service-card {
+      flex: 1 1 300px;
+      max-width: 320px;
+      background: #fff;
+      border: 2px solid var(--secondary); /* Bahia green */
+      border-radius: 8px;
+      padding: 1.5rem;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .service-card .icon {
+      font-size: 2rem;
+      color: var(--primary); /* Jungle green accent */
+      margin-bottom: 0.5rem;
+    }
+
+    /* Work in Progress Grid */
+    .work-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin: 2rem 0;
+    }
+    .work-item {
+      flex: 1 1 300px;
+      max-width: 320px;
+      position: relative;
+      text-align: center;
+    }
+    .work-item img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    .work-item p {
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      color: var(--neutral);
+    }
+
+    /* Trusted Businesses */
+    .trusted-logos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin: 2rem 0;
+    }
+    .trusted-logos img, .trusted-logos .logo-placeholder {
+      flex: 1 1 150px;
+      max-width: 180px;
+      background: #fff;
+      border: 1px solid var(--neutral);
+      border-radius: 6px;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .services-grid, .work-grid, .trusted-logos {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
 </head>
 <body>
 
   <!-- Header/Navbar -->
   <header class="navbar" data-aos="fade-down">
     <div class="nav-logo" data-aos="zoom-in">
-      <a href="index.html">
+      <a href="index.html" class="logo-container">
         <img src="TRANSPARENT.png" alt="EWC Icon Logo" class="logo-icon">
         <img src="ewc transparent words.png" alt="EWC Words Logo" class="logo-words">
       </a>
@@ -22,83 +101,82 @@
       <ul class="nav-links">
         <li><a href="index.html" data-aos="fade-up">Home</a></li>
         <li><a href="about.html" data-aos="fade-up" data-aos-delay="100">About Us</a></li>
-        <li><a href="services.html" data-aos="fade-up" data-aos-delay="200">Services</a></li>
+        <li><a href="services.html" class="active" data-aos="fade-up" data-aos-delay="200">Services</a></li>
         <li><a href="salvage.html" data-aos="fade-up" data-aos-delay="300">Salvaged Goods</a></li>
         <li><a href="contact.html" data-aos="fade-up" data-aos-delay="400">Contact</a></li>
       </ul>      
     </nav>
   </header>
 
-  <!-- Our Services -->
-  <section class="services-section">
+  <!-- Services Section -->
+  <section class="services-section" data-aos="fade-up">
     <h2>Our Services</h2>
-    <p class="trust-badge">♻️ Proudly serving Estcourt for 15+ years</p>
-
     <div class="services-grid">
-      <!-- Consulting Services -->
-      <div class="service-card">
-        <h3>Consulting Services</h3>
-        <p><strong>Our expertise:</strong> We advise businesses and municipalities on sustainable waste management strategies.</p>
-        <p><strong>Benefits of consulting:</strong> Gain compliance with environmental regulations and improve efficiency.</p>
-        <p><strong>Request a consultation:</strong> Contact us to schedule a tailored session.</p>
-        <p><strong>FAQs:</strong> Common questions answered to help you get started.</p>
-      </div>
-
-      <!-- Recycling Services -->
-      <div class="service-card">
+      <div class="service-card" data-aos="zoom-in">
+        <div class="icon">♻</div>
         <h3>Recycling Services</h3>
-        <p><strong>Types of recycling:</strong> Paper, plastics, metals, glass, e‑waste, salvaged goods, chicory by‑products.</p>
-        <p><strong>Eco‑friendly processes:</strong> Sustainable recycling methods that reduce landfill waste.</p>
-        <p><strong>Recycling equipment:</strong> Modern tools and machinery for efficient recycling.</p>
-        <p><strong>How to participate:</strong> Drop off items or schedule a collection.</p>
+        <p>Paper, plastics, metals, glass, e‑waste, and salvaged goods processed sustainably.</p>
       </div>
-
-      <!-- Waste Collection -->
-      <div class="service-card">
+      <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
+        <div class="icon">🗑</div>
         <h3>Waste Collection</h3>
-        <p><strong>Our fleet:</strong> Reliable vehicles serving households, businesses, and industries.</p>
-        <p><strong>Collection process:</strong> Streamlined pickup and safe disposal methods.</p>
-        <p><strong>Areas we serve:</strong> Covering Estcourt and surrounding communities.</p>
-        <p><strong>Schedule a pickup:</strong> Easy booking via phone or online form.</p>
+        <p>Reliable fleet serving households, businesses, and industries with safe disposal.</p>
       </div>
-    </div>
-
-    <!-- Custom Solutions -->
-    <section class="service">
-      <h2>Custom Solutions</h2>
-      <p>We tailor waste management solutions to meet the unique needs of factories, malls, and agricultural operations.</p>
-    </section>
-
-    <!-- Trusted by Local Businesses -->
-    <div class="trusted-by">
-      <h3>Trusted by Local Businesses</h3>
-      <div class="partner-logos">
-        <img src="images/logo1.png" alt="Partner 1">
-        <img src="images/logo2.png" alt="Partner 2">
-        <img src="images/logo3.png" alt="Partner 3">
+      <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
+        <div class="icon">🌿</div>
+        <h3>Custom Solutions</h3>
+        <p>Tailored waste management for factories, malls, and agricultural operations.</p>
       </div>
-    </div>
-
-    <!-- Photo Gallery -->
-    <div class="photo-gallery">
-      <h3>Our Work in Action</h3>
-      <img src="images/recycling.jpg" alt="Recycling team">
-      <img src="images/collection.jpg" alt="Collection fleet">
-      <img src="images/community.jpg" alt="Community outreach">
     </div>
   </section>
 
-<!-- Footer -->
+  <!-- Work in Progress -->
+  <section class="work-section" data-aos="fade-up">
+    <h2>Our Work in Progress</h2>
+    <div class="work-grid">
+      <div class="work-item" data-aos="fade-up">
+        <img src="images/recycling.jpg" alt="Recycling team">
+        <p>Recycling in action</p>
+      </div>
+      <div class="work-item" data-aos="fade-up" data-aos-delay="100">
+        <img src="images/collection.jpg" alt="Collection fleet">
+        <p>Collection fleet at work</p>
+      </div>
+      <div class="work-item" data-aos="fade-up" data-aos-delay="200">
+        <img src="images/community.jpg" alt="Community outreach">
+        <p>Community outreach programs</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trusted Businesses -->
+  <section class="trusted-section" data-aos="fade-up">
+    <h2>Trusted Businesses</h2>
+    <div class="trusted-logos">
+      <img src="images/logo1.png" alt="Partner 1">
+      <img src="images/logo2.png" alt="Partner 2">
+      <img src="images/logo3.png" alt="Partner 3">
+      <div class="logo-placeholder">+ More Partners</div>
+    </div>
+  </section>
+
+  <!-- Additional Heading -->
+  <section class="innovation-section" data-aos="fade-up">
+    <h2>Innovation in Action</h2>
+    <p>We continuously improve our recycling processes, adopt new technologies, and empower Estcourt with sustainable solutions.</p>
+  </section>
+
+  <!-- Footer -->
   <footer class="footer" data-aos="fade-up">
     <div class="footer-container">
       <section class="footer-column" data-aos="fade-right">
         <h2>Navigation</h2>
         <ul>
-          <li><a href="index.html" data-aos="fade-up" data-aos-delay="100">Home</a></li>
-          <li><a href="about.html" data-aos="fade-up" data-aos-delay="200">About Us</a></li>
-          <li><a href="services.html" data-aos="fade-up" data-aos-delay="300">Services</a></li>
-          <li><a href="salvage.html" data-aos="fade-up" data-aos-delay="400">Salvaged Goods</a></li>
-          <li><a href="contact.html" data-aos="fade-up" data-aos-delay="500">Contact</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html" class="active">Services</a></li>
+          <li><a href="salvage.html">Salvaged Goods</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </section>
       <section class="footer-column" data-aos="fade-up" data-aos-delay="200">
@@ -124,9 +202,9 @@
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init({
-      duration: 1000,  // animation duration
-      once: true,      // animate only once
-      offset: 100      // trigger offset
+      duration: 1000,
+      once: true,
+      offset: 100
     });
   </script>
 </body>

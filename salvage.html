@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Estcourt Waste Collectors</title>
+  <title>Salvaged Goods | Estcourt Waste Collectors</title>
   <link rel="stylesheet" href="style.css">
   <!-- AOS CSS -->
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
@@ -14,7 +14,7 @@
   <!-- Header/Navbar -->
   <header class="navbar" data-aos="fade-down">
     <div class="nav-logo" data-aos="zoom-in">
-      <a href="index.html">
+      <a href="index.html" class="logo-container">
         <img src="TRANSPARENT.png" alt="EWC Icon Logo" class="logo-icon">
         <img src="ewc transparent words.png" alt="EWC Words Logo" class="logo-words">
       </a>
@@ -24,66 +24,94 @@
         <li><a href="index.html" data-aos="fade-up">Home</a></li>
         <li><a href="about.html" data-aos="fade-up" data-aos-delay="100">About Us</a></li>
         <li><a href="services.html" data-aos="fade-up" data-aos-delay="200">Services</a></li>
-        <li><a href="salvage.html" data-aos="fade-up" data-aos-delay="300">Salvaged Goods</a></li>
+        <li><a href="salvage.html" class="active" data-aos="fade-up" data-aos-delay="300">Salvaged Goods</a></li>
         <li><a href="contact.html" data-aos="fade-up" data-aos-delay="400">Contact</a></li>
       </ul>      
     </nav>
   </header>
 
+  <!-- Hero Section -->
+  <section id="hero" class="hero" data-aos="fade-right">
+    <div class="hero-text" data-aos="fade-up">
+      <h1>♻️ Affordable <span class="highlight">Salvaged Goods</span></h1>
+      <p data-aos="fade-up" data-aos-delay="200">
+        Repurposing materials and products to reduce waste, save money, and empower our community.
+      </p>
+      <div class="hero-buttons" data-aos="zoom-in" data-aos-delay="400">
+        <a href="contact.html" class="btn-primary">Contact Us</a>
+        <a href="services.html" class="btn-secondary">Explore Services</a>
+      </div>
+    </div>
+    <div class="hero-image" data-aos="fade-left" data-aos-delay="600">
+      <img src="images/salvaged-goods.jpg" alt="Salvaged Goods">
+    </div>
+  </section>
+
   <!-- Introduction -->
-  <section id="intro" class="salvage-section">
+  <section id="intro" class="salvage-section light-bg" data-aos="fade-up">
     <h2>Introduction to Salvaged Goods</h2>
-    <p>We offer salvaged goods, including chicory and other recovered items, to reduce waste and provide affordable, sustainable options for our community.</p>
+    <p>We recover and repurpose items — from chicory by‑products to furniture — reducing waste while offering affordable, sustainable options for Estcourt families and businesses.</p>
   </section>
 
   <!-- Available Products -->
-  <section id="products" class="salvage-section">
+  <section id="products" class="salvage-section alt-bg" data-aos="fade-right">
     <h2>Available Products</h2>
     <div class="product-grid">
-      <div class="product-item">Furniture</div>
-      <div class="product-item">Appliances</div>
-      <div class="product-item">Building Materials</div>
-      <div class="product-item">Chicory & Agricultural By‑Products</div>
-      <div class="product-item">Electronics</div>
-      <div class="product-item">Household Goods</div>
+      <div class="product-card" data-aos="zoom-in">🪑 Furniture</div>
+      <div class="product-card" data-aos="zoom-in" data-aos-delay="100">🔌 Appliances</div>
+      <div class="product-card" data-aos="zoom-in" data-aos-delay="200">🏗 Building Materials</div>
+      <div class="product-card" data-aos="zoom-in" data-aos-delay="300">🌱 Chicory & Agricultural By‑Products</div>
+      <div class="product-card" data-aos="zoom-in" data-aos-delay="400">💻 Electronics</div>
+      <div class="product-card" data-aos="zoom-in" data-aos-delay="500">🏠 Household Goods</div>
     </div>
   </section>
 
   <!-- Why Choose Salvaged Goods -->
-  <section id="benefits" class="salvage-section">
+  <section id="benefits" class="salvage-section light-bg" data-aos="fade-left">
     <h2>Why Choose Salvaged Goods</h2>
-    <p>Salvaged goods are affordable, eco‑friendly, and help reduce landfill waste. Choosing them supports sustainability and community empowerment.</p>
+    <ul class="benefit-list">
+      <li>✅ Affordable alternatives for families</li>
+      <li>✅ Eco‑friendly and reduces landfill waste</li>
+      <li>✅ Supports sustainability and community empowerment</li>
+    </ul>
   </section>
 
   <!-- Seasonal or Limited Stock -->
-  <section id="seasonal" class="salvage-section">
+  <section id="seasonal" class="salvage-section alt-bg" data-aos="zoom-in">
     <h2>Seasonal or Limited Stock</h2>
-    <p>Some items are available seasonally or in limited quantities. Visit regularly to discover new finds and unique products.</p>
+    <p>Some items are available seasonally or in limited quantities. Visit regularly to discover unique finds and one‑of‑a‑kind products.</p>
   </section>
 
   <!-- How to Purchase -->
-  <section id="purchase" class="salvage-section">
+  <section id="purchase" class="salvage-section light-bg" data-aos="fade-up">
     <h2>How to Purchase</h2>
-    <p>Customers can purchase salvaged goods directly at our facility. Payment options include cash and card. Contact us for bulk orders or special requests.</p>
+    <p>Browse salvaged goods directly at our facility. Payment options include cash and card. For bulk orders or special requests, <a href="contact.html">contact us</a> today.</p>
   </section>
 
   <!-- Community Impact -->
-  <section id="impact" class="salvage-section">
+  <section id="impact" class="salvage-section alt-bg" data-aos="fade-right">
     <h2>Community Impact</h2>
-    <p>By offering salvaged goods, we create jobs, support local families, and promote recycling awareness in Estcourt.</p>
+    <p>By offering salvaged goods, we create jobs, support local families, and promote recycling awareness in Estcourt. Every purchase helps build a cleaner, stronger community.</p>
   </section>
 
   <!-- Safety & Quality Assurance -->
-  <section id="safety" class="salvage-section">
+  <section id="safety" class="salvage-section light-bg" data-aos="fade-left">
     <h2>Safety & Quality Assurance</h2>
     <p>All salvaged goods undergo safety and quality checks to ensure they meet community standards and are safe for reuse.</p>
   </section>
 
+  <!-- Customer Testimonials -->
+  <section id="testimonials" class="salvage-section alt-bg" data-aos="fade-up">
+    <h2>Customer Testimonials</h2>
+    <blockquote>“We furnished our home affordably thanks to EWC’s salvaged goods. The quality exceeded our expectations.” – The Dlamini Family</blockquote>
+    <blockquote>“Buying salvaged building materials saved us money and supported local recycling efforts.” – Estcourt Builders</blockquote>
+  </section>
+
   <!-- Call to Action -->
-  <section id="cta" class="salvage-section cta-section">
-    <h2>Get In Touch</h2>
+  <section id="cta" class="salvage-section light-bg cta-section" data-aos="zoom-in">
+    <h2>Discover Affordable, Sustainable Goods</h2>
     <p>Interested in salvaged goods or chicory products? Reach out today to learn more or place an order.</p>
-    <a href="contact.html" class="cta-button">Contact Us</a>
+    <a href="contact.html" class="btn-primary">Contact Us Now</a>
   </section>
 
   <!-- Footer -->
@@ -92,11 +120,11 @@
       <section class="footer-column" data-aos="fade-right">
         <h2>Navigation</h2>
         <ul>
-          <li><a href="index.html" data-aos="fade-up" data-aos-delay="100">Home</a></li>
-          <li><a href="about.html" data-aos="fade-up" data-aos-delay="200">About Us</a></li>
-          <li><a href="services.html" data-aos="fade-up" data-aos-delay="300">Services</a></li>
-          <li><a href="salvage.html" data-aos="fade-up" data-aos-delay="400">Salvaged Goods</a></li>
-          <li><a href="contact.html" data-aos="fade-up" data-aos-delay="500">Contact</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="salvage.html" class="active">Salvaged Goods</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </section>
       <section class="footer-column" data-aos="fade-up" data-aos-delay="200">
@@ -122,9 +150,9 @@
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init({
-      duration: 1000,  // animation duration
-      once: true,      // animate only once
-      offset: 100      // trigger offset
+      duration: 1000,
+      once: true,
+      offset: 100
     });
   </script>
 </body>
