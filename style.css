@@ -1,3 +1,6 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&family=Poppins:wght@600;700&display=swap');
+
 /* Root Variables */
 :root {
   --background: #FFFFFF;   /* site background */
@@ -9,7 +12,7 @@
 
 /* Global Styles */
 body {
-  font-family: 'Segoe UI', Arial, sans-serif;
+  font-family: 'Inter', Arial, sans-serif;
   margin: 0;
   line-height: 1.6;
   background: var(--background);
@@ -18,6 +21,7 @@ body {
 }
 
 h1, h2, h3 {
+  font-family: 'Poppins', Arial, sans-serif;
   font-weight: 700;
   margin: 0;
 }
@@ -114,6 +118,7 @@ header nav a:hover {
   text-decoration: none;
   font-weight: bold;
   transition: all 0.3s ease;
+  font-family: 'Poppins', Arial, sans-serif;
 }
 
 .btn-primary {
@@ -156,6 +161,7 @@ header nav a:hover {
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
   transition: background 0.3s ease, transform 0.3s ease;
   z-index: 9999;
+  font-family: 'Poppins', Arial, sans-serif;
 }
 
 .whatsapp-float:hover {
@@ -163,26 +169,41 @@ header nav a:hover {
   transform: scale(1.05);
 }
 
-/* Trust Bar */
 .trust-bar {
-  background: var(--light);
-  padding: 1rem;
+  background: #fff;
+  padding: 2rem 0;
   text-align: center;
 }
 
 .trust-bar ul {
-  list-style: none;
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 3rem;
+  list-style: none;
   margin: 0;
   padding: 0;
+  flex-wrap: wrap;
 }
 
 .trust-bar li {
-  color: var(--neutral);
-  font-weight: bold;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.4;
 }
+
+.trust-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--primary); /* Jungle Green */
+  text-transform: uppercase;
+}
+
+.trust-sub {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  color: var(--neutral); /* Corduroy or dark gray */
+}
+
 
 /* About Section */
 .about-section {
@@ -365,6 +386,7 @@ footer {
 }
 
 .footer-column h2 {
+  font-family: 'Poppins', Arial, sans-serif;
   color: var(--secondary);
   margin-bottom: 1rem;
 }
@@ -382,6 +404,7 @@ footer {
   color: #F2F4F4;               /* Azure for links */
   text-decoration: none;
   transition: color 0.3s ease;
+  font-family: 'Inter', Arial, sans-serif;
 }
 
 .footer-column a:hover {
@@ -395,6 +418,7 @@ footer {
   padding-top: 1rem;
   font-size: 0.9rem;
   color: #F2F4F4;
+  font-family: 'Inter', Arial, sans-serif;
 }
 
 /* Buttons inside footer */
@@ -406,6 +430,7 @@ footer {
   text-decoration: none;
   font-weight: bold;
   transition: background 0.3s ease;
+  font-family: 'Poppins', Arial, sans-serif;
 }
 
 .footer-column .btn-primary:hover {
@@ -460,4 +485,93 @@ footer {
   .review-card {
     max-width: 100%;
   }
+}
+
+.services-section {
+  background: #fff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.services-section h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  color: var(--primary); /* Jungle Green */
+  margin-bottom: 2rem;
+}
+
+.services-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.service-card {
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 2rem;
+  width: 300px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card .icon {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.service-card h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.service-card p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  color: var(--neutral); /* Corduroy or dark gray */
+  line-height: 1.5;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #fff;
+  background-color: var(--primary); /* Jungle Green */
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;          /* centers horizontally */
+}
+
+.btn-primary:hover {
+  background-color: var(--accent); /* Bahia Yellow */
+  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* wrapper to center the button */
+.btn-wrapper {
+  text-align: center;
+  margin-top: 2rem;
 }

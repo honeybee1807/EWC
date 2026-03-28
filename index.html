@@ -5,7 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Estcourt Waste Collectors</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <!-- GSAP -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
@@ -16,8 +18,7 @@
   <header class="navbar">
     <div class="nav-logo">
       <a href="index.html">
-        <img src="TRANSPARENT.png" alt="EWC Icon Logo" class="logo-icon">
-        <img src="ewc transparent words.png" alt="EWC Words Logo" class="logo-words">
+        <img src="ewc transparent logo.png" alt="EWC Icon Logo" class="logo-icon">
       </a>
     </div>
     <nav>
@@ -36,11 +37,11 @@
     <div class="hero-text">
       <h1>♻️ Reliable <span class="highlight">Recycling</span> Services</h1>
       <p>
-        Cleaner Estcourt, Better Community. We help households and businesses reduce waste, recycle responsibly, and contribute to a greener future.
+        Cleaner Estcourt, Healthier Community. We help households and businesses reduce waste, recycle responsibly, and contribute to a greener future.
       </p>
       <div class="hero-buttons">
         <a href="https://wa.me/27828497869" class="btn-primary">Get a FREE Quote</a>
-        <a href="https://wa.me/27828497869" class="btn-secondary">Request a Service</a>
+        <a href="services.html" class="btn-secondary">Explore Services</a>
       </div>
     </div>
     <div class="hero-image">
@@ -58,12 +59,12 @@
       <h2>Who We Are</h2>
       <p>
         Estcourt Waste Collectors (EWC) is a family‑owned recycling company dedicated to keeping our town clean, reducing landfill waste, and empowering the community through sustainable practices. 
-        For over 15 years, we’ve provided reliable collection services, eco‑friendly recycling solutions, and community outreach programs that make a real difference.
+        For over 25 years, we’ve provided reliable collection services, eco‑friendly recycling solutions, and community outreach programs that make a real difference.
       </p>
       <p>
         Our mission is simple: to transform waste into opportunity, protect the environment, and build a greener future for Estcourt and beyond.
       </p>
-      <a href="about.html" class="btn-primary">Learn More</a>
+      <a href="about.html" class="btn-primary">Learn More About Us</a>
     </div>
     <div class="about-image">
       <img src="images/community-work.jpg" alt="EWC team working in the community">
@@ -71,40 +72,73 @@
   </section>
 
   <!-- Trust Bar -->
-  <section class="trust-bar">
-    <ul>
-      <li>✔ Serving Estcourt</li>
-      <li>✔ Fast Collection</li>
-      <li>✔ Eco Friendly</li>
-    </ul>
-  </section>
+<section class="trust-bar">
+  <ul>
+    <li>
+      <span class="trust-title">25+ YEARS</span><br>
+      <span class="trust-sub">Serving Estcourt</span>
+    </li>
+    <li>
+      <span class="trust-title">FAST & RELIABLE</span><br>
+      <span class="trust-sub">Timely Collections</span>
+    </li>
+    <li>
+      <span class="trust-title">ECO-FRIENDLY</span><br>
+      <span class="trust-sub">Sustainable Practices</span>
+    </li>
+  </ul>
+</section>
+
 
   <!-- Why Choose EWC Section -->
   <section id="why-choose" class="why-choose">
     <h2>Why Choose EWC?</h2>
     <div class="features-grid">
       <div class="feature-card">
-        <div class="icon">📍</div>
+        <div class="icon"><i class="fa fa-heart" aria-hidden="true"></i></div>
         <h3>Local Expertise</h3>
-        <p>We understand Estcourt’s waste management needs and operate with community focus.</p>
+        <p>We understand Estcourt's waste management needs and operate with community focus.</p>
       </div>
       <div class="feature-card">
-        <div class="icon">🚚</div>
+        <div class="icon"><i class="fa fa-truck" aria-hidden="true"></i></div>
         <h3>Fast & Reliable Service</h3>
         <p>Our team ensures timely pickups and dependable recycling solutions.</p>
       </div>
       <div class="feature-card">
-        <div class="icon">♻️</div>
-        <h3>Comprehensive Solutions</h3>
-        <p>From household recycling to commercial waste collection, we cover it all.</p>
+        <div class="icon"><i class="fa fa-recycle" aria-hidden="true"></i></div>
+        <h3>Community</h3>
+        <p>From household recycling to commercial waste collection, we cover it all</p>
       </div>
       <div class="feature-card">
-        <div class="icon">🌱</div>
-        <h3>Eco-Friendly Disposal</h3>
+        <div class="icon"><i class="fa fa-leaf" aria-hidden="true"></i></div>
+        <h3>Eco-Friendly</h3>
         <p>We prioritize sustainable recycling methods to protect the environment.</p>
       </div>
     </div>
   </section>
+
+  <!-- Services Section -->
+  <section class="services-section" data-aos="fade-up">
+    <h2>Our Services</h2>
+    <div class="services-grid">
+      <div class="service-card" data-aos="zoom-in">
+        <div class="icon"><i class="fa fa-recycle" aria-hidden="true"></i></div>
+        <h3>Recycling Services</h3>
+        <p>Paper, plastics, metals, glass, e‑waste, and salvaged goods processed sustainably.</p>
+      </div>
+      <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
+        <div class="icon"><i class="fa fa-trash" aria-hidden="true"></i></div>
+        <h3>Waste Collection</h3>
+        <p>Reliable fleet serving households, businesses, and industries with safe disposal.</p>
+      </div>
+      <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
+        <div class="icon"><i class="fa fa-pagelines" aria-hidden="true"></i></div>
+        <h3>Custom Solutions</h3>
+        <p>Tailored waste management for factories, malls, and agricultural operations.</p>
+      </div>
+    </div>
+  </section>
+  <a href="services.html" class="btn-primary">View All Services</a>
 
   <!-- Testimonials Section -->
   <section id="testimonials" class="testimonials-section">
