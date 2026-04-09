@@ -1,185 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Estcourt Waste Collectors</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Estcourt Waste Collectors — reliable recycling, waste collection and salvaged goods in Estcourt, KwaZulu-Natal.">
+  <title>Estcourt Waste Collectors | Home</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <!-- GSAP -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 </head>
 <body>
 
-  <!-- Header/Navbar -->
+  <!-- ── Navbar ───────────────────────────────────────────── -->
   <header class="navbar">
     <div class="nav-logo">
       <a href="index.html">
-        <img src="ewc transparent logo.png" alt="EWC Icon Logo" class="logo-icon">
+        <img src="TRANSPARENT.png" alt="Estcourt Waste Collectors logo" class="logo-icon">
       </a>
     </div>
+
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
     <nav>
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="salvage.html">Salvaged Goods</a></li>
         <li><a href="contact.html">Contact</a></li>
-      </ul>      
+      </ul>
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section id="hero" class="hero">
-    <div class="hero-text">
-      <h1>♻️ Reliable <span class="highlight">Recycling</span> Services</h1>
-      <p>
-        Cleaner Estcourt, Healthier Community. We help households and businesses reduce waste, recycle responsibly, and contribute to a greener future.
-      </p>
-      <div class="hero-buttons">
-        <a href="https://wa.me/27828497869" class="btn-primary">Get a FREE Quote</a>
-        <a href="services.html" class="btn-secondary">Explore Services</a>
+  <!-- ── Hero ─────────────────────────────────────────────── -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <span class="eyebrow"><i class="fa fa-leaf"></i> Estcourt, KwaZulu-Natal</span>
+        <h1>Recycling for a <em>Cleaner</em> Estcourt</h1>
+        <p>
+          Family-owned and community-driven, EWC provides reliable waste collection,
+          responsible recycling, and affordable salvaged goods — right here in Estcourt.
+        </p>
+        <div class="hero-buttons">
+          <a href="https://wa.me/27828497869" class="btn btn-primary" target="_blank" rel="noopener">
+            <i class="fab fa-whatsapp"></i> Free Quote
+          </a>
+          <a href="services.html" class="btn btn-secondary">Our Services</a>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <img src="ewc_green_logo_2.jpeg" alt="Estcourt Waste Collectors — green recycling">
       </div>
     </div>
-    <div class="hero-image">
-      <img src="images/recycling-truck.jpg" alt="Recycling Truck">
-    </div>
-  </section>
-  
-  <a href="https://wa.me/27828497869" class="whatsapp-float" target="_blank">
-    💬 Chat With Assistant 
-  </a>
-
-  <!-- Who We Are Section -->
-  <section id="about" class="about-section">
-    <div class="about-text">
-      <h2>Who We Are</h2>
-      <p>
-        Estcourt Waste Collectors (EWC) is a family‑owned recycling company dedicated to keeping our town clean, reducing landfill waste, and empowering the community through sustainable practices. 
-        For over 25 years, we’ve provided reliable collection services, eco‑friendly recycling solutions, and community outreach programs that make a real difference.
-      </p>
-      <p>
-        Our mission is simple: to transform waste into opportunity, protect the environment, and build a greener future for Estcourt and beyond.
-      </p>
-      <a href="about.html" class="btn-primary">Learn More About Us</a>
-    </div>
-    <div class="about-image">
-      <img src="images/community-work.jpg" alt="EWC team working in the community">
-    </div>
   </section>
 
-  <!-- Trust Bar -->
-<section class="trust-bar">
-  <ul>
-    <li>
-      <span class="trust-title">25+ YEARS</span><br>
-      <span class="trust-sub">Serving Estcourt</span>
-    </li>
-    <li>
-      <span class="trust-title">FAST & RELIABLE</span><br>
-      <span class="trust-sub">Timely Collections</span>
-    </li>
-    <li>
-      <span class="trust-title">ECO-FRIENDLY</span><br>
-      <span class="trust-sub">Sustainable Practices</span>
-    </li>
-  </ul>
-</section>
+  <!-- ── Trust Bar ─────────────────────────────────────────── -->
+  <div class="trust-bar">
+    <ul>
+      <li>
+        <span class="trust-title">25+ Years</span>
+        <span class="trust-sub">Serving Estcourt</span>
+      </li>
+      <li>
+        <span class="trust-title">Fast &amp; Reliable</span>
+        <span class="trust-sub">Timely Collections</span>
+      </li>
+      <li>
+        <span class="trust-title">Eco-Friendly</span>
+        <span class="trust-sub">Sustainable Practices</span>
+      </li>
+    </ul>
+  </div>
 
+  <!-- ── Who We Are ────────────────────────────────────────── -->
+  <section class="about-section">
+    <div class="about-inner">
+      <div class="about-image" data-reveal>
+        <img src="ewc_green_logo.jpeg" alt="EWC team working in the community">
+      </div>
+      <div class="about-text" data-reveal>
+        <span class="section-label">Who We Are</span>
+        <h2>Estcourt's Trusted Recycling Partner</h2>
+        <p>
+          Estcourt Waste Collectors (EWC) is a family-owned business dedicated to keeping our
+          town clean, reducing landfill waste, and empowering the community through
+          sustainable recycling practices.
+        </p>
+        <p>
+          For over 25 years we have provided reliable waste collection, eco-friendly recycling
+          solutions, and community outreach that make a real difference across KwaZulu-Natal.
+        </p>
+        <a href="about.html" class="btn btn-primary">Learn More About Us</a>
+      </div>
+    </div>
+  </section>
 
-  <!-- Why Choose EWC Section -->
-  <section id="why-choose" class="why-choose">
-    <h2>Why Choose EWC?</h2>
+  <!-- ── Why Choose ────────────────────────────────────────── -->
+  <section class="why-choose">
+    <span class="section-label">Why EWC?</span>
+    <h2>What Sets Us Apart</h2>
+    <p>We know Estcourt — and we know waste. Here's why families and businesses choose us.</p>
+
     <div class="features-grid">
-      <div class="feature-card">
-        <div class="icon"><i class="fa fa-heart" aria-hidden="true"></i></div>
+      <div class="feature-card" data-reveal>
+        <div class="icon"><i class="fa fa-heart"></i></div>
         <h3>Local Expertise</h3>
-        <p>We understand Estcourt's waste management needs and operate with community focus.</p>
+        <p>Deep roots in Estcourt mean we understand the town's unique waste needs and serve with genuine community pride.</p>
       </div>
-      <div class="feature-card">
-        <div class="icon"><i class="fa fa-truck" aria-hidden="true"></i></div>
-        <h3>Fast & Reliable Service</h3>
-        <p>Our team ensures timely pickups and dependable recycling solutions.</p>
+      <div class="feature-card" data-reveal>
+        <div class="icon"><i class="fa fa-truck"></i></div>
+        <h3>Fast &amp; Reliable</h3>
+        <p>Our fleet ensures timely pickups every time — no missed collections, no excuses.</p>
       </div>
-      <div class="feature-card">
-        <div class="icon"><i class="fa fa-recycle" aria-hidden="true"></i></div>
-        <h3>Community</h3>
-        <p>From household recycling to commercial waste collection, we cover it all</p>
+      <div class="feature-card" data-reveal>
+        <div class="icon"><i class="fa fa-recycle"></i></div>
+        <h3>Full Coverage</h3>
+        <p>From household recycling to large commercial waste streams — we handle it all.</p>
       </div>
-      <div class="feature-card">
-        <div class="icon"><i class="fa fa-leaf" aria-hidden="true"></i></div>
+      <div class="feature-card" data-reveal>
+        <div class="icon"><i class="fa fa-leaf"></i></div>
         <h3>Eco-Friendly</h3>
-        <p>We prioritize sustainable recycling methods to protect the environment.</p>
+        <p>Sustainable methods that protect our environment and keep Estcourt beautiful for future generations.</p>
       </div>
     </div>
   </section>
 
-  <!-- Services Section -->
-  <section class="services-section" data-aos="fade-up">
+  <!-- ── Services Preview ───────────────────────────────────── -->
+  <section class="services-section">
+    <span class="section-label">What We Do</span>
     <h2>Our Services</h2>
+    <p class="sub">Comprehensive waste and recycling solutions for homes, businesses, and industries.</p>
+
     <div class="services-grid">
-      <div class="service-card" data-aos="zoom-in">
-        <div class="icon"><i class="fa fa-recycle" aria-hidden="true"></i></div>
+      <div class="service-card" data-reveal>
+        <div class="icon"><i class="fa fa-recycle fa-2x"></i></div>
         <h3>Recycling Services</h3>
-        <p>Paper, plastics, metals, glass, e‑waste, and salvaged goods processed sustainably.</p>
+        <p>Paper, plastics, metals, glass, e-waste and salvaged goods — all processed responsibly.</p>
       </div>
-      <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
-        <div class="icon"><i class="fa fa-trash" aria-hidden="true"></i></div>
+      <div class="service-card" data-reveal>
+        <div class="icon"><i class="fa fa-trash fa-2x"></i></div>
         <h3>Waste Collection</h3>
-        <p>Reliable fleet serving households, businesses, and industries with safe disposal.</p>
+        <p>Reliable fleet serving households, businesses, and industries across Estcourt.</p>
       </div>
-      <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
-        <div class="icon"><i class="fa fa-pagelines" aria-hidden="true"></i></div>
+      <div class="service-card" data-reveal>
+        <div class="icon"><i class="fa fa-cogs fa-2x"></i></div>
         <h3>Custom Solutions</h3>
-        <p>Tailored waste management for factories, malls, and agricultural operations.</p>
+        <p>Tailored waste management for factories, farms, malls and large operations.</p>
       </div>
     </div>
-  </section>
-  <a href="services.html" class="btn-primary">View All Services</a>
 
-  <!-- Testimonials Section -->
-  <section id="testimonials" class="testimonials-section">
-    <h2>Testimonials</h2>
+    <div style="text-align:center; margin-top:1rem;">
+      <a href="services.html" class="btn btn-primary">View All Services</a>
+    </div>
+  </section>
+
+  <!-- ── Testimonials ───────────────────────────────────────── -->
+  <section class="testimonials-section">
+    <span class="section-label">Reviews</span>
+    <h2>What Our Community Says</h2>
+
     <div class="overall-rating">
-      <span class="stars">★★★★★</span>
+      <div class="stars">★★★★★</div>
       <p>4.9 stars based on 653 reviews</p>
-      <button class="review-btn">Write a Review</button>
+      <button class="review-btn" onclick="window.open('https://wa.me/27828497869','_blank')">
+        Write a Review
+      </button>
     </div>
+
     <div class="reviews-grid">
-      <div class="review-card">
+      <div class="review-card" data-reveal>
         <h3>Jessica Montalvo <span class="date">– 7 days ago</span></h3>
-        <p class="stars">★★★★★</p>
-        <p>“Easy to schedule and service was excellent.”</p>
+        <span class="stars">★★★★★</span>
+        <p>"Easy to schedule and service was excellent."</p>
       </div>
-      <div class="review-card">
+      <div class="review-card" data-reveal>
         <h3>Denise Quirion <span class="date">– 8 days ago</span></h3>
-        <p class="stars">★★★★★</p>
-        <p>“Excellent! The team was friendly, knowledgeable, and professional.”</p>
+        <span class="stars">★★★★★</span>
+        <p>"Excellent! The team was friendly, knowledgeable, and professional."</p>
       </div>
-      <div class="review-card">
+      <div class="review-card" data-reveal>
         <h3>Daniel Ryan <span class="date">– 9 days ago</span></h3>
-        <p class="stars">★★★★★</p>
-        <p>“EWC is my go‑to for personal and business recycling. Always reliable and communicative.”</p>
+        <span class="stars">★★★★★</span>
+        <p>"EWC is my go-to for personal and business recycling. Always reliable."</p>
       </div>
-      <div class="review-card">
+      <div class="review-card" data-reveal>
         <h3>Patrick Stapleton <span class="date">– 10 days ago</span></h3>
-        <p class="stars">★★★★★</p>
-        <p>“They removed old materials efficiently and with no mess. Highly recommend.”</p>
+        <span class="stars">★★★★★</span>
+        <p>"Removed old materials efficiently and with no mess. Highly recommend."</p>
       </div>
     </div>
-    <div class="reviews-cta">
-      <a href="https://wa.me/27828497869" class="btn-primary">Contact Us</a>
+
+    <div style="text-align:center; margin-top:2rem;">
+      <a href="contact.html" class="btn btn-primary">Contact Us</a>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- ── Footer ─────────────────────────────────────────────── -->
   <footer class="footer">
     <div class="footer-container">
-      <section class="footer-column">
-        <h2>Navigation</h2>
+      <div class="footer-column footer-logo">
+        <img src="TRANSPARENT.png" alt="EWC Logo">
+        <p>Serving Estcourt and KwaZulu-Natal with reliable, eco-friendly waste collection and recycling.</p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Navigation</h3>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About Us</a></li>
@@ -187,116 +215,37 @@
           <li><a href="salvage.html">Salvaged Goods</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
-      </section>
-      <section class="footer-column">
-        <h2>Contact Details</h2>
-        <p><strong>Address:</strong> 26 Industria Road, Estcourt</p>
-        <p><strong>Phone:</strong> +27 82 849 7869</p>
-        <p><strong>Email:</strong> estcourtwaste@gmail.com</p>
-      </section>
-      <section class="footer-column">
-        <h2>Stay Connected</h2>
-        <div class="social-links">
-          <a href="#">Facebook</a>
-          <a href="#">Instagram</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>Contact</h3>
+        <p><i class="fa fa-map-marker-alt"></i> 26 Industria Road, Estcourt</p>
+        <p><i class="fa fa-phone"></i> +27 82 849 7869</p>
+        <p><i class="fa fa-envelope"></i> estcourtwaste@gmail.com</p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/27828497869" aria-label="WhatsApp" target="_blank" rel="noopener">
+            <i class="fab fa-whatsapp"></i>
+          </a>
         </div>
-      </section>
+      </div>
     </div>
+
     <div class="footer-bottom">
       <p>&copy; 2026 Estcourt Waste Collectors. All rights reserved.</p>
     </div>
   </footer>
 
-    <!-- GSAP Animations -->
-  <script>
-    gsap.registerPlugin(ScrollTrigger);
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/27828497869" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i> Chat With Us
+  </a>
 
-    // Hero animations
-    gsap.from(".hero-text h1", {opacity:0, y:-50, duration:1});
-    gsap.from(".hero-text p", {opacity:0, y:30, duration:1, delay:0.5});
-    gsap.from(".hero-buttons a", {opacity:0, scale:0.8, stagger:0.2, duration:0.8, delay:1});
-    gsap.from(".hero-image img", {opacity:0, x:100, duration:1.2, delay:0.8});
-
-    // About section
-    gsap.from("#about .about-text", {
-      scrollTrigger: "#about",
-      opacity:0,
-      x:-100,
-      duration:1
-    });
-    gsap.from("#about .about-image img", {
-      scrollTrigger: "#about",
-      opacity:0,
-      x:100,
-      duration:1
-    });
-
-    // Trust bar
-    gsap.from(".trust-bar li", {
-      scrollTrigger: ".trust-bar",
-      opacity:0,
-      y:30,
-      stagger:0.2,
-      duration:0.8
-    });
-
-    // Why Choose section
-    gsap.from("#why-choose h2", {
-      scrollTrigger: "#why-choose",
-      opacity:0,
-      y:-50,
-      duration:1
-    });
-    gsap.from(".feature-card", {
-      scrollTrigger: ".features-grid",
-      opacity:0,
-      scale:0.8,
-      stagger:0.2,
-      duration:0.8
-    });
-
-    // Testimonials section
-    gsap.from("#testimonials h2", {
-      scrollTrigger: "#testimonials",
-      opacity:0,
-      y:-50,
-      duration:1
-    });
-    gsap.from(".overall-rating", {
-      scrollTrigger: "#testimonials",
-      opacity:0,
-      scale:0.9,
-      duration:1
-    });
-    gsap.from(".review-card", {
-      scrollTrigger: ".reviews-grid",
-      opacity:0,
-      y:50,
-      stagger:0.2,
-      duration:0.8
-    });
-    gsap.from(".reviews-cta", {
-      scrollTrigger: ".reviews-cta",
-      opacity:0,
-      y:30,
-      duration:1
-    });
-
-    // Footer
-    gsap.from("footer .footer-column", {
-      scrollTrigger: "footer",
-      opacity:0,
-      y:50,
-      stagger:0.3,
-      duration:1
-    });
-    gsap.from("footer .footer-bottom", {
-      scrollTrigger: "footer",
-      opacity:0,
-      y:30,
-      duration:1,
-      delay:0.5
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>

@@ -3,209 +3,329 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Estcourt Waste Collectors services — recycling, waste collection, and custom waste management solutions in KwaZulu-Natal.">
   <title>Services | Estcourt Waste Collectors</title>
   <link rel="stylesheet" href="style.css">
-  <!-- AOS CSS -->
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <style>
-    /* Services Grid */
-    .services-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-      margin: 2rem 0;
-    }
-    .service-card {
-      flex: 1 1 300px;
-      max-width: 320px;
-      background: #fff;
-      border: 2px solid var(--secondary); /* Bahia green */
-      border-radius: 8px;
-      padding: 1.5rem;
+    .services-hero {
+      background: linear-gradient(135deg, var(--forest) 0%, #2d7a4f 100%);
+      padding: 5rem 2rem;
       text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    .service-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    .services-hero h1 { color: var(--white); margin-bottom: .75rem; }
+    .services-hero p  { color: rgba(255,255,255,.85); font-size: 1.1rem; max-width: 540px; margin: 0 auto; }
+
+    .detailed-services {
+      background: var(--white);
+      padding: 5rem 2rem;
     }
-    .service-card .icon {
+
+    .detailed-services h2 { text-align: center; margin-bottom: 2.5rem; }
+
+    .service-row {
+      max-width: 1000px;
+      margin: 0 auto 3rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 2rem;
+      flex-wrap: wrap;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid var(--sand);
+    }
+
+    .service-row:last-child { border-bottom: none; margin-bottom: 0; }
+
+    .service-row.reverse { flex-direction: row-reverse; }
+
+    .service-row-icon {
+      flex: 0 0 80px;
+      width: 80px; height: 80px;
+      background: #e5f5d8;
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       font-size: 2rem;
-      color: var(--primary); /* Jungle green accent */
-      margin-bottom: 0.5rem;
+      color: var(--forest);
+      flex-shrink: 0;
     }
 
-    /* Work in Progress Grid */
-    .work-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-      margin: 2rem 0;
+    .service-row-text { flex: 1 1 280px; }
+    .service-row-text h3 { color: var(--forest); margin-bottom: .6rem; font-size: 1.3rem; }
+    .service-row-text ul {
+      list-style: none;
+      margin-top: .75rem;
     }
-    .work-item {
-      flex: 1 1 300px;
-      max-width: 320px;
+    .service-row-text ul li {
+      padding: .3rem 0;
+      font-size: .9rem;
+      color: var(--stone);
+    }
+    .service-row-text ul li::before {
+      content: '✓ ';
+      color: var(--leaf);
+      font-weight: 700;
+    }
+
+    .process-section {
+      background: var(--cream);
+      padding: 5rem 2rem;
+      text-align: center;
+    }
+
+    .process-section h2 { margin-bottom: 2.5rem; }
+
+    .process-steps {
+      display: flex;
+      justify-content: center;
+      gap: 0;
+      flex-wrap: wrap;
+      max-width: 1000px;
+      margin: 0 auto;
       position: relative;
-      text-align: center;
-    }
-    .work-item img {
-      width: 100%;
-      border-radius: 8px;
-    }
-    .work-item p {
-      margin-top: 0.5rem;
-      font-size: 0.9rem;
-      color: var(--neutral);
     }
 
-    /* Trusted Businesses */
-    .trusted-logos {
+    .process-step {
+      flex: 1 1 180px;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      position: relative;
+    }
+
+    .step-num {
+      width: 52px; height: 52px;
+      background: var(--forest);
+      color: var(--white);
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.3rem;
+      border-radius: 50%;
       display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
+      align-items: center;
       justify-content: center;
-      margin: 2rem 0;
+      margin: 0 auto 1rem;
+      position: relative;
+      z-index: 1;
     }
-    .trusted-logos img, .trusted-logos .logo-placeholder {
-      flex: 1 1 150px;
-      max-width: 180px;
-      background: #fff;
-      border: 1px solid var(--neutral);
-      border-radius: 6px;
-      padding: 1rem;
+
+    .process-step h4 { color: var(--forest); margin-bottom: .4rem; font-size: 1rem; }
+    .process-step p  { font-size: .875rem; }
+
+    .innovation-section {
+      background: var(--white);
+      padding: 5rem 2rem;
       text-align: center;
     }
 
-    /* Responsive */
-    @media (max-width: 768px) {
-      .services-grid, .work-grid, .trusted-logos {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
+    .innovation-section h2 { margin-bottom: 1rem; }
+    .innovation-section p  { max-width: 600px; margin: 0 auto 2rem; }
   </style>
 </head>
 <body>
 
-  <!-- Header/Navbar -->
-  <header class="navbar" data-aos="fade-down">
-    <div class="nav-logo" data-aos="zoom-in">
-      <a href="index.html" class="logo-container">
-        <img src="TRANSPARENT.png" alt="EWC Icon Logo" class="logo-icon">
-        <img src="ewc transparent words.png" alt="EWC Words Logo" class="logo-words">
+  <!-- ── Navbar ───────────────────────────────────────────── -->
+  <header class="navbar">
+    <div class="nav-logo">
+      <a href="index.html">
+        <img src="TRANSPARENT.png" alt="Estcourt Waste Collectors logo" class="logo-icon">
       </a>
     </div>
-    <nav data-aos="fade-left">
+
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav>
       <ul class="nav-links">
-        <li><a href="index.html" data-aos="fade-up">Home</a></li>
-        <li><a href="about.html" data-aos="fade-up" data-aos-delay="100">About Us</a></li>
-        <li><a href="services.html" class="active" data-aos="fade-up" data-aos-delay="200">Services</a></li>
-        <li><a href="salvage.html" data-aos="fade-up" data-aos-delay="300">Salvaged Goods</a></li>
-        <li><a href="contact.html" data-aos="fade-up" data-aos-delay="400">Contact</a></li>
-      </ul>      
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="salvage.html">Salvaged Goods</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
-  <!-- Services Section -->
-  <section class="services-section" data-aos="fade-up">
-    <h2>Our Services</h2>
+  <!-- ── Hero ─────────────────────────────────────────────── -->
+  <section class="services-hero">
+    <span class="section-label" style="color:var(--accent)">What We Offer</span>
+    <h1>Our Services</h1>
+    <p>Comprehensive, community-driven waste and recycling solutions for Estcourt and KwaZulu-Natal.</p>
+  </section>
+
+  <!-- ── Service Cards Overview ────────────────────────────── -->
+  <section class="services-section" style="background: var(--cream);">
     <div class="services-grid">
-      <div class="service-card" data-aos="zoom-in">
-        <div class="icon">♻</div>
+      <div class="service-card" data-reveal>
+        <div class="icon"><i class="fa fa-recycle fa-2x"></i></div>
         <h3>Recycling Services</h3>
-        <p>Paper, plastics, metals, glass, e‑waste, and salvaged goods processed sustainably.</p>
+        <p>Paper, plastics, metals, glass, e-waste and salvaged goods — all processed responsibly and sustainably.</p>
       </div>
-      <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
-        <div class="icon">🗑</div>
+      <div class="service-card" data-reveal>
+        <div class="icon"><i class="fa fa-truck fa-2x"></i></div>
         <h3>Waste Collection</h3>
-        <p>Reliable fleet serving households, businesses, and industries with safe disposal.</p>
+        <p>Reliable fleet serving households, businesses, and industrial clients with scheduled pickups.</p>
       </div>
-      <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
-        <div class="icon">🌿</div>
+      <div class="service-card" data-reveal>
+        <div class="icon"><i class="fa fa-cogs fa-2x"></i></div>
         <h3>Custom Solutions</h3>
-        <p>Tailored waste management for factories, malls, and agricultural operations.</p>
+        <p>Tailored waste management plans for factories, farms, shopping centres and large operations.</p>
+      </div>
+      <div class="service-card" data-reveal>
+        <div class="icon"><i class="fa fa-store fa-2x"></i></div>
+        <h3>Salvaged Goods</h3>
+        <p>Affordable, quality-checked salvaged items available at our Estcourt facility.</p>
+      </div>
+      <div class="service-card" data-reveal>
+        <div class="icon"><i class="fa fa-building fa-2x"></i></div>
+        <h3>Commercial Recycling</h3>
+        <p>Dedicated services for shops, offices, and businesses — reducing costs and environmental impact.</p>
+      </div>
+      <div class="service-card" data-reveal>
+        <div class="icon"><i class="fa fa-seedling fa-2x"></i></div>
+        <h3>Agricultural Waste</h3>
+        <p>Specialised collection and processing of chicory by-products and agricultural waste streams.</p>
       </div>
     </div>
   </section>
 
-  <!-- Work in Progress -->
-  <section class="work-section" data-aos="fade-up">
-    <h2>Our Work in Progress</h2>
-    <div class="work-grid">
-      <div class="work-item" data-aos="fade-up">
-        <img src="images/recycling.jpg" alt="Recycling team">
-        <p>Recycling in action</p>
+  <!-- ── Detailed Breakdown ─────────────────────────────────── -->
+  <section class="detailed-services">
+    <h2>Service Details</h2>
+
+    <div class="service-row" data-reveal>
+      <div class="service-row-icon"><i class="fa fa-recycle"></i></div>
+      <div class="service-row-text">
+        <h3>Recycling Services</h3>
+        <p>We accept and responsibly process a wide range of recyclable materials, keeping them out of Estcourt's landfills and putting them back into the economy.</p>
+        <ul>
+          <li>Paper &amp; cardboard</li>
+          <li>Plastics (all types)</li>
+          <li>Metals &amp; aluminium</li>
+          <li>Glass</li>
+          <li>Electronic waste (e-waste)</li>
+          <li>Salvaged and repurposed goods</li>
+        </ul>
       </div>
-      <div class="work-item" data-aos="fade-up" data-aos-delay="100">
-        <img src="images/collection.jpg" alt="Collection fleet">
-        <p>Collection fleet at work</p>
+    </div>
+
+    <div class="service-row reverse" data-reveal>
+      <div class="service-row-icon"><i class="fa fa-truck"></i></div>
+      <div class="service-row-text">
+        <h3>Waste Collection</h3>
+        <p>Our reliable collection fleet operates across Estcourt and surrounding areas, providing scheduled pickups for homes and businesses — so you never have to worry about overflowing bins.</p>
+        <ul>
+          <li>Household collection schedules</li>
+          <li>Commercial &amp; industrial pickups</li>
+          <li>Large item and bulk removal</li>
+          <li>Same-week bookings available</li>
+        </ul>
       </div>
-      <div class="work-item" data-aos="fade-up" data-aos-delay="200">
-        <img src="images/community.jpg" alt="Community outreach">
-        <p>Community outreach programs</p>
+    </div>
+
+    <div class="service-row" data-reveal>
+      <div class="service-row-icon"><i class="fa fa-cogs"></i></div>
+      <div class="service-row-text">
+        <h3>Custom Waste Management Solutions</h3>
+        <p>Every operation is different. We work with you to design a waste management plan that reduces costs, ensures compliance, and maximises recycling rates for your specific needs.</p>
+        <ul>
+          <li>Factories &amp; manufacturing plants</li>
+          <li>Retail centres &amp; malls</li>
+          <li>Agricultural &amp; chicory operations</li>
+          <li>Schools &amp; community organisations</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <!-- Trusted Businesses -->
-  <section class="trusted-section" data-aos="fade-up">
-    <h2>Trusted Businesses</h2>
-    <div class="trusted-logos">
-      <img src="images/logo1.png" alt="Partner 1">
-      <img src="images/logo2.png" alt="Partner 2">
-      <img src="images/logo3.png" alt="Partner 3">
-      <div class="logo-placeholder">+ More Partners</div>
+  <!-- ── Process ────────────────────────────────────────────── -->
+  <section class="process-section">
+    <span class="section-label">How It Works</span>
+    <h2>Our Simple Process</h2>
+
+    <div class="process-steps">
+      <div class="process-step" data-reveal>
+        <div class="step-num">1</div>
+        <h4>Contact Us</h4>
+        <p>Reach out via phone, WhatsApp, or our contact form to discuss your needs.</p>
+      </div>
+      <div class="process-step" data-reveal>
+        <div class="step-num">2</div>
+        <h4>We Assess</h4>
+        <p>Our team assesses your waste volumes and recommends the right solution.</p>
+      </div>
+      <div class="process-step" data-reveal>
+        <div class="step-num">3</div>
+        <h4>Schedule Pickup</h4>
+        <p>We arrange a convenient collection time that works for your schedule.</p>
+      </div>
+      <div class="process-step" data-reveal>
+        <div class="step-num">4</div>
+        <h4>We Collect</h4>
+        <p>Our team arrives on time, collects everything, and leaves your space clean.</p>
+      </div>
+      <div class="process-step" data-reveal>
+        <div class="step-num">5</div>
+        <h4>We Recycle</h4>
+        <p>Materials are sorted, processed, and recycled responsibly at our facility.</p>
+      </div>
     </div>
   </section>
 
-  <!-- Additional Heading -->
-  <section class="innovation-section" data-aos="fade-up">
+  <!-- ── Innovation ─────────────────────────────────────────── -->
+  <section class="innovation-section">
+    <span class="section-label">Commitment</span>
     <h2>Innovation in Action</h2>
-    <p>We continuously improve our recycling processes, adopt new technologies, and empower Estcourt with sustainable solutions.</p>
+    <p>We continuously improve our processes, adopt greener technologies, and empower Estcourt with solutions that make a lasting difference — for the environment and the economy.</p>
+    <a href="contact.html" class="btn btn-primary">Get a Free Quote</a>
   </section>
 
-  <!-- Footer -->
-  <footer class="footer" data-aos="fade-up">
+  <!-- ── Footer ─────────────────────────────────────────────── -->
+  <footer class="footer">
     <div class="footer-container">
-      <section class="footer-column" data-aos="fade-right">
-        <h2>Navigation</h2>
+      <div class="footer-column footer-logo">
+        <img src="TRANSPARENT.png" alt="EWC Logo">
+        <p>Serving Estcourt and KwaZulu-Natal with reliable, eco-friendly waste collection and recycling.</p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Navigation</h3>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html" class="active">Services</a></li>
+          <li><a href="services.html">Services</a></li>
           <li><a href="salvage.html">Salvaged Goods</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
-      </section>
-      <section class="footer-column" data-aos="fade-up" data-aos-delay="200">
-        <h2>Contact Details</h2>
-        <p><strong>Address:</strong> 26 Industria Road, Estcourt</p>
-        <p><strong>Phone:</strong> +27 82 849 7869</p>
-        <p><strong>Email:</strong> estcourtwaste@gmail.com</p>
-      </section>
-      <section class="footer-column" data-aos="fade-left" data-aos-delay="300">
-        <h2>Stay Connected</h2>
-        <div class="social-links" data-aos="zoom-in">
-          <a href="#">Facebook</a>
-          <a href="#">Instagram</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>Contact</h3>
+        <p><i class="fa fa-map-marker-alt"></i> 26 Industria Road, Estcourt</p>
+        <p><i class="fa fa-phone"></i> +27 82 849 7869</p>
+        <p><i class="fa fa-envelope"></i> estcourtwaste@gmail.com</p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/27828497869" aria-label="WhatsApp" target="_blank" rel="noopener">
+            <i class="fab fa-whatsapp"></i>
+          </a>
         </div>
-      </section>
+      </div>
     </div>
-    <div class="footer-bottom" data-aos="fade-up" data-aos-delay="400">
+    <div class="footer-bottom">
       <p>&copy; 2026 Estcourt Waste Collectors. All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- AOS JS -->
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 1000,
-      once: true,
-      offset: 100
-    });
-  </script>
+  <a href="https://wa.me/27828497869" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i> Chat With Us
+  </a>
+
+  <script src="script.js"></script>
 </body>
 </html>

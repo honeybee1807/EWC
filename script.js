@@ -1,191 +1,128 @@
-// Handle contact form submission
-const contactForm = document.querySelector("form"); 
-if (contactForm) {
-  contactForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-    alert("Thank you for contacting Estcourt Waste Collectors!");
-    contactForm.reset();
-  });
-}
+/* ============================================================
+   ESTCOURT WASTE COLLECTORS — script.js
+   Shared interactive behaviour across all pages
+   ============================================================ */
 
-// Impact slider functionality
-const impactText = document.querySelector("#impact p");
-const messages = [
-  "We recycle thousands of tons annually, reducing landfill waste.",
-  "Our salvaged goods program provides affordable items for families.",
-  "Chicory and agricultural by-products are repurposed sustainably."
-];
+document.addEventListener('DOMContentLoaded', () => {
 
-let currentIndex = 0;
-const updateImpactText = () => {
-  if (impactText) {
-    impactText.textContent = messages[currentIndex];
+  /* ── Mobile Nav Toggle ─────────────────────────────────── */
+  const toggle = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  if (toggle && navLinks) {
+    toggle.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+
+    // Close menu when a link is clicked
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => navLinks.classList.remove('open'));
+    });
   }
-};
 
-document.querySelectorAll("#impact .arrow").forEach((arrow) => {
-  arrow.addEventListener("click", () => {
-    if (arrow.classList.contains("left")) {
-      currentIndex = (currentIndex - 1 + messages.length) % messages.length;
-    } else {
-      currentIndex = (currentIndex + 1) % messages.length;
-    }
-    updateImpactText();
-  });
-});
+  /* ── Contact Form (EmailJS) ────────────────────────────── */
+  const form = document.getElementById('contact-form');
+  if (form) {
+    const btn  = form.querySelector('.form-submit');
+    const msg  = document.getElementById('form-message');
 
-// Impact counter animation (GSAP version)
-const counter = document.querySelector("#impact-counter");
-if (counter) {
-  gsap.fromTo(counter, 
-    { innerText: 0 }, 
-    {
-      innerText: 10000,
-      duration: 3,
-      ease: "power1.out",
-      snap: { innerText: 1 },
-      onUpdate: function () {
-        counter.textContent = `Over ${Math.floor(counter.innerText).toLocaleString()} tons recycled since 2010.`;
-      },
-      scrollTrigger: {
-        trigger: "#impact-counter",
-        start: "top 80%",
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      btn.disabled = true;
+      btn.textContent = 'Sending…';
+
+      const data = {
+        from_name:  form.querySelector('[name="name"]').value,
+        from_email: form.querySelector('[name="email"]').value,
+        phone:      form.querySelector('[name="phone"]')?.value || '',
+        subject:    form.querySelector('[name="subject"]')?.value || 'Website Enquiry',
+        message:    form.querySelector('[name="message"]').value,
+        to_email:   'estcourtwaste@gmail.com'
+      };
+
+      try {
+        // EmailJS send — replace with your own Service ID, Template ID, Public Key
+        await emailjs.send(
+          'YOUR_SERVICE_ID',
+          'YOUR_TEMPLATE_ID',
+          data,
+          'YOUR_PUBLIC_KEY'
+        );
+
+        msg.textContent = '✅ Thank you! We\'ll be in touch shortly.';
+        msg.className = 'form-msg success';
+        form.reset();
+      } catch (err) {
+        // Fallback: open mailto link so message is never lost
+        const body = `Name: ${data.from_name}\nPhone: ${data.phone}\n\n${data.message}`;
+        window.location.href =
+          `mailto:estcourtwaste@gmail.com?subject=${encodeURIComponent(data.subject)}&body=${encodeURIComponent(body)}`;
+
+        msg.textContent = '📧 Your email client has opened — please send the email to reach us.';
+        msg.className = 'form-msg info';
+      } finally {
+        btn.disabled = false;
+        btn.textContent = 'Send Message';
       }
-    }
-  );
-}
+    });
+  }
 
-// Call-to-action button
-const ctaButton = document.querySelector("#cta button");
-if (ctaButton) {
-  ctaButton.addEventListener("click", () => {
-    alert("Thank you for joining our mission! Together we can build a cleaner Estcourt.");
+  /* ── Intersection-observer fade-in ─────────────────────── */
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('[data-reveal]').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(28px)';
+    el.style.transition = 'opacity .6s ease, transform .6s ease';
+    observer.observe(el);
   });
-}
 
-// Smooth scroll for navigation links
-document.querySelectorAll("nav a[href^='#']").forEach(link => {
-  link.addEventListener("click", function(e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute("href"));
-    if (target) {
-      target.scrollIntoView({ behavior: "smooth" });
-    }
-  });
-});
+  /* ── Animated counters ──────────────────────────────────── */
+  const counters = document.querySelectorAll('[data-count]');
+  if (counters.length) {
+    const countObs = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const el    = entry.target;
+        const end   = parseInt(el.dataset.count, 10);
+        const dur   = 1800;
+        const step  = end / (dur / 16);
+        let current = 0;
+        const tick  = () => {
+          current += step;
+          if (current >= end) {
+            el.textContent = end.toLocaleString() + (el.dataset.suffix || '');
+          } else {
+            el.textContent = Math.floor(current).toLocaleString() + (el.dataset.suffix || '');
+            requestAnimationFrame(tick);
+          }
+        };
+        requestAnimationFrame(tick);
+        countObs.unobserve(el);
+      });
+    }, { threshold: 0.5 });
 
-// WhatsApp Help Center button
-const whatsappBtn = document.querySelector(".whatsapp-btn");
-if (whatsappBtn) {
-  whatsappBtn.addEventListener("click", () => {
-    window.open("https://wa.me/27828497869", "_blank"); 
-  });
-}
+    counters.forEach(c => countObs.observe(c));
+  }
 
-// Highlight seasonal stock dynamically
-const seasonalSection = document.querySelector("#seasonal p");
-if (seasonalSection) {
-  const seasonalItems = ["Garden Tools", "Harvest Chicory", "Winter Clothing"];
-  seasonalSection.textContent += ` Current highlights: ${seasonalItems.join(", ")}.`;
-}
+  /* ── Sticky nav shadow on scroll ───────────────────────── */
+  const navbar = document.querySelector('.navbar');
+  if (navbar) {
+    window.addEventListener('scroll', () => {
+      navbar.style.boxShadow = window.scrollY > 10
+        ? '0 2px 18px rgba(0,0,0,.12)'
+        : '0 2px 12px rgba(0,0,0,.07)';
+    });
+  }
 
-/* ============================
-   GSAP Cinematic Animations
-   ============================ */
-gsap.registerPlugin(ScrollTrigger);
-
-// Hero animations
-gsap.from(".hero-text h1", { opacity: 0, y: -50, duration: 1 });
-gsap.from(".hero-text p", { opacity: 0, y: 30, duration: 1, delay: 0.5 });
-gsap.from(".hero-buttons a", { opacity: 0, scale: 0.8, stagger: 0.2, duration: 0.8, delay: 1 });
-gsap.from(".hero-image img", { opacity: 0, x: 100, duration: 1.2, delay: 0.8 });
-
-// About section
-gsap.from("#about .about-text", {
-  scrollTrigger: "#about",
-  opacity: 0,
-  x: -100,
-  duration: 1
-});
-gsap.from("#about .about-image img", {
-  scrollTrigger: "#about",
-  opacity: 0,
-  x: 100,
-  duration: 1
-});
-
-// Trust bar
-gsap.from(".trust-bar li", {
-  scrollTrigger: ".trust-bar",
-  opacity: 0,
-  y: 30,
-  stagger: 0.2,
-  duration: 0.8
-});
-
-// Why Choose section
-gsap.from("#why-choose h2", {
-  scrollTrigger: "#why-choose",
-  opacity: 0,
-  y: -50,
-  duration: 1
-});
-gsap.from(".feature-card", {
-  scrollTrigger: ".features-grid",
-  opacity: 0,
-  scale: 0.8,
-  stagger: 0.2,
-  duration: 0.8
-});
-
-// Testimonials section
-gsap.from("#testimonials h2", {
-  scrollTrigger: "#testimonials",
-  opacity: 0,
-  y: -50,
-  duration: 1
-});
-gsap.from(".overall-rating", {
-  scrollTrigger: "#testimonials",
-  opacity: 0,
-  scale: 0.9,
-  duration: 1
-});
-gsap.from(".review-card", {
-  scrollTrigger: ".reviews-grid",
-  opacity: 0,
-  y: 50,
-  stagger: 0.2,
-  duration: 0.8
-});
-gsap.from(".reviews-cta", {
-  scrollTrigger: ".reviews-cta",
-  opacity: 0,
-  y: 30,
-  duration: 1
-});
-
-// Footer
-gsap.from("footer .footer-column", {
-  scrollTrigger: "footer",
-  opacity: 0,
-  y: 50,
-  stagger: 0.3,
-  duration: 1
-});
-gsap.from("footer .footer-bottom", {
-  scrollTrigger: "footer",
-  opacity: 0,
-  y: 30,
-  duration: 1,
-  delay: 0.5
-});
-
-// Pulse animation for CTA quote or button
-gsap.to(".cta-quote, #cta button", {
-  scale: 1.05,
-  duration: 1,
-  repeat: -1,
-  yoyo: true,
-  ease: "power1.inOut"
 });

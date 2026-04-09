@@ -1,390 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn about Estcourt Waste Collectors — our story, mission, values, and impact in KwaZulu-Natal.">
   <title>About Us | Estcourt Waste Collectors</title>
   <link rel="stylesheet" href="style.css">
-  <!-- AOS CSS -->
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <style>
-    /* Hero Split Layout */
-    .hero-split {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      background: #fff;
-      border-top: 6px solid var(--secondary); /* Bahia green accent */
-      padding: 3rem 2rem;
-    }
-    .hero-text {
-      flex: 1;
-      min-width: 280px;
-      padding: 1rem;
-    }
-    .hero-text h1 {
-      font-size: 2.5rem;
-      color: var(--secondary);
-    }
-    .hero-text p {
-      font-size: 1.2rem;
-      color: var(--neutral);
-    }
-    .hero-image {
-      flex: 1;
-      min-width: 280px;
-      text-align: center;
-    }
-    .hero-image img {
-      max-width: 100%;
-      border-radius: 8px;
-    }
-
-    /* Alternating Layout */
-    .alt-row {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      padding: 2rem;
-    }
-    .alt-row:nth-child(even) {
-      flex-direction: row-reverse;
-    }
-    .alt-row img {
-      flex: 1;
-      max-width: 100%;
-      border-radius: 8px;
-    }
-    .alt-row .text {
-      flex: 1;
-      padding: 1rem;
-    }
-
-    /* Overlay Section */
-    .overlay-section {
-      position: relative;
-      background: url('images/recycling-bins.jpg') center/cover no-repeat;
-      color: #fff;
-      padding: 4rem 2rem;
-    }
-    .overlay-box {
-      background: rgba(34,168,134,0.9); /* Jungle Green overlay */
-      padding: 2rem;
-      border-radius: 8px;
-      max-width: 600px;
-      margin: auto;
-      text-align: center;
-    }
-
-    /* Values Grid */
-    .values-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-      padding: 2rem;
-    }
-    .value-card {
-      flex: 1 1 200px;
-      background: #fff;
-      border: 2px solid var(--secondary);
-      border-radius: 8px;
-      text-align: center;
-      padding: 1.5rem;
-      font-size: 1.1rem;
-    }
-
-    /* Team Profile Cards */
-    .team-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-      padding: 2rem;
-    }
-    .team-card {
-      flex: 1 1 200px;
-      max-width: 220px;
-      background: #fff;
-      border: 1px solid var(--neutral);
-      border-radius: 8px;
-      text-align: center;
-      padding: 1rem;
-    }
-    .team-card img {
-      width: 100%;
-      border-radius: 50%;
-      margin-bottom: 0.5rem;
-    }
-
-    /* Impact Counters */
-    .impact-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-      padding: 2rem;
-    }
-    .impact-card {
-      flex: 1 1 200px;
-      background: #fff;
-      border: 2px solid var(--secondary);
-      border-radius: 8px;
-      text-align: center;
-      padding: 1.5rem;
-      font-size: 1.2rem;
-    }
-
-    /* Timeline */
-    .timeline {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-      padding: 2rem;
-    }
-    .timeline-item {
-      flex: 1 1 200px;
-      text-align: center;
-    }
-    .timeline-item::before {
-      content: "⬤";
-      display: block;
-      color: var(--secondary);
-      font-size: 1.5rem;
-      margin-bottom: 0.5rem;
-    }
-
-    /* CTA Banner */
-    .cta-banner {
-      background: var(--neutral);
-      color: #fff;
-      text-align: center;
-      padding: 3rem 2rem;
-    }
-    .cta-banner h2 {
-      margin-bottom: 1rem;
-    }
-    .cta-banner .btn-primary {
-      background: var(--primary);
-      color: #fff;
-      padding: 0.8rem 1.5rem;
-      border-radius: 4px;
-      text-decoration: none;
-    }
-    .cta-banner .btn-primary:hover {
-      background: var(--secondary);
-    }
-
-    @media (max-width: 768px) {
-      .hero-split, .alt-row {
-        flex-direction: column;
-      }
-      .values-grid, .team-grid, .impact-grid, .timeline {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
-  <!-- Header/Navbar -->
-  <header class="navbar" data-aos="fade-down">
-    <div class="nav-logo" data-aos="zoom-in">
-      <a href="index.html" class="logo-container">
-        <img src="TRANSPARENT.png" alt="EWC Icon Logo" class="logo-icon">
-        <img src="ewc transparent words.png" alt="EWC Words Logo" class="logo-words">
+  <!-- ── Navbar ───────────────────────────────────────────── -->
+  <header class="navbar">
+    <div class="nav-logo">
+      <a href="index.html">
+        <img src="TRANSPARENT.png" alt="Estcourt Waste Collectors logo" class="logo-icon">
       </a>
     </div>
-    <nav data-aos="fade-left">
+
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html" class="active">About Us</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="salvage.html">Salvaged Goods</a></li>
         <li><a href="contact.html">Contact</a></li>
-      </ul>      
+      </ul>
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero-split" data-aos="fade-up">
-    <div class="hero-text">
-      <h1>About Estcourt Waste Collectors</h1>
-      <p>From humble beginnings to trusted recycling partner in KwaZulu‑Natal.</p>
-    </div>
-    <div class="hero-image">
-      <img src="images/community-work.jpg" alt="Community Recycling">
-    </div>
-  </section>
-
-  <!-- Our Story (Alternating Layout) -->
-  <section class="alt-row" data-aos="fade-up">
-    <div class="text">
-      <h2>Our Story</h2>
-      <p>Started as a small family initiative in Estcourt, EWC has grown into a trusted recycling partner serving households and businesses.</p>
-    </div>
-    <img src="images/early-truck.jpg" alt="Early Recycling Truck">
-  </section>
-  <section class="alt-row" data-aos="fade-up">
-    <div class="text">
-      <h2>Growth & Community</h2>
-      <p>From one truck in 2010 to hundreds of pickups today, our journey is rooted in community and sustainability.</p>
-    </div>
-    <img src="images/family-team.jpg" alt="Family Team">
-  </section>
-
-  <!-- Mission & Vision (Overlay Style) -->
-  <section class="overlay-section" data-aos="fade-up">
-    <div class="overlay-box">
-      <h2>Our Mission & Vision</h2>
-      <p>Transform waste into opportunity, protect the environment, and empower communities through sustainable recycling.</p>
+  <!-- ── Page Hero ──────────────────────────────────────────── -->
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <div class="page-hero-text fade-up">
+        <span class="section-label">Our Story</span>
+        <h1>About Estcourt Waste Collectors</h1>
+        <p>From humble beginnings to a trusted recycling partner across KwaZulu-Natal — built on community, care, and sustainability.</p>
+      </div>
+      <div class="page-hero-image fade-up delay-2">
+        <img src="ewc_green_logo_2.jpeg" alt="EWC community recycling">
+      </div>
     </div>
   </section>
 
-  <!-- Values (Icon Grid) -->
-  <section id="values" data-aos="fade-up">
-    <h2>Our Values</h2>
+  <!-- ── Our Story ──────────────────────────────────────────── -->
+  <section class="story-section">
+    <div class="story-inner">
+      <div class="story-image" data-reveal>
+        <img src="ewc_green_logo.jpeg" alt="Early days of EWC">
+      </div>
+      <div class="story-text" data-reveal>
+        <span class="section-label">How It Started</span>
+        <h2>A Family Initiative, A Community Movement</h2>
+        <p>
+          Estcourt Waste Collectors was born out of a simple belief: that a cleaner town is a
+          stronger town. Started as a small, family-run operation in Estcourt, EWC has grown
+          into one of the most trusted recycling services in the region.
+        </p>
+        <p>
+          From our early days with a single collection vehicle to a growing fleet serving
+          hundreds of households and businesses, every step of our journey has been rooted in
+          community empowerment and environmental responsibility.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Mission & Vision ───────────────────────────────────── -->
+  <section class="mission-section">
+    <div data-reveal>
+      <span class="section-label" style="color:var(--accent)">Mission &amp; Vision</span>
+      <h2>What Drives Us</h2>
+      <p>
+        Our mission is to transform waste into opportunity — protecting the environment,
+        creating jobs, and empowering Estcourt families through sustainable, community-first
+        recycling. Our vision is a KwaZulu-Natal where no recyclable material ever reaches
+        a landfill unnecessarily.
+      </p>
+    </div>
+  </section>
+
+  <!-- ── Values ─────────────────────────────────────────────── -->
+  <section class="values-section">
+    <span class="section-label">Core Values</span>
+    <h2>What We Stand For</h2>
+
     <div class="values-grid">
-      <div class="value-card">♻ Sustainability</div>
-      <div class="value-card">🤝 Community Empowerment</div>
-      <div class="value-card">✔ Integrity</div>
-      <div class="value-card">💡 Innovation</div>
-    </div>
-  </section>
-
-  <!-- Team Members -->
-  <section id="team" data-aos="fade-up">
-    <h2>Meet Our Team</h2>
-    <div class="team-grid">
-      <div class="team-card">
-        <img src="images/staff1.jpg" alt="Jabu">
-        <p>Jabu – 8 years with EWC, known for never missing a pickup.</p>
+      <div class="value-card" data-reveal>
+        <div class="vi">♻️</div>
+        <h3>Sustainability</h3>
       </div>
-      <div class="team-card">
-        <img src="images/staff2.jpg" alt= "Thandi">
-        <p>Thandi – passionate about community outreach and recycling education.</p>
+      <div class="value-card" data-reveal>
+        <div class="vi">🤝</div>
+        <h3>Community First</h3>
       </div>
-      <div class="team-card">
-        <img src="images/staff3.jpg" alt="Sipho">
-        <p>Sipho – fleet manager ensuring reliable pickups across Estcourt.</p>
+      <div class="value-card" data-reveal>
+        <div class="vi">✅</div>
+        <h3>Integrity</h3>
+      </div>
+      <div class="value-card" data-reveal>
+        <div class="vi">💡</div>
+        <h3>Innovation</h3>
+      </div>
+      <div class="value-card" data-reveal>
+        <div class="vi">🌿</div>
+        <h3>Environmental Care</h3>
       </div>
     </div>
   </section>
 
-  <!-- Community Partnerships -->
-  <section id="community-partnerships" data-aos="fade-up">
-    <h2>Working Together</h2>
-    <div class="trusted-logos">
-      <img src="images/logo1.png" alt="School Partner">
-      <img src="images/logo2.png" alt="NGO Partner">
-      <img src="images/logo3.png" alt="Local Business Partner">
-    </div>
-  </section>
-
-  <!-- Customer Stories (Carousel) -->
-  <section id="customer-stories" data-aos="fade-up">
-    <h2>Customer Stories</h2>
-    <div class="testimonial-carousel">
-      <div class="testimonial">
-        <p>“EWC made recycling easy for our family.” – Naidoo Family</p>
-      </div>
-      <div class="testimonial">
-        <p>“Partnering with EWC reduced our costs and boosted sustainability.” – Estcourt Hardware</p>
-      </div>
-      <div class="testimonial">
-        <p>“Reliable pickups and friendly staff. Highly recommended.” – Mkhize Household</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Impact in Numbers -->
-  <section id="impact-numbers" data-aos="fade-up">
+  <!-- ── Impact in Numbers ──────────────────────────────────── -->
+  <section class="impact-section">
+    <span class="section-label">Our Impact</span>
     <h2>Impact in Numbers</h2>
+
     <div class="impact-grid">
-      <div class="impact-card">📦 <strong>10,000+</strong><br>Tons recycled</div>
-      <div class="impact-card">👨‍👩‍👧 <strong>500+</strong><br>Families served</div>
-      <div class="impact-card">🏢 <strong>50+</strong><br>Businesses supported</div>
+      <div class="impact-card" data-reveal>
+        <span class="num" data-count="10000" data-suffix="+">0</span>
+        <p>Tons recycled</p>
+      </div>
+      <div class="impact-card" data-reveal>
+        <span class="num" data-count="500" data-suffix="+">0</span>
+        <p>Families served</p>
+      </div>
+      <div class="impact-card" data-reveal>
+        <span class="num" data-count="50" data-suffix="+">0</span>
+        <p>Businesses supported</p>
+      </div>
+      <div class="impact-card" data-reveal>
+        <span class="num" data-count="25" data-suffix="+ yrs">0</span>
+        <p>In the community</p>
+      </div>
     </div>
   </section>
 
-  <!-- Awards & Recognition -->
-  <section id="awards" data-aos="fade-up">
-    <h2>Recognition</h2>
-    <div class="trusted-logos">
-      <img src="images/award1.png" alt="Award 1">
-      <img src="images/award2.png" alt="Award 2">
-      <img src="images/award3.png" alt="Award 3">
-    </div>
-  </section>
+  <!-- ── Future Goals ───────────────────────────────────────── -->
+  <section class="timeline-section">
+    <span class="section-label">Looking Ahead</span>
+    <h2>Our Future Goals</h2>
 
-  <!-- Future Goals (Timeline) -->
-  <section id="future" data-aos="fade-up">
-    <h2>Future Goals</h2>
     <div class="timeline">
-      <div class="timeline-item">
+      <div class="timeline-item" data-reveal>
+        <div class="dot"></div>
         <h3>Expand Facilities</h3>
-        <p>Increase recycling capacity across Estcourt.</p>
+        <p>Increase recycling capacity across Estcourt and surrounding areas.</p>
       </div>
-      <div class="timeline-item">
+      <div class="timeline-item" data-reveal>
+        <div class="dot"></div>
         <h3>Create More Jobs</h3>
-        <p>Empower local families with employment opportunities.</p>
+        <p>Empower local families with meaningful employment in recycling.</p>
       </div>
-      <div class="timeline-item">
+      <div class="timeline-item" data-reveal>
+        <div class="dot"></div>
         <h3>Lead Sustainability</h3>
-        <p>Set the standard for waste management in South Africa.</p>
+        <p>Set the regional standard for responsible waste management in KZN.</p>
       </div>
     </div>
   </section>
 
-  <!-- Call to Action Banner -->
-  <section class="cta-banner" data-aos="fade-up">
-    <h2>Join the Estcourt Recycling Movement</h2>
-    <a href="contact.html" class="btn-primary">Get Involved</a>
+  <!-- ── Customer Stories ───────────────────────────────────── -->
+  <section class="testimonials-section">
+    <span class="section-label">From Our Community</span>
+    <h2>Customer Stories</h2>
+
+    <div class="reviews-grid" style="max-width:900px; margin:2rem auto 0;">
+      <div class="review-card" data-reveal>
+        <span class="stars">★★★★★</span>
+        <p>"EWC made recycling easy for our family. Friendly, reliable and always on time."</p>
+        <h3>— Naidoo Family</h3>
+      </div>
+      <div class="review-card" data-reveal>
+        <span class="stars">★★★★★</span>
+        <p>"Partnering with EWC reduced our waste costs and boosted our sustainability."</p>
+        <h3>— Estcourt Hardware</h3>
+      </div>
+      <div class="review-card" data-reveal>
+        <span class="stars">★★★★★</span>
+        <p>"Reliable pickups and friendly staff. Highly recommended to any local business."</p>
+        <h3>— Mkhize Household</h3>
+      </div>
+    </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="footer" data-aos="fade-up">
+  <!-- ── CTA ────────────────────────────────────────────────── -->
+  <div style="padding: 0 2rem 4rem;">
+    <div class="cta-section">
+      <h2>Join the Estcourt Recycling Movement</h2>
+      <p>Whether you're a household or a business, we have a solution that fits you.</p>
+      <a href="contact.html" class="btn btn-outline-white">Get Involved</a>
+    </div>
+  </div>
+
+  <!-- ── Footer ─────────────────────────────────────────────── -->
+  <footer class="footer">
     <div class="footer-container">
-      <section class="footer-column">
-        <h2>Navigation</h2>
+      <div class="footer-column footer-logo">
+        <img src="TRANSPARENT.png" alt="EWC Logo">
+        <p>Serving Estcourt and KwaZulu-Natal with reliable, eco-friendly waste collection and recycling.</p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Navigation</h3>
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="about.html" class="active">About Us</a></li>
+          <li><a href="about.html">About Us</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="salvage.html">Salvaged Goods</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
-      </section>
-      <section class="footer-column">
-        <h2>Contact Details</h2>
-        <p><strong>Address:</strong> 26 Industria Road, Estcourt</p>
-        <p><strong>Phone:</strong> +27 82 849 7869</p>
-        <p><strong>Email:</strong> estcourtwaste@gmail.com</p>
-      </section>
-      <section class="footer-column">
-        <h2>Stay Connected</h2>
-        <div class="social-links">
-          <a href="#">Facebook</a>
-          <a href="#">Instagram</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>Contact</h3>
+        <p><i class="fa fa-map-marker-alt"></i> 26 Industria Road, Estcourt</p>
+        <p><i class="fa fa-phone"></i> +27 82 849 7869</p>
+        <p><i class="fa fa-envelope"></i> estcourtwaste@gmail.com</p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/27828497869" aria-label="WhatsApp" target="_blank" rel="noopener">
+            <i class="fab fa-whatsapp"></i>
+          </a>
         </div>
-      </section>
+      </div>
     </div>
     <div class="footer-bottom">
       <p>&copy; 2026 Estcourt Waste Collectors. All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- AOS JS -->
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 1000,
-      once: true,
-      offset: 100
-    });
-  </script>
+  <a href="https://wa.me/27828497869" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i> Chat With Us
+  </a>
+
+  <script src="script.js"></script>
 </body>
 </html>
