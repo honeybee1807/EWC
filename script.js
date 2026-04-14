@@ -45,10 +45,10 @@ document.addEventListener('DOMContentLoaded', () => {
       try {
         // EmailJS send — replace with your own Service ID, Template ID, Public Key
         await emailjs.send(
-          'YOUR_SERVICE_ID',
-          'YOUR_TEMPLATE_ID',
+          'service_84mbqzb',
+          'template_qst3raa',
           data,
-          'YOUR_PUBLIC_KEY'
+          'O7zXi6ExJZ1hlYPfZ'
         );
 
         msg.textContent = '✅ Thank you! We\'ll be in touch shortly.';
