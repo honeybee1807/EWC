@@ -4,23 +4,87 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Affordable salvaged and repurposed goods from Estcourt Waste Collectors — furniture, appliances, building materials and more.">
+
   <title>Salvaged Goods | Estcourt Waste Collectors</title>
+
+  <!-- ── Canonical ─────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.estcourtwaste.co.za/salvage.html">
+
+  <!-- ── Favicon ───────────────────────────────────────────── -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="ewc_logo.png">
+
+  <!-- ── Open Graph ────────────────────────────────────────── -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://www.estcourtwaste.co.za/salvage.html">
+  <meta property="og:title"       content="Salvaged Goods | Estcourt Waste Collectors">
+  <meta property="og:description" content="Quality pre-owned and repurposed items — saving you money while keeping waste out of Estcourt's landfills.">
+  <meta property="og:image"       content="https://www.estcourtwaste.co.za/ewc_logo.png">
+  <meta property="og:image:alt"   content="Estcourt Waste Collectors logo">
+  <meta property="og:site_name"   content="Estcourt Waste Collectors">
+  <meta property="og:locale"      content="en_ZA">
+
+  <!-- ── Twitter Card ──────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Salvaged Goods | Estcourt Waste Collectors">
+  <meta name="twitter:description" content="Quality pre-owned and repurposed items — saving you money while keeping waste out of Estcourt's landfills.">
+  <meta name="twitter:image"       content="https://www.estcourtwaste.co.za/ewc_logo.png">
+
+  <!-- ── JSON-LD Schema ────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Store",
+    "name": "Estcourt Waste Collectors — Salvaged Goods",
+    "parentOrganization": {
+      "@type": "LocalBusiness",
+      "name": "Estcourt Waste Collectors"
+    },
+    "description": "Quality pre-owned and repurposed goods including furniture, appliances, building materials, electronics, and chicory by-products.",
+    "url": "https://www.estcourtwaste.co.za/salvage.html",
+    "logo": "https://www.estcourtwaste.co.za/ewc_logo.png",
+    "telephone": "+27828497869",
+    "email": "estcourtwaste@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "26 Industria Road",
+      "addressLocality": "Estcourt",
+      "addressRegion": "KwaZulu-Natal",
+      "postalCode": "3310",
+      "addressCountry": "ZA"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "07:00",
+        "closes": "17:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "08:00",
+        "closes": "13:00"
+      }
+    ],
+    "paymentAccepted": "Cash, Card",
+    "currenciesAccepted": "ZAR"
+  }
+  </script>
+
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <style>
     .salvage-hero {
-      background: linear-gradient(135deg, #2a6e40 0%, var(--forest) 100%);
+      background: linear-gradient(135deg, #1a8a6e 0%, var(--forest) 100%);
       padding: 5rem 2rem;
       text-align: center;
     }
     .salvage-hero h1 { color: var(--white); margin-bottom: .75rem; }
     .salvage-hero p  { color: rgba(255,255,255,.85); font-size: 1.1rem; max-width: 540px; margin: 0 auto 2rem; }
 
-    .intro-section {
-      background: var(--white);
-      padding: 5rem 2rem;
-      text-align: center;
-    }
+    .intro-section { background: var(--white); padding: 5rem 2rem; text-align: center; }
     .intro-section h2 { margin-bottom: 1rem; }
     .intro-section p  { max-width: 650px; margin: 0 auto; }
 
@@ -37,11 +101,7 @@
       margin-bottom: .5rem;
     }
 
-    .how-to-buy {
-      background: var(--white);
-      padding: 5rem 2rem;
-    }
-
+    .how-to-buy { background: var(--white); padding: 5rem 2rem; }
     .how-to-buy-inner {
       max-width: 1000px;
       margin: 0 auto;
@@ -50,20 +110,12 @@
       gap: 4rem;
       flex-wrap: wrap;
     }
-
     .how-to-buy-text { flex: 1 1 300px; }
     .how-to-buy-text h2 { margin-bottom: 1rem; }
     .how-to-buy-text p  { margin-bottom: 1rem; }
-
     .how-steps { flex: 1 1 260px; }
 
-    .how-step {
-      display: flex;
-      align-items: flex-start;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
-    }
-
+    .how-step { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.5rem; }
     .how-step-num {
       width: 36px; height: 36px;
       background: var(--forest);
@@ -76,15 +128,10 @@
       font-size: .9rem;
       flex-shrink: 0;
     }
-
     .how-step-text h4 { color: var(--forest); margin-bottom: .2rem; font-size: 1rem; }
     .how-step-text p  { font-size: .875rem; margin: 0; }
 
-    .community-impact {
-      background: var(--forest);
-      padding: 5rem 2rem;
-      text-align: center;
-    }
+    .community-impact { background: var(--forest); padding: 5rem 2rem; text-align: center; }
     .community-impact h2 { color: var(--white); margin-bottom: 1rem; }
     .community-impact p  { color: rgba(255,255,255,.85); max-width: 620px; margin: 0 auto; }
   </style>
@@ -95,7 +142,7 @@
   <header class="navbar">
     <div class="nav-logo">
       <a href="index.html">
-        <img src="TRANSPARENT.png" alt="Estcourt Waste Collectors logo" class="logo-icon">
+        <img src="ewc_logo.png" alt="Estcourt Waste Collectors logo" class="logo-icon">
       </a>
     </div>
 
@@ -139,12 +186,12 @@
       <span class="section-label">In Stock</span>
       <h2>Available Products</h2>
       <div class="product-grid" style="margin-top:2rem;">
-        <div class="product-card" data-reveal>🪑<br>Furniture</div>
-        <div class="product-card" data-reveal>🔌<br>Appliances</div>
-        <div class="product-card" data-reveal>🏗<br>Building Materials</div>
-        <div class="product-card" data-reveal>🌱<br>Chicory &amp; Agricultural By-Products</div>
-        <div class="product-card" data-reveal>💻<br>Electronics</div>
-        <div class="product-card" data-reveal>🏠<br>Household Goods</div>
+        <div class="product-card" data-reveal>&#129681;<br>Furniture</div>
+        <div class="product-card" data-reveal>&#128268;<br>Appliances</div>
+        <div class="product-card" data-reveal>&#127959;<br>Building Materials</div>
+        <div class="product-card" data-reveal>&#127807;<br>Chicory &amp; Agricultural By-Products</div>
+        <div class="product-card" data-reveal>&#128187;<br>Electronics</div>
+        <div class="product-card" data-reveal>&#127968;<br>Household Goods</div>
       </div>
     </div>
   </section>
@@ -155,8 +202,7 @@
       <span class="seasonal-badge">Limited &amp; Seasonal</span>
       <h2>Seasonal Stock</h2>
       <p>
-        Some items are available seasonally or in limited quantities. Visit us regularly — or
-        contact us — to discover unique finds. Current seasonal highlights include
+        Some items are available seasonally or in limited quantities. Current seasonal highlights include
         <strong>Garden Tools, Harvest Chicory, and Winter Clothing</strong>.
       </p>
       <a href="contact.html" class="btn btn-primary" style="margin-top:1rem;">Check Availability</a>
@@ -169,11 +215,11 @@
       <span class="section-label">Why Salvaged?</span>
       <h2>Benefits of Choosing Salvaged Goods</h2>
       <ul class="benefit-list" style="margin-top:1.5rem;">
-        <li>💰 Affordable alternatives for families on any budget</li>
-        <li>♻️ Eco-friendly — keeps materials out of landfill</li>
-        <li>🤝 Supports local jobs and community empowerment</li>
-        <li>✅ All items safety and quality checked before sale</li>
-        <li>🌿 Promotes Estcourt's circular economy</li>
+        <li>&#128176; Affordable alternatives for families on any budget</li>
+        <li>&#9851; Eco-friendly — keeps materials out of landfill</li>
+        <li>&#129309; Supports local jobs and community empowerment</li>
+        <li>&#10003; All items safety and quality checked before sale</li>
+        <li>&#127807; Promotes Estcourt's circular economy</li>
       </ul>
     </div>
   </section>
@@ -199,8 +245,7 @@
         <h2>How to Purchase</h2>
         <p>
           Browse our salvaged goods directly at our facility on 26 Industria Road, Estcourt.
-          We accept cash and card payments. For bulk orders, business procurement, or special
-          requests — contact us and we'll sort it out.
+          We accept cash and card payments. For bulk orders or special requests — contact us.
         </p>
         <a href="contact.html" class="btn btn-primary">Contact Us</a>
       </div>
@@ -237,12 +282,12 @@
 
     <div class="reviews-grid" style="max-width:800px; margin:2rem auto 0;">
       <div class="review-card" data-reveal>
-        <span class="stars">★★★★★</span>
+        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <p>"We furnished our home affordably thanks to EWC's salvaged goods. The quality exceeded our expectations."</p>
         <h3>— The Dlamini Family</h3>
       </div>
       <div class="review-card" data-reveal>
-        <span class="stars">★★★★★</span>
+        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <p>"Buying salvaged building materials saved us thousands and supported local recycling. Win-win!"</p>
         <h3>— Estcourt Builders</h3>
       </div>
@@ -273,7 +318,7 @@
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-column footer-logo">
-        <img src="TRANSPARENT.png" alt="EWC Logo">
+        <img src="ewc_transparent_logo.png" alt="EWC Logo">
         <p>Serving Estcourt and KwaZulu-Natal with reliable, eco-friendly waste collection and recycling.</p>
       </div>
 
@@ -299,10 +344,8 @@
         <h3>Follow Us</h3>
         <div class="social-icons">
           <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="https://wa.me/27828497869" aria-label="WhatsApp" target="_blank" rel="noopener">
-            <i class="fab fa-whatsapp"></i>
-          </a>
+          <a href="https://www.instagram.com/estcourt_waste?igsh=MWQ2bnFzcGtuM3Y4cA==" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/27828497869" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
         </div>
       </div>
     </div>

@@ -4,7 +4,103 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Estcourt Waste Collectors — reliable recycling, waste collection and salvaged goods in Estcourt, KwaZulu-Natal.">
+
   <title>Estcourt Waste Collectors | Home</title>
+
+  <!-- ── Canonical ─────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.estcourtwaste.co.za/index.html">
+
+  <!-- ── Favicon ───────────────────────────────────────────── -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="ewc_logo.png">
+
+  <!-- ── Open Graph ────────────────────────────────────────── -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://www.estcourtwaste.co.za/index.html">
+  <meta property="og:title"       content="Estcourt Waste Collectors | Home">
+  <meta property="og:description" content="Family-owned recycling and waste collection serving Estcourt and KwaZulu-Natal for 25+ years.">
+  <meta property="og:image"       content="https://www.estcourtwaste.co.za/ewc_logo.png">
+  <meta property="og:image:alt"   content="Estcourt Waste Collectors logo">
+  <meta property="og:site_name"   content="Estcourt Waste Collectors">
+  <meta property="og:locale"      content="en_ZA">
+
+  <!-- ── Twitter Card ──────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Estcourt Waste Collectors | Home">
+  <meta name="twitter:description" content="Family-owned recycling and waste collection serving Estcourt and KwaZulu-Natal for 25+ years.">
+  <meta name="twitter:image"       content="https://www.estcourtwaste.co.za/ewc_logo.png">
+
+  <!-- ── Local Business JSON-LD Schema ─────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Estcourt Waste Collectors",
+    "alternateName": "EWC",
+    "description": "Family-owned recycling and waste collection company serving Estcourt and KwaZulu-Natal for over 25 years. Services include household and commercial waste collection, recycling, and salvaged goods.",
+    "url": "https://www.estcourtwaste.co.za",
+    "logo": "https://www.estcourtwaste.co.za/ewc_logo.png",
+    "image": "https://www.estcourtwaste.co.za/ewc_logo.png",
+    "telephone": "+27828497869",
+    "email": "estcourtwaste@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "26 Industria Road",
+      "addressLocality": "Estcourt",
+      "addressRegion": "KwaZulu-Natal",
+      "postalCode": "3310",
+      "addressCountry": "ZA"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -28.998352,
+      "longitude": 29.860061
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "07:00",
+        "closes": "17:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "08:00",
+        "closes": "13:00"
+      }
+    ],
+    "sameAs": [
+      "https://www.instagram.com/estcourt_waste",
+      "https://wa.me/27828497869"
+    ],
+    "priceRange": "R",
+    "currenciesAccepted": "ZAR",
+    "paymentAccepted": "Cash, Card",
+    "areaServed": {
+      "@type": "State",
+      "name": "KwaZulu-Natal"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Waste & Recycling Services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Recycling Services" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Waste Collection" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom Waste Management" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Salvaged Goods" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Agricultural Waste" } }
+      ]
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "653"
+    }
+  }
+  </script>
+
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -14,7 +110,7 @@
   <header class="navbar">
     <div class="nav-logo">
       <a href="index.html">
-        <img src="TRANSPARENT.png" alt="Estcourt Waste Collectors logo" class="logo-icon">
+        <img src="ewc_logo.png" alt="Estcourt Waste Collectors logo" class="logo-icon">
       </a>
     </div>
 
@@ -35,8 +131,7 @@
 
   <!-- ── Hero ────────────────────────────────────────────────── -->
   <section class="hero">
-    <!-- Three.js recycling background — positions itself automatically -->
-   <canvas id="ewc-three-bg" aria-hidden="true"></canvas>
+    <canvas id="ewc-three-bg" aria-hidden="true"></canvas>
     <div class="hero-inner">
       <div class="hero-text">
         <span class="eyebrow"><i class="fa fa-leaf"></i> Estcourt, KwaZulu-Natal</span>
@@ -161,12 +256,12 @@
 
   <!-- ── Testimonials ─────────────────────────────────────────────────── -->
   <section class="testimonials-section">
-    <span class="section-label">Reviews</span>
-    <h2>What Our Community Says</h2>
+    <span class="section-label">Community Reviews</span>
+    <h2>What Estcourt Says About Us</h2>
 
     <div class="overall-rating">
-      <div class="stars">★★★★★</div>
-      <p>4.9 stars based on 653 reviews</p>
+      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p>4.9 stars based on 653 local reviews</p>
       <button class="review-btn" onclick="window.open('https://wa.me/27828497869','_blank')">
         Write a Review
       </button>
@@ -174,24 +269,24 @@
 
     <div class="reviews-grid">
       <div class="review-card" data-reveal>
-        <h3>Jessica Montalvo <span class="date">– 7 days ago</span></h3>
-        <span class="stars">★★★★★</span>
-        <p>"Easy to schedule and service was excellent."</p>
+        <h3>Thandi Dlamini <span class="date">– 3 days ago</span></h3>
+        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <p>"The team collected everything on time. Very professional and friendly service."</p>
       </div>
       <div class="review-card" data-reveal>
-        <h3>Denise Quirion <span class="date">– 8 days ago</span></h3>
-        <span class="stars">★★★★★</span>
-        <p>"Excellent! The team was friendly, knowledgeable, and professional."</p>
+        <h3>Raj <span class="date">– 5 days ago</span></h3>
+        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <p>"I use EWC for my shop's recycling. Reliable and affordable, highly recommend."</p>
       </div>
       <div class="review-card" data-reveal>
-        <h3>Daniel Ryan <span class="date">– 9 days ago</span></h3>
-        <span class="stars">★★★★★</span>
-        <p>"EWC is my go-to for personal and business recycling. Always reliable."</p>
+        <h3>Nokuthula Khumalo <span class="date">– 1 week ago</span></h3>
+        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <p>"They helped us clear out after a family event. Quick, clean, and eco-friendly."</p>
       </div>
       <div class="review-card" data-reveal>
-        <h3>Patrick Stapleton <span class="date">– 10 days ago</span></h3>
-        <span class="stars">★★★★★</span>
-        <p>"Removed old materials efficiently and with no mess. Highly recommend."</p>
+        <h3>Mr Khan <span class="date">– 2 weeks ago</span></h3>
+        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <p>"Great service for both home and business. Always on time and easy to deal with."</p>
       </div>
     </div>
 
@@ -204,7 +299,7 @@
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-column footer-logo">
-        <img src="TRANSPARENT.png" alt="EWC Logo">
+        <img src="ewc_transparent_logo.png" alt="EWC Logo">
         <p>Serving Estcourt and KwaZulu-Natal with reliable, eco-friendly waste collection and recycling.</p>
       </div>
 
@@ -230,10 +325,8 @@
         <h3>Follow Us</h3>
         <div class="social-icons">
           <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="https://wa.me/27828497869" aria-label="WhatsApp" target="_blank" rel="noopener">
-            <i class="fab fa-whatsapp"></i>
-          </a>
+          <a href="https://www.instagram.com/estcourt_waste?igsh=MWQ2bnFzcGtuM3Y4cA==" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/27828497869" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
         </div>
       </div>
     </div>
@@ -243,13 +336,11 @@
     </div>
   </footer>
 
-  <!-- WhatsApp Float -->
   <a href="https://wa.me/27828497869" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
     <i class="fab fa-whatsapp"></i> Chat With Us
   </a>
 
   <script src="script.js"></script>
-  <!-- ── Three.js background (only addition — 2 lines) ──────────────────────── -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="three.js"></script>
 </body>

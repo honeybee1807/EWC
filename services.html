@@ -4,23 +4,112 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Estcourt Waste Collectors services — recycling, waste collection, and custom waste management solutions in KwaZulu-Natal.">
+
   <title>Services | Estcourt Waste Collectors</title>
+
+  <!-- ── Canonical ─────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.estcourtwaste.co.za/services.html">
+
+  <!-- ── Favicon ───────────────────────────────────────────── -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="ewc_logo.png">
+
+  <!-- ── Open Graph ────────────────────────────────────────── -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://www.estcourtwaste.co.za/services.html">
+  <meta property="og:title"       content="Services | Estcourt Waste Collectors">
+  <meta property="og:description" content="Comprehensive recycling, waste collection, and custom waste management solutions for Estcourt and KwaZulu-Natal.">
+  <meta property="og:image"       content="https://www.estcourtwaste.co.za/ewc_logo.png">
+  <meta property="og:image:alt"   content="Estcourt Waste Collectors logo">
+  <meta property="og:site_name"   content="Estcourt Waste Collectors">
+  <meta property="og:locale"      content="en_ZA">
+
+  <!-- ── Twitter Card ──────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Services | Estcourt Waste Collectors">
+  <meta name="twitter:description" content="Comprehensive recycling, waste collection, and custom waste management solutions for Estcourt and KwaZulu-Natal.">
+  <meta name="twitter:image"       content="https://www.estcourtwaste.co.za/ewc_logo.png">
+
+  <!-- ── Service JSON-LD Schema ────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Estcourt Waste Collectors",
+    "url": "https://www.estcourtwaste.co.za",
+    "logo": "https://www.estcourtwaste.co.za/ewc_logo.png",
+    "telephone": "+27828497869",
+    "email": "estcourtwaste@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "26 Industria Road",
+      "addressLocality": "Estcourt",
+      "addressRegion": "KwaZulu-Natal",
+      "postalCode": "3310",
+      "addressCountry": "ZA"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Waste &amp; Recycling Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Recycling Services",
+            "description": "Paper, plastics, metals, glass, e-waste and salvaged goods — all processed responsibly."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Waste Collection",
+            "description": "Scheduled household and commercial waste collection across Estcourt and surrounds."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Custom Waste Management",
+            "description": "Tailored waste management plans for factories, farms, malls and large operations."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Commercial Recycling",
+            "description": "Dedicated recycling services for shops, offices and businesses."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Agricultural Waste",
+            "description": "Specialised collection and processing of chicory by-products and agricultural waste."
+          }
+        }
+      ]
+    }
+  }
+  </script>
+
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <style>
     .services-hero {
-      background: linear-gradient(135deg, var(--forest) 0%, #2d7a4f 100%);
+      background: linear-gradient(135deg, var(--forest) 0%, #1a8a6e 100%);
       padding: 5rem 2rem;
       text-align: center;
     }
     .services-hero h1 { color: var(--white); margin-bottom: .75rem; }
     .services-hero p  { color: rgba(255,255,255,.85); font-size: 1.1rem; max-width: 540px; margin: 0 auto; }
 
-    .detailed-services {
-      background: var(--white);
-      padding: 5rem 2rem;
-    }
-
+    .detailed-services { background: var(--white); padding: 5rem 2rem; }
     .detailed-services h2 { text-align: center; margin-bottom: 2.5rem; }
 
     .service-row {
@@ -33,15 +122,13 @@
       padding-bottom: 3rem;
       border-bottom: 1px solid var(--sand);
     }
-
     .service-row:last-child { border-bottom: none; margin-bottom: 0; }
-
     .service-row.reverse { flex-direction: row-reverse; }
 
     .service-row-icon {
       flex: 0 0 80px;
       width: 80px; height: 80px;
-      background: #e5f5d8;
+      background: #d4f2ec;
       border-radius: 18px;
       display: flex;
       align-items: center;
@@ -53,45 +140,22 @@
 
     .service-row-text { flex: 1 1 280px; }
     .service-row-text h3 { color: var(--forest); margin-bottom: .6rem; font-size: 1.3rem; }
-    .service-row-text ul {
-      list-style: none;
-      margin-top: .75rem;
-    }
-    .service-row-text ul li {
-      padding: .3rem 0;
-      font-size: .9rem;
-      color: var(--stone);
-    }
-    .service-row-text ul li::before {
-      content: '✓ ';
-      color: var(--leaf);
-      font-weight: 700;
-    }
+    .service-row-text ul { list-style: none; margin-top: .75rem; }
+    .service-row-text ul li { padding: .3rem 0; font-size: .9rem; color: var(--stone); }
+    .service-row-text ul li::before { content: '✓ '; color: var(--leaf); font-weight: 700; }
 
-    .process-section {
-      background: var(--cream);
-      padding: 5rem 2rem;
-      text-align: center;
-    }
-
+    .process-section { background: var(--cream); padding: 5rem 2rem; text-align: center; }
     .process-section h2 { margin-bottom: 2.5rem; }
 
     .process-steps {
       display: flex;
       justify-content: center;
-      gap: 0;
       flex-wrap: wrap;
       max-width: 1000px;
       margin: 0 auto;
-      position: relative;
     }
 
-    .process-step {
-      flex: 1 1 180px;
-      text-align: center;
-      padding: 1.5rem 1rem;
-      position: relative;
-    }
+    .process-step { flex: 1 1 180px; text-align: center; padding: 1.5rem 1rem; }
 
     .step-num {
       width: 52px; height: 52px;
@@ -104,19 +168,12 @@
       align-items: center;
       justify-content: center;
       margin: 0 auto 1rem;
-      position: relative;
-      z-index: 1;
     }
 
     .process-step h4 { color: var(--forest); margin-bottom: .4rem; font-size: 1rem; }
     .process-step p  { font-size: .875rem; }
 
-    .innovation-section {
-      background: var(--white);
-      padding: 5rem 2rem;
-      text-align: center;
-    }
-
+    .innovation-section { background: var(--white); padding: 5rem 2rem; text-align: center; }
     .innovation-section h2 { margin-bottom: 1rem; }
     .innovation-section p  { max-width: 600px; margin: 0 auto 2rem; }
   </style>
@@ -127,7 +184,7 @@
   <header class="navbar">
     <div class="nav-logo">
       <a href="index.html">
-        <img src="TRANSPARENT.png" alt="Estcourt Waste Collectors logo" class="logo-icon">
+        <img src="ewc_logo.png" alt="Estcourt Waste Collectors logo" class="logo-icon">
       </a>
     </div>
 
@@ -213,7 +270,7 @@
       <div class="service-row-icon"><i class="fa fa-truck"></i></div>
       <div class="service-row-text">
         <h3>Waste Collection</h3>
-        <p>Our reliable collection fleet operates across Estcourt and surrounding areas, providing scheduled pickups for homes and businesses — so you never have to worry about overflowing bins.</p>
+        <p>Our reliable collection fleet operates across Estcourt and surrounding areas, providing scheduled pickups for homes and businesses.</p>
         <ul>
           <li>Household collection schedules</li>
           <li>Commercial &amp; industrial pickups</li>
@@ -227,7 +284,7 @@
       <div class="service-row-icon"><i class="fa fa-cogs"></i></div>
       <div class="service-row-text">
         <h3>Custom Waste Management Solutions</h3>
-        <p>Every operation is different. We work with you to design a waste management plan that reduces costs, ensures compliance, and maximises recycling rates for your specific needs.</p>
+        <p>We work with you to design a waste management plan that reduces costs, ensures compliance, and maximises recycling rates.</p>
         <ul>
           <li>Factories &amp; manufacturing plants</li>
           <li>Retail centres &amp; malls</li>
@@ -276,7 +333,7 @@
   <section class="innovation-section">
     <span class="section-label">Commitment</span>
     <h2>Innovation in Action</h2>
-    <p>We continuously improve our processes, adopt greener technologies, and empower Estcourt with solutions that make a lasting difference — for the environment and the economy.</p>
+    <p>We continuously improve our processes, adopt greener technologies, and empower Estcourt with solutions that make a lasting difference.</p>
     <a href="contact.html" class="btn btn-primary">Get a Free Quote</a>
   </section>
 
@@ -284,7 +341,7 @@
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-column footer-logo">
-        <img src="TRANSPARENT.png" alt="EWC Logo">
+        <img src="ewc_transparent_logo.png" alt="EWC Logo">
         <p>Serving Estcourt and KwaZulu-Natal with reliable, eco-friendly waste collection and recycling.</p>
       </div>
 
@@ -310,10 +367,8 @@
         <h3>Follow Us</h3>
         <div class="social-icons">
           <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="https://wa.me/27828497869" aria-label="WhatsApp" target="_blank" rel="noopener">
-            <i class="fab fa-whatsapp"></i>
-          </a>
+          <a href="https://www.instagram.com/estcourt_waste?igsh=MWQ2bnFzcGtuM3Y4cA==" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/27828497869" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
         </div>
       </div>
     </div>
