@@ -65,6 +65,48 @@
   }
   </script>
 
+
+  <style>
+    /* ── About page slideshows ───────────────────────────── */
+    .about-slideshow {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0,0,0,.15);
+      width: 100%;
+      aspect-ratio: 4 / 3;
+    }
+    .about-slideshow .slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity 1s ease;
+    }
+    .about-slideshow .slide.active { opacity: 1; }
+    .about-slideshow .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .about-slideshow .slide-dots {
+      position: absolute;
+      bottom: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 7px;
+      z-index: 2;
+    }
+    .about-slideshow .slide-dots span {
+      width: 9px; height: 9px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.45);
+      display: block;
+      transition: background .3s;
+    }
+    .about-slideshow .slide-dots span.active { background: #fff; }
+  </style>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -102,7 +144,12 @@
         <p>From humble beginnings to a trusted recycling partner across KwaZulu-Natal — built on community, care, and sustainability.</p>
       </div>
       <div class="page-hero-image fade-up delay-2">
-        <img src="ewc_green_logo_2.jpeg" alt="EWC community recycling">
+        <div class="about-slideshow" id="ss-hero">
+          <div class="slide active"><img src="assets/images/EWC_about.png" alt="EWC team at the Estcourt recycling facility"></div>
+          <div class="slide"><img src="assets/images/recycling_machinery.png" alt="EWC community recycling operations"></div>
+          <div class="slide"><img src="assets/images/entrance.png" alt="Entrance to Estcourt Waste Collectors facility"></div>
+          <div class="slide-dots"><span class="active"></span><span></span><span></span></div>
+        </div>
       </div>
     </div>
   </section>
@@ -111,7 +158,12 @@
   <section class="story-section">
     <div class="story-inner">
       <div class="story-image" data-reveal>
-        <img src="ewc_green_logo.jpeg" alt="Early days of EWC">
+        <div class="about-slideshow" id="ss-story">
+          <div class="slide active"><img src="assets/images/EWC_about_2.png" alt="Early days of EWC — family-run waste collection"></div>
+          <div class="slide"><img src="assets/images/EWC_about.png" alt="EWC recycling facility Estcourt"></div>
+          <div class="slide"><img src="assets/images/EWC_index_hero.jpg" alt="EWC operations in KwaZulu-Natal"></div>
+          <div class="slide-dots"><span class="active"></span><span></span><span></span></div>
+        </div>
       </div>
       <div class="story-text" data-reveal>
         <span class="section-label">How It Started</span>
@@ -259,7 +311,7 @@
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-column footer-logo">
-        <img src="ewc_logo.png" alt="EWC Logo">
+        <img src="assets/images/ewc transparent logo.png" alt="EWC Logo">
         <p>Serving Estcourt and KwaZulu-Natal with reliable, eco-friendly waste collection and recycling.</p>
       </div>
 
@@ -300,5 +352,21 @@
   </a>
 
   <script src="script.js"></script>
+
+  <script>
+    document.querySelectorAll('.about-slideshow').forEach(function(ss) {
+      var slides = ss.querySelectorAll('.slide:not(:has(.slide-dots))');
+      var dots   = ss.querySelectorAll('.slide-dots span');
+      var current = 0;
+      if (slides.length < 2) return;
+      setInterval(function() {
+        slides[current].classList.remove('active');
+        if (dots[current]) dots[current].classList.remove('active');
+        current = (current + 1) % slides.length;
+        slides[current].classList.add('active');
+        if (dots[current]) dots[current].classList.add('active');
+      }, 4000);
+    });
+  </script>
 </body>
 </html>

@@ -176,6 +176,51 @@
     .innovation-section { background: var(--white); padding: 5rem 2rem; text-align: center; }
     .innovation-section h2 { margin-bottom: 1rem; }
     .innovation-section p  { max-width: 600px; margin: 0 auto 2rem; }
+
+    /* ── Service row slideshow ─────────────────────────────── */
+    .service-slideshow {
+      flex: 0 0 380px;
+      width: 380px;
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0,0,0,.14);
+      align-self: stretch;
+      min-height: 280px;
+    }
+    .service-slideshow .slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity 0.9s ease;
+    }
+    .service-slideshow .slide.active { opacity: 1; }
+    .service-slideshow .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .slide-dots {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 6px;
+      z-index: 2;
+    }
+    .slide-dots span {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.5);
+      display: block;
+      transition: background .3s;
+    }
+    .slide-dots span.active { background: #fff; }
+    @media (max-width: 768px) {
+      .service-slideshow { flex: 1 1 100%; width: 100%; min-height: 220px; }
+    }
   </style>
 </head>
 <body>
@@ -211,7 +256,9 @@
   </section>
 
   <!-- ── Service Cards Overview ────────────────────────────── -->
-  <section class="services-section" style="background: var(--cream);">
+<section class="services-section" style="background: var(--cream);">
+  <div class="services-layout">
+    <!-- Left: service cards -->
     <div class="services-grid">
       <div class="service-card" data-reveal>
         <div class="icon"><i class="fa fa-recycle fa-2x"></i></div>
@@ -244,56 +291,82 @@
         <p>Specialised collection and processing of chicory by-products and agricultural waste streams.</p>
       </div>
     </div>
-  </section>
+
+     <!-- Right: gallery -->
+    <div class="services-gallery">
+      <img src="../assets/images/recycling-bales.jpeg" alt="Compressed plastic recyclables">
+      <img src="../assets/images/recycling-bale2.jpeg" alt="Compressed paper recyclables">
+    </div>
+  </div>
+</section>
+
 
   <!-- ── Detailed Breakdown ─────────────────────────────────── -->
   <section class="detailed-services">
-    <h2>Service Details</h2>
+  <h2>Service Details</h2>
 
-    <div class="service-row" data-reveal>
-      <div class="service-row-icon"><i class="fa fa-recycle"></i></div>
-      <div class="service-row-text">
-        <h3>Recycling Services</h3>
-        <p>We accept and responsibly process a wide range of recyclable materials, keeping them out of Estcourt's landfills and putting them back into the economy.</p>
-        <ul>
-          <li>Paper &amp; cardboard</li>
-          <li>Plastics (all types)</li>
-          <li>Metals &amp; aluminium</li>
-          <li>Glass</li>
-          <li>Electronic waste (e-waste)</li>
-          <li>Salvaged and repurposed goods</li>
-        </ul>
-      </div>
+  <div class="service-row" data-reveal>
+    <div class="service-row-icon"><i class="fa fa-recycle"></i></div>
+    <div class="service-row-text">
+      <h3>Recycling Services</h3>
+      <p>We accept and responsibly process a wide range of recyclable materials, keeping them out of Estcourt's landfills and putting them back into the economy.</p>
+      <ul>
+        <li>Paper &amp; cardboard</li>
+        <li>Plastics (all types)</li>
+        <li>Metals &amp; aluminium</li>
+        <li>Glass</li>
+        <li>Electronic waste (e-waste)</li>
+        <li>Salvaged and repurposed goods</li>
+      </ul>
     </div>
+    <div class="service-slideshow" id="ss-recycling">
+      <div class="slide active"><img src="assets/images/recycling_bales.png" alt="Compacted plastic bales at EWC recycling facility"></div>
+      <div class="slide"><img src="assets/images/paper_bales.png" alt="Compacted paper bales ready for processing"></div>
+      <div class="slide"><img src="assets/images/recycling_bale2.png" alt="Sorted recyclable materials at EWC"></div>
+      <div class="slide-dots"><span class="active"></span><span></span><span></span></div>
+    </div>
+  </div>
 
-    <div class="service-row reverse" data-reveal>
-      <div class="service-row-icon"><i class="fa fa-truck"></i></div>
-      <div class="service-row-text">
-        <h3>Waste Collection</h3>
-        <p>Our reliable collection fleet operates across Estcourt and surrounding areas, providing scheduled pickups for homes and businesses.</p>
-        <ul>
-          <li>Household collection schedules</li>
-          <li>Commercial &amp; industrial pickups</li>
-          <li>Large item and bulk removal</li>
-          <li>Same-week bookings available</li>
-        </ul>
-      </div>
+  <div class="service-row reverse" data-reveal>
+    <div class="service-row-icon"><i class="fa fa-truck"></i></div>
+    <div class="service-row-text">
+      <h3>Waste Collection</h3>
+      <p>Our reliable collection fleet operates across Estcourt and surrounding areas, providing scheduled pickups for homes and businesses.</p>
+      <ul>
+        <li>Household collection schedules</li>
+        <li>Commercial &amp; industrial pickups</li>
+        <li>Large item and bulk removal</li>
+        <li>Same-week bookings available</li>
+      </ul>
     </div>
+    <div class="service-slideshow" id="ss-collection">
+      <div class="slide active"><img src="assets/images/warehouse_bales.png" alt="Warehouse stacked with sorted waste bales"></div>
+      <div class="slide"><img src="assets/images/recycling_bale2.png" alt="Recycling collection yard at EWC Estcourt"></div>
+      <div class="slide"><img src="assets/images/entrance.png" alt="Entrance to EWC facility in Estcourt"></div>
+      <div class="slide-dots"><span class="active"></span><span></span><span></span></div>
+    </div>
+  </div>
 
-    <div class="service-row" data-reveal>
-      <div class="service-row-icon"><i class="fa fa-cogs"></i></div>
-      <div class="service-row-text">
-        <h3>Custom Waste Management Solutions</h3>
-        <p>We work with you to design a waste management plan that reduces costs, ensures compliance, and maximises recycling rates.</p>
-        <ul>
-          <li>Factories &amp; manufacturing plants</li>
-          <li>Retail centres &amp; malls</li>
-          <li>Agricultural &amp; chicory operations</li>
-          <li>Schools &amp; community organisations</li>
-        </ul>
-      </div>
+  <div class="service-row" data-reveal>
+    <div class="service-row-icon"><i class="fa fa-cogs"></i></div>
+    <div class="service-row-text">
+      <h3>Custom Waste Management Solutions</h3>
+      <p>We work with you to design a waste management plan that reduces costs, ensures compliance, and maximises recycling rates.</p>
+      <ul>
+        <li>Factories &amp; manufacturing plants</li>
+        <li>Retail centres &amp; malls</li>
+        <li>Agricultural &amp; chicory operations</li>
+        <li>Schools &amp; community organisations</li>
+      </ul>
     </div>
-  </section>
+    <div class="service-slideshow" id="ss-custom">
+      <div class="slide active"><img src="assets/images/recycling_machinery.png" alt="Industrial recycling machinery in operation"></div>
+      <div class="slide"><img src="assets/images/recycling_bales.png" alt="Recycled materials processed at EWC facility"></div>
+      <div class="slide-dots"><span class="active"></span><span></span></div>
+    </div>
+  </div>
+</section>
+
 
   <!-- ── Process ────────────────────────────────────────────── -->
   <section class="process-section">
@@ -382,5 +455,23 @@
   </a>
 
   <script src="script.js"></script>
+
+  <script>
+    // Auto-rotating slideshows for service rows
+    document.querySelectorAll('.service-slideshow').forEach(function(ss) {
+      var slides = ss.querySelectorAll('.slide:not(.slide-dots)');
+      var dots   = ss.querySelectorAll('.slide-dots span');
+      var current = 0;
+      if (slides.length < 2) return;
+      setInterval(function() {
+        slides[current].classList.remove('active');
+        dots[current] && dots[current].classList.remove('active');
+        current = (current + 1) % slides.length;
+        slides[current].classList.add('active');
+        dots[current] && dots[current].classList.add('active');
+      }, 3500);
+    });
+  </script>
+
 </body>
 </html>
