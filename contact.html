@@ -124,11 +124,11 @@
   </header>
 
   <!-- ── Hero ─────────────────────────────────────────────── -->
-  <section class="contact-hero">
-    <span class="section-label" style="color:var(--accent)">Reach Out</span>
-    <h1>Get in Touch</h1>
-    <p>We're here to answer your questions and provide sustainable solutions for Estcourt.</p>
-  </section>
+   <section class="contact-hero">
+   <span class="section-label">Reach Out</span>
+   <h1>Get in <em>Touch</em></h1>
+   <p class="lead">We're here to answer your questions and provide sustainable solutions for Estcourt.</p>
+ </section>
 
   <!-- ── Contact Info Bar ───────────────────────────────────── -->
   <section class="contact-info-bar">
@@ -160,57 +160,52 @@
   </section>
 
   <!-- ── Contact Form ───────────────────────────────────────── -->
-  <section class="contact-form-section">
-    <span class="section-label text-center" style="display:block; text-align:center;">Send a Message</span>
-    <h2>We'd Love to Hear From You</h2>
+   <span class="section-label">Send a Message</span>
+  <h2>We'd Love to <em>Hear From You</em></h2>
 
-    <form class="contact-form" id="contact-form" novalidate>
-      <div class="form-row">
-        <div class="form-group">
-          <label for="name">Full Name *</label>
-          <input type="text" id="name" name="name" placeholder="e.g. Thandi Nkosi" required>
-        </div>
-        <div class="form-group">
-          <label for="email">Email Address *</label>
-          <input type="email" id="email" name="email" placeholder="you@example.com" required>
-        </div>
-      </div>
-
-      <div class="form-row">
-        <div class="form-group">
-          <label for="phone">Phone Number</label>
-          <input type="tel" id="phone" name="phone" placeholder="+27 82 000 0000">
-        </div>
-        <div class="form-group">
-          <label for="subject">Subject *</label>
-          <select id="subject" name="subject" required>
-            <option value="" disabled selected>Select a topic...</option>
-            <option value="Recycling Collection">Recycling Collection</option>
-            <option value="Waste Collection Quote">Waste Collection Quote</option>
-            <option value="Salvaged Goods Enquiry">Salvaged Goods Enquiry</option>
-            <option value="Commercial / Industrial">Commercial / Industrial</option>
-            <option value="General Enquiry">General Enquiry</option>
-          </select>
-        </div>
-      </div>
-
+  <form class="contact-form" id="contact-form" novalidate>
+    <div class="form-row">
       <div class="form-group">
-        <label for="message">Message *</label>
-        <textarea id="message" name="message" placeholder="Tell us a little about what you need..." required></textarea>
+        <label for="name">Full Name *</label>
+        <input type="text" id="name" name="name" placeholder="e.g. Thandi Nkosi" required>
       </div>
-
-      <button type="submit" class="btn btn-primary form-submit">
-        <i class="fa fa-paper-plane"></i> Send Message
-      </button>
-
-      <div id="form-message" class="form-msg" style="display:none;"></div>
-    </form>
-  </section>
+      <div class="form-group">
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="+27 82 000 0000">
+      </div>
+      <div class="form-group">
+        <label for="subject">Subject *</label>
+        <select id="subject" name="subject" required>
+          <option value="" disabled selected>Select a topic...</option>
+          <option value="Recycling Collection">Recycling Collection</option>
+          <option value="Waste Collection Quote">Waste Collection Quote</option>
+          <option value="Salvaged Goods Enquiry">Salvaged Goods Enquiry</option>
+          <option value="Commercial / Industrial">Commercial / Industrial</option>
+          <option value="General Enquiry">General Enquiry</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="message">Message *</label>
+      <textarea id="message" name="message" placeholder="Tell us a little about what you need..." required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary form-submit">
+      <i class="fa fa-paper-plane"></i> Send Message
+    </button>
+    <div id="form-message" class="form-msg" style="display:none;"></div>
+  </form>
+</section>
 
   <!-- ── Map ────────────────────────────────────────────────── -->
   <section class="map-section">
     <span class="section-label">Find Us</span>
-    <h2>Our Location</h2>
+    <h2>Our <em>Location</em></h2>
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3489.629369752967!2d29.86006127408828!3d-28.998351883556804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef3c68a40680a0f%3A0x4c30a98eaf3c55f1!2s26%20Industria%20St%2C%20Estcourt%2C%203310!5e0!3m2!1sen!2sza!4v1774736950629!5m2!1sen!2sza"
       allowfullscreen=""
@@ -244,7 +239,7 @@
   </section>
 
   <!-- ── Footer ─────────────────────────────────────────────── -->
-  <footer class="footer">
+    <footer class="footer">
     <div class="footer-container">
       <div class="footer-column footer-logo">
         <img src="ewc_logo.png" alt="EWC Logo">
@@ -267,7 +262,10 @@
         <p><i class="fa fa-map-marker-alt"></i> 26 Industria Road, Estcourt</p>
         <p><i class="fa fa-phone"></i> +27 82 849 7869</p>
         <p><i class="fa fa-envelope"></i> estcourtwaste@gmail.com</p>
+        <p><i class="fa fa-clock"></i> Trading Hours: Mon–Fri 8:00–17:00, Sat 8:00–13:00</p>
+        <p><i class="fa fa-ban"></i> Sunday & Public Holidays: Closed</p>
       </div>
+
 
       <div class="footer-column">
         <h3>Follow Us</h3>
@@ -278,8 +276,10 @@
         </div>
       </div>
     </div>
+
     <div class="footer-bottom">
-      <p>&copy; 2026 Estcourt Waste Collectors. All rights reserved.</p>
+       <span>&copy; 2026 Estcourt Waste Collectors. All rights reserved.</span>
+       <span class="credit">Developed by <a href="https://olideentech.co.za" target="_blank" rel="noopener">Olideen Technologies</a></span>
     </div>
   </footer>
 
@@ -288,6 +288,10 @@
   </a>
 
   <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="three.js"></script>
+
+ 
   <script>
     const formMsg = document.getElementById('form-message');
     const observer = new MutationObserver(() => {

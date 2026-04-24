@@ -161,68 +161,90 @@
     </nav>
   </header>
 
-  <!-- ── Hero ─────────────────────────────────────────────── -->
-  <section class="salvage-hero">
-    <span class="section-label" style="color:var(--accent)">Repurposed &amp; Affordable</span>
-    <h1>Salvaged Goods</h1>
-    <p>Quality pre-owned and repurposed items — saving you money while keeping waste out of Estcourt's landfills.</p>
-    <a href="contact.html" class="btn btn-outline-white">Enquire Now</a>
-  </section>
+  <!-- ═══════════════════════════════════════════════
+      SECTION: Hero — dark gradient over blurred warehouse
+      ═══════════════════════════════════════════════ -->
+ <section class="salvage-hero">
+   <div class="bg" aria-hidden="true"></div>
+   <span class="pill">Repurposed &amp; Affordable</span>
+   <h1>Salvaged Goods</h1>
+   <p class="lead">Quality pre-owned and repurposed items — saving you money while keeping waste out of Estcourt's landfills.</p>
+   <a href="#products" class="btn btn-primary">Browse Products</a>
+ </section>
 
-  <!-- ── Introduction ──────────────────────────────────────── -->
-  <section class="intro-section">
-    <span class="section-label">What We Offer</span>
-    <h2>Giving Things a Second Life</h2>
-    <p>
-      At EWC's Estcourt facility, we recover and repurpose everyday items — from furniture and
-      appliances to building materials and chicory by-products. Every purchase supports local
-      recycling, reduces landfill waste, and puts money back into the community.
-    </p>
-  </section>
+ <!-- ═══════════════════════════════════════════════
+      SECTION: Intro
+      ═══════════════════════════════════════════════ -->
+ <section class="intro-section">
+   <span class="section-label">What We Offer</span>
+   <h2>Giving Things a <em>Second Life</em></h2>
+   <p>At our Estcourt facility we recover and repurpose everyday items — from furniture and appliances to building materials and chicory by-products. Every purchase supports local recycling, reduces landfill waste, and puts money back into the community.</p>
+ </section>
+
 
   <!-- ── Available Products ─────────────────────────────────── -->
-  <section class="salvage-section alt-bg">
-    <div style="max-width:1000px; margin:0 auto; text-align:center;">
-      <span class="section-label">In Stock</span>
-      <h2>Available Products</h2>
-      <div class="product-grid" style="margin-top:2rem;">
-        <div class="product-card" data-reveal>&#129681;<br>Furniture</div>
-        <div class="product-card" data-reveal>&#128268;<br>Appliances</div>
-        <div class="product-card" data-reveal>&#127959;<br>Building Materials</div>
-        <div class="product-card" data-reveal>&#127807;<br>Chicory &amp; Agricultural By-Products</div>
-        <div class="product-card" data-reveal>&#128187;<br>Electronics</div>
-        <div class="product-card" data-reveal>&#127968;<br>Household Goods</div>
+ <section class="salvage-section alt-bg" id="products">
+  <div style="max-width:1100px; margin:0 auto; text-align:center;">
+    <span class="section-label">In Stock</span>
+    <h2>Available Products</h2>
+    <p class="sub">Stock rotates fast — drop by the yard or send a WhatsApp to check availability.</p>
+
+    <div class="product-grid">
+      <div class="product-card" data-reveal>
+        <i class="fas fa-couch" style="color: var(--forest);"></i>
+        <span>Furniture</span>
+      </div>
+      <div class="product-card" data-reveal>
+        <i class="fas fa-blender" style="color: var(--forest);"></i>
+        <span>Appliances</span>
+      </div>
+      <div class="product-card" data-reveal>
+        <i class="fas fa-trowel-bricks" style="color: var(--forest);"></i>
+        <span>Building Materials</span>
+      </div>
+      <div class="product-card" data-reveal>
+        <i class="fas fa-seedling" style="color: var(--forest);"></i>
+        <span>Chicory &amp; Agricultural</span>
+      </div>
+      <div class="product-card" data-reveal>
+        <i class="fas fa-tv" style="color: var(--forest);"></i>
+        <span>Electronics</span>
+      </div>
+      <div class="product-card" data-reveal>
+        <i class="fas fa-mug-hot" style="color: var(--forest);"></i>
+        <span>Household Goods</span>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- ── Seasonal Stock ─────────────────────────────────────── -->
-  <section class="salvage-section light-bg">
-    <div style="max-width:700px; margin:0 auto; text-align:center;">
-      <span class="seasonal-badge">Limited &amp; Seasonal</span>
-      <h2>Seasonal Stock</h2>
-      <p>
-        Some items are available seasonally or in limited quantities. Current seasonal highlights include
-        <strong>Garden Tools, Harvest Chicory, and Winter Clothing</strong>.
-      </p>
-      <a href="contact.html" class="btn btn-primary" style="margin-top:1rem;">Check Availability</a>
-    </div>
-  </section>
+ <section class="salvage-section light-bg">
+  <div style="max-width:720px; margin:0 auto; text-align:center;">
+    <span class="pill" style="margin-bottom:1rem;">Limited &amp; Seasonal</span>
+    <h2>Seasonal <em>Highlights</em></h2>
+    <p>Some items are available seasonally or in limited quantities. Current seasonal highlights include <strong>garden tools, harvest chicory, and winter clothing</strong>.</p>
+    <a href="contact.html" class="btn btn-primary" style="margin-top:1rem;">Check Availability</a>
+  </div>
+</section>
 
   <!-- ── Benefits ───────────────────────────────────────────── -->
-  <section class="salvage-section alt-bg">
-    <div style="max-width:700px; margin:0 auto;">
+ <section class="salvage-section alt-bg">
+  <div style="max-width:760px; margin:0 auto;">
+    <div style="text-align:center; margin-bottom: 1.5rem;">
       <span class="section-label">Why Salvaged?</span>
       <h2>Benefits of Choosing Salvaged Goods</h2>
-      <ul class="benefit-list" style="margin-top:1.5rem;">
-        <li>&#128176; Affordable alternatives for families on any budget</li>
-        <li>&#9851; Eco-friendly — keeps materials out of landfill</li>
-        <li>&#129309; Supports local jobs and community empowerment</li>
-        <li>&#10003; All items safety and quality checked before sale</li>
-        <li>&#127807; Promotes Estcourt's circular economy</li>
-      </ul>
     </div>
-  </section>
+    <ul class="benefit-list">
+      <li><i class="fas fa-sack-dollar" style="color: var(--forest); margin-right:.5rem;"></i> Affordable alternatives for families on any budget</li>
+      <li><i class="fas fa-recycle" style="color: var(--forest); margin-right:.5rem;"></i> Eco-friendly — keeps materials out of landfill</li>
+      <li><i class="fas fa-handshake" style="color: var(--forest); margin-right:.5rem;"></i> Supports local jobs and community empowerment</li>
+      <li><i class="fas fa-shield-halved" style="color: var(--forest); margin-right:.5rem;"></i> All items safety and quality checked before sale</li>
+      <li><i class="fas fa-leaf" style="color: var(--forest); margin-right:.5rem;"></i> Promotes Estcourt's circular economy</li>
+    </ul>
+  </div>
+</section>
 
   <!-- ── Safety & Quality ───────────────────────────────────── -->
   <section class="salvage-section light-bg">
@@ -238,84 +260,58 @@
   </section>
 
   <!-- ── How to Purchase ────────────────────────────────────── -->
-  <section class="how-to-buy">
-    <div class="how-to-buy-inner">
-      <div class="how-to-buy-text" data-reveal>
-        <span class="section-label">Buying Is Easy</span>
-        <h2>How to Purchase</h2>
-        <p>
-          Browse our salvaged goods directly at our facility on 26 Industria Road, Estcourt.
-          We accept cash and card payments. For bulk orders or special requests — contact us.
-        </p>
-        <a href="contact.html" class="btn btn-primary">Contact Us</a>
-      </div>
-      <div class="how-steps" data-reveal>
-        <div class="how-step">
-          <div class="how-step-num">1</div>
-          <div class="how-step-text">
-            <h4>Visit or Call</h4>
-            <p>Come in to browse or call ahead to ask about specific items.</p>
-          </div>
-        </div>
-        <div class="how-step">
-          <div class="how-step-num">2</div>
-          <div class="how-step-text">
-            <h4>Select Your Items</h4>
-            <p>Our team will help you find what you need from current stock.</p>
-          </div>
-        </div>
-        <div class="how-step">
-          <div class="how-step-num">3</div>
-          <div class="how-step-text">
-            <h4>Pay &amp; Collect</h4>
-            <p>Cash or card — simple. Bulk orders can be arranged for delivery.</p>
-          </div>
-        </div>
-      </div>
+ <section class="how-to-buy">
+  <div class="how-to-buy-inner">
+    <div data-reveal>
+      <span class="section-label">Buying Is Easy</span>
+      <h2>How to <em>Purchase</em></h2>
+      <p>Browse our salvaged goods directly at our facility on 26 Industria Road, Estcourt. We accept cash and card payments. For bulk orders or special requests — get in touch.</p>
+      <a href="contact.html" class="btn btn-primary">Contact Us</a>
     </div>
-  </section>
-
-  <!-- ── Customer Stories ───────────────────────────────────── -->
-  <section class="testimonials-section">
-    <span class="section-label">Happy Customers</span>
-    <h2>What Our Customers Say</h2>
-
-    <div class="reviews-grid" style="max-width:800px; margin:2rem auto 0;">
-      <div class="review-card" data-reveal>
-        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-        <p>"We furnished our home affordably thanks to EWC's salvaged goods. The quality exceeded our expectations."</p>
-        <h3>— The Dlamini Family</h3>
+    <div data-reveal>
+      <div class="how-step">
+        <div class="how-step-num">1</div>
+        <div class="how-step-text">
+          <h4>Visit or Call</h4>
+          <p>Come in to browse or call ahead to ask about specific items.</p>
+        </div>
       </div>
-      <div class="review-card" data-reveal>
-        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-        <p>"Buying salvaged building materials saved us thousands and supported local recycling. Win-win!"</p>
-        <h3>— Estcourt Builders</h3>
+      <div class="how-step">
+        <div class="how-step-num">2</div>
+        <div class="how-step-text">
+          <h4>Select Your Items</h4>
+          <p>Our team will help you find what you need from current stock.</p>
+        </div>
       </div>
-    </div>
-  </section>
-
-  <!-- ── Community Impact ───────────────────────────────────── -->
-  <section class="community-impact">
-    <span class="section-label" style="color:var(--accent)">Making a Difference</span>
-    <h2>Community Impact</h2>
-    <p>
-      Every item sold through our salvaged goods programme creates jobs, keeps waste out of
-      landfills, and supports Estcourt families. By choosing salvaged, you become part of
-      Estcourt's sustainability story.
-    </p>
-  </section>
-
-  <!-- ── CTA ────────────────────────────────────────────────── -->
-  <div style="padding: 2rem 2rem 4rem;">
-    <div class="cta-section">
-      <h2>Discover Affordable, Sustainable Goods</h2>
-      <p>Interested in salvaged items or chicory products? Reach out today to learn more.</p>
-      <a href="contact.html" class="btn btn-outline-white">Contact Us Now</a>
+      <div class="how-step">
+        <div class="how-step-num">3</div>
+        <div class="how-step-text">
+          <h4>Pay &amp; Collect</h4>
+          <p>Cash or card — simple. Bulk orders can be arranged for delivery.</p>
+        </div>
+      </div>
     </div>
   </div>
+</section>
+
+
+
+  <!-- ── CTA ────────────────────────────────────────────────── -->
+ <div style="padding: 2rem 2rem 5rem;">
+   <div class="cta-section" data-reveal>
+     <h2>Discover affordable, sustainable goods</h2>
+     <p>Interested in salvaged items or chicory by-products? Reach out today — we'll let you know what's in the yard.</p>
+     <div style="display:flex; gap:.85rem; justify-content:center; flex-wrap:wrap;">
+       <a href="contact.html" class="btn btn-primary">Contact Us</a>
+       <a href="https://wa.me/27828497869" target="_blank" rel="noopener" class="btn btn-outline-white">
+         <i class="fab fa-whatsapp"></i> WhatsApp
+       </a>
+     </div>
+   </div>
+ </div>
 
   <!-- ── Footer ─────────────────────────────────────────────── -->
-  <footer class="footer">
+   <footer class="footer">
     <div class="footer-container">
       <div class="footer-column footer-logo">
         <img src="ewc_logo.png" alt="EWC Logo">
@@ -338,7 +334,10 @@
         <p><i class="fa fa-map-marker-alt"></i> 26 Industria Road, Estcourt</p>
         <p><i class="fa fa-phone"></i> +27 82 849 7869</p>
         <p><i class="fa fa-envelope"></i> estcourtwaste@gmail.com</p>
+        <p><i class="fa fa-clock"></i> Trading Hours: Mon–Fri 8:00–17:00, Sat 8:00–13:00</p>
+        <p><i class="fa fa-ban"></i> Sunday & Public Holidays: Closed</p>
       </div>
+
 
       <div class="footer-column">
         <h3>Follow Us</h3>
@@ -349,8 +348,10 @@
         </div>
       </div>
     </div>
+
     <div class="footer-bottom">
-      <p>&copy; 2026 Estcourt Waste Collectors. All rights reserved.</p>
+       <span>&copy; 2026 Estcourt Waste Collectors. All rights reserved.</span>
+       <span class="credit">Developed by <a href="https://olideentech.co.za" target="_blank" rel="noopener">Olideen Technologies</a></span>
     </div>
   </footer>
 
@@ -359,5 +360,7 @@
   </a>
 
   <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="three.js"></script>
 </body>
 </html>

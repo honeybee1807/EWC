@@ -249,48 +249,70 @@
   </header>
 
   <!-- ── Hero ─────────────────────────────────────────────── -->
-  <section class="services-hero">
-    <span class="section-label" style="color:var(--accent)">What We Offer</span>
-    <h1>Our Services</h1>
-    <p>Comprehensive, community-driven waste and recycling solutions for Estcourt and KwaZulu-Natal.</p>
-  </section>
+<section class="services-hero">
+  <div class="floating-icons" aria-hidden="true">
+    <i class="fas fa-recycle"></i>
+    <i class="fas fa-truck"></i>
+    <i class="fas fa-cogs"></i>
+    <i class="fas fa-leaf"></i>
+    <i class="fas fa-trash-alt"></i>
+  </div>
+  <span class="section-label" style="color: var(--leaf);">What We Offer</span>
+  <h1>Services Built for <em>Every</em> Kind of Waste</h1>
+  <p class="lead">From kerbside household collections to full industrial contracts — one reliable local partner.</p>
+  <div class="btn-row">
+    <a href="#services-grid" class="btn btn-primary">See All Services</a>
+    <a href="https://wa.me/27828497869" target="_blank" rel="noopener" class="btn btn-outline-white">
+      <i class="fab fa-whatsapp"></i> Request a Quote
+    </a>
+  </div>
+</section>
 
   <!-- ── Service Cards Overview ────────────────────────────── -->
-<section class="services-section" style="background: var(--cream);">
-  <div class="services-layout">
-    <!-- Left: service cards -->
-    <div class="services-grid">
-      <div class="service-card" data-reveal>
-        <div class="icon"><i class="fa fa-recycle fa-2x"></i></div>
-        <h3>Recycling Services</h3>
-        <p>Paper, plastics, metals, glass, e-waste and salvaged goods — all processed responsibly and sustainably.</p>
-      </div>
-      <div class="service-card" data-reveal>
-        <div class="icon"><i class="fa fa-truck fa-2x"></i></div>
-        <h3>Waste Collection</h3>
-        <p>Reliable fleet serving households, businesses, and industrial clients with scheduled pickups.</p>
-      </div>
-      <div class="service-card" data-reveal>
-        <div class="icon"><i class="fa fa-cogs fa-2x"></i></div>
-        <h3>Custom Solutions</h3>
-        <p>Tailored waste management plans for factories, farms, shopping centres and large operations.</p>
-      </div>
-      <div class="service-card" data-reveal>
-        <div class="icon"><i class="fa fa-store fa-2x"></i></div>
-        <h3>Salvaged Goods</h3>
-        <p>Affordable, quality-checked salvaged items available at our Estcourt facility.</p>
-      </div>
-      <div class="service-card" data-reveal>
-        <div class="icon"><i class="fa fa-building fa-2x"></i></div>
-        <h3>Commercial Recycling</h3>
-        <p>Dedicated services for shops, offices, and businesses — reducing costs and environmental impact.</p>
-      </div>
-      <div class="service-card" data-reveal>
-        <div class="icon"><i class="fa fa-seedling fa-2x"></i></div>
-        <h3>Agricultural Waste</h3>
-        <p>Specialised collection and processing of chicory by-products and agricultural waste streams.</p>
-      </div>
+<section class="services-section" id="services-grid">
+  <span class="section-label">At a Glance</span>
+  <h2>Our <em>Core</em> Services</h2>
+  <p class="sub">Six dependable offerings, each designed for the realities of Estcourt homes and businesses.</p>
+
+  <div class="services-grid">
+    <div class="service-card" data-reveal id="residential">
+      <div class="icon"><i class="fas fa-house"></i></div>
+      <h3>Residential Waste Collection</h3>
+      <p>Weekly or bi-weekly pickups for households across Estcourt and surrounding suburbs. Reliable, on-schedule, friendly crews.</p>
+      <a href="https://wa.me/27828497869" target="_blank" rel="noopener" class="btn btn-outline" style="padding:.5rem 1rem; font-size:.85rem;">Book Collection</a>
     </div>
+    <div class="service-card" data-reveal id="commercial">
+      <div class="icon"><i class="fas fa-building"></i></div>
+      <h3>Commercial Waste</h3>
+      <p>Custom schedules for shops, offices and restaurants. Skip bins, bulk bags and recycling-inclusive packages.</p>
+      <a href="https://wa.me/27828497869" target="_blank" rel="noopener" class="btn btn-outline" style="padding:.5rem 1rem; font-size:.85rem;">Request Quote</a>
+    </div>
+    <div class="service-card" data-reveal id="industrial">
+      <div class="icon"><i class="fas fa-industry"></i></div>
+      <h3>Industrial &amp; Factory</h3>
+      <p>Bulk collection, compliant disposal and recycling reporting for manufacturers and industrial sites.</p>
+      <a href="https://wa.me/27828497869" target="_blank" rel="noopener" class="btn btn-outline" style="padding:.5rem 1rem; font-size:.85rem;">Discuss a Contract</a>
+    </div>
+    <div class="service-card" data-reveal id="recycling">
+      <div class="icon"><i class="fas fa-recycle"></i></div>
+      <h3>Recycling Programmes</h3>
+      <p>Paper, cardboard, plastics, metal and glass — sorted, baled and sent onward for proper downstream recycling.</p>
+      <a href="salvage.html" class="btn btn-outline" style="padding:.5rem 1rem; font-size:.85rem;">Learn More</a>
+    </div>
+    <div class="service-card" data-reveal id="bulk">
+      <div class="icon"><i class="fas fa-dumpster"></i></div>
+      <h3>Bulk &amp; Rubble Clearance</h3>
+      <p>Once-off clearances for renovations, garden refuse, estate cleanups and building rubble.</p>
+      <a href="https://wa.me/27828497869" target="_blank" rel="noopener" class="btn btn-outline" style="padding:.5rem 1rem; font-size:.85rem;">Get a Quote</a>
+    </div>
+    <div class="service-card" data-reveal id="salvage">
+      <div class="icon"><i class="fas fa-box-open"></i></div>
+      <h3>Salvaged Goods</h3>
+      <p>Quality-checked furniture, appliances and building materials available at affordable prices from our yard.</p>
+      <a href="salvage.html" class="btn btn-outline" style="padding:.5rem 1rem; font-size:.85rem;">Visit Salvage</a>
+    </div>
+  </div>
+</section>
 
      <!-- Right: gallery -->
     <div class="services-gallery">
@@ -303,115 +325,116 @@
 
   <!-- ── Detailed Breakdown ─────────────────────────────────── -->
   <section class="detailed-services">
-  <h2>Service Details</h2>
+  <span class="section-label text-center" style="display:block; text-align:center;">In Detail</span>
+  <h2 class="text-center">What's <em>Included</em></h2>
 
   <div class="service-row" data-reveal>
-    <div class="service-row-icon"><i class="fa fa-recycle"></i></div>
+    <div class="service-row-icon"><i class="fas fa-house"></i></div>
     <div class="service-row-text">
-      <h3>Recycling Services</h3>
-      <p>We accept and responsibly process a wide range of recyclable materials, keeping them out of Estcourt's landfills and putting them back into the economy.</p>
+      <h3>Residential Waste Collection</h3>
+      <p>Consistent weekly or bi-weekly kerbside collections, complete with recycling separation and responsible disposal.</p>
       <ul>
-        <li>Paper &amp; cardboard</li>
-        <li>Plastics (all types)</li>
-        <li>Metals &amp; aluminium</li>
-        <li>Glass</li>
-        <li>Electronic waste (e-waste)</li>
-        <li>Salvaged and repurposed goods</li>
+        <li>Scheduled weekly pickups</li>
+        <li>240L wheelie bins supplied</li>
+        <li>Separate recycling collection</li>
+        <li>Estate &amp; complex packages</li>
       </ul>
-    </div>
-    <div class="service-slideshow" id="ss-recycling">
-      <div class="slide active"><img src="assets/images/recycling_bales.png" alt="Compacted plastic bales at EWC recycling facility"></div>
-      <div class="slide"><img src="assets/images/paper_bales.png" alt="Compacted paper bales ready for processing"></div>
-      <div class="slide"><img src="assets/images/recycling_bale2.png" alt="Sorted recyclable materials at EWC"></div>
-      <div class="slide-dots"><span class="active"></span><span></span><span></span></div>
-    </div>
-  </div>
-
-  <div class="service-row reverse" data-reveal>
-    <div class="service-row-icon"><i class="fa fa-truck"></i></div>
-    <div class="service-row-text">
-      <h3>Waste Collection</h3>
-      <p>Our reliable collection fleet operates across Estcourt and surrounding areas, providing scheduled pickups for homes and businesses.</p>
-      <ul>
-        <li>Household collection schedules</li>
-        <li>Commercial &amp; industrial pickups</li>
-        <li>Large item and bulk removal</li>
-        <li>Same-week bookings available</li>
-      </ul>
-    </div>
-    <div class="service-slideshow" id="ss-collection">
-      <div class="slide active"><img src="assets/images/warehouse_bales.png" alt="Warehouse stacked with sorted waste bales"></div>
-      <div class="slide"><img src="assets/images/recycling_bale2.png" alt="Recycling collection yard at EWC Estcourt"></div>
-      <div class="slide"><img src="assets/images/entrance.png" alt="Entrance to EWC facility in Estcourt"></div>
-      <div class="slide-dots"><span class="active"></span><span></span><span></span></div>
     </div>
   </div>
 
   <div class="service-row" data-reveal>
-    <div class="service-row-icon"><i class="fa fa-cogs"></i></div>
+    <div class="service-row-icon"><i class="fas fa-building"></i></div>
     <div class="service-row-text">
-      <h3>Custom Waste Management Solutions</h3>
-      <p>We work with you to design a waste management plan that reduces costs, ensures compliance, and maximises recycling rates.</p>
+      <h3>Commercial &amp; Industrial</h3>
+      <p>Flexible contracts for any business size — from corner shops to factories along Industria Road.</p>
       <ul>
-        <li>Factories &amp; manufacturing plants</li>
-        <li>Retail centres &amp; malls</li>
-        <li>Agricultural &amp; chicory operations</li>
-        <li>Schools &amp; community organisations</li>
+        <li>Skip bin hire (6m³ &amp; 12m³)</li>
+        <li>Scheduled bulk collections</li>
+        <li>Recycling reporting</li>
+        <li>Compliant disposal certificates</li>
       </ul>
     </div>
-    <div class="service-slideshow" id="ss-custom">
-      <div class="slide active"><img src="assets/images/recycling_machinery.png" alt="Industrial recycling machinery in operation"></div>
-      <div class="slide"><img src="assets/images/recycling_bales.png" alt="Recycled materials processed at EWC facility"></div>
-      <div class="slide-dots"><span class="active"></span><span></span></div>
+  </div>
+
+  <div class="service-row" data-reveal>
+    <div class="service-row-icon"><i class="fas fa-recycle"></i></div>
+    <div class="service-row-text">
+      <h3>Recycling &amp; Salvage</h3>
+      <p>Everything we collect gets sorted, with as much as possible diverted from landfill and routed to proper recyclers.</p>
+      <ul>
+        <li>Paper, cardboard &amp; mixed</li>
+        <li>PET, HDPE &amp; mixed plastics</li>
+        <li>Ferrous &amp; non-ferrous metals</li>
+        <li>Salvaged goods resale yard</li>
+      </ul>
     </div>
   </div>
 </section>
 
 
   <!-- ── Process ────────────────────────────────────────────── -->
-  <section class="process-section">
-    <span class="section-label">How It Works</span>
-    <h2>Our Simple Process</h2>
+ <section class="process-section">
+  <span class="section-label">How It Works</span>
+  <h2>Our <em>Simple</em> 5-Step Process</h2>
+  <p class="sub">From your first WhatsApp message to a cleaner driveway — here's what to expect.</p>
 
-    <div class="process-steps">
-      <div class="process-step" data-reveal>
-        <div class="step-num">1</div>
-        <h4>Contact Us</h4>
-        <p>Reach out via phone, WhatsApp, or our contact form to discuss your needs.</p>
-      </div>
-      <div class="process-step" data-reveal>
-        <div class="step-num">2</div>
-        <h4>We Assess</h4>
-        <p>Our team assesses your waste volumes and recommends the right solution.</p>
-      </div>
-      <div class="process-step" data-reveal>
-        <div class="step-num">3</div>
-        <h4>Schedule Pickup</h4>
-        <p>We arrange a convenient collection time that works for your schedule.</p>
-      </div>
-      <div class="process-step" data-reveal>
-        <div class="step-num">4</div>
-        <h4>We Collect</h4>
-        <p>Our team arrives on time, collects everything, and leaves your space clean.</p>
-      </div>
-      <div class="process-step" data-reveal>
-        <div class="step-num">5</div>
-        <h4>We Recycle</h4>
-        <p>Materials are sorted, processed, and recycled responsibly at our facility.</p>
-      </div>
+  <div class="process-steps">
+    <div class="process-step" data-reveal>
+      <div class="step-num">1</div>
+      <h4>Get in Touch</h4>
+      <p>WhatsApp, call or email — tell us what you need collected.</p>
     </div>
-  </section>
+    <div class="process-step" data-reveal>
+      <div class="step-num">2</div>
+      <h4>Free Quote</h4>
+      <p>Same-day transparent pricing — no hidden fees.</p>
+    </div>
+    <div class="process-step" data-reveal>
+      <div class="step-num">3</div>
+      <h4>Schedule</h4>
+      <p>Pick a slot that works. One-off or recurring.</p>
+    </div>
+    <div class="process-step" data-reveal>
+      <div class="step-num">4</div>
+      <h4>We Collect</h4>
+      <p>Our crews arrive on time and leave the site tidy.</p>
+    </div>
+    <div class="process-step" data-reveal>
+      <div class="step-num">5</div>
+      <h4>Sort &amp; Recycle</h4>
+      <p>Everything sorted at Industria Rd — recyclables saved.</p>
+    </div>
+  </div>
+</section>
 
   <!-- ── Innovation ─────────────────────────────────────────── -->
-  <section class="innovation-section">
-    <span class="section-label">Commitment</span>
-    <h2>Innovation in Action</h2>
-    <p>We continuously improve our processes, adopt greener technologies, and empower Estcourt with solutions that make a lasting difference.</p>
+<section class="innovation-section">
+  <span class="section-label">Behind the Scenes</span>
+  <h2>A Modern Sorting Facility</h2>
+  <p>Our Industria Road facility handles sorting, baling and onward shipping for recyclables across Estcourt. We invest in proper infrastructure because doing recycling right matters.</p>
     <a href="contact.html" class="btn btn-primary">Get a Free Quote</a>
   </section>
 
+
+  <!-- ═══════════════════════════════════════════════
+     SECTION: CTA
+     ═══════════════════════════════════════════════ -->
+<div style="padding: 2rem 2rem 5rem;">
+  <div class="cta-section" data-reveal>
+    <h2>Not sure which service you need?</h2>
+    <p>Send us a quick WhatsApp — we'll ask a few questions and get back to you with the right option (and a fair price).</p>
+    <div style="display:flex; gap:.85rem; justify-content:center; flex-wrap:wrap;">
+      <a href="https://wa.me/27828497869" target="_blank" rel="noopener" class="btn btn-primary">
+        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+      </a>
+      <a href="contact.html" class="btn btn-outline-white">Send a Message</a>
+    </div>
+  </div>
+</div>
+
+
   <!-- ── Footer ─────────────────────────────────────────────── -->
-  <footer class="footer">
+<footer class="footer">
     <div class="footer-container">
       <div class="footer-column footer-logo">
         <img src="ewc_logo.png" alt="EWC Logo">
@@ -434,7 +457,10 @@
         <p><i class="fa fa-map-marker-alt"></i> 26 Industria Road, Estcourt</p>
         <p><i class="fa fa-phone"></i> +27 82 849 7869</p>
         <p><i class="fa fa-envelope"></i> estcourtwaste@gmail.com</p>
+        <p><i class="fa fa-clock"></i> Trading Hours: Mon–Fri 8:00–17:00, Sat 8:00–13:00</p>
+        <p><i class="fa fa-ban"></i> Sunday & Public Holidays: Closed</p>
       </div>
+
 
       <div class="footer-column">
         <h3>Follow Us</h3>
@@ -445,8 +471,10 @@
         </div>
       </div>
     </div>
+
     <div class="footer-bottom">
-      <p>&copy; 2026 Estcourt Waste Collectors. All rights reserved.</p>
+       <span>&copy; 2026 Estcourt Waste Collectors. All rights reserved.</span>
+       <span class="credit">Developed by <a href="https://olideentech.co.za" target="_blank" rel="noopener">Olideen Technologies</a></span>
     </div>
   </footer>
 
@@ -455,6 +483,9 @@
   </a>
 
   <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="three.js"></script>
+
 
   <script>
     // Auto-rotating slideshows for service rows
