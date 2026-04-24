@@ -13,14 +13,14 @@
   <!-- ── Favicon ───────────────────────────────────────────── -->
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/ewc_logo.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/ewc_logo.png">
 
   <!-- ── Open Graph ────────────────────────────────────────── -->
   <meta property="og:type"        content="website">
   <meta property="og:url"         content="https://www.estcourtwastecollectors.co.za/index.html">
   <meta property="og:title"       content="Estcourt Waste Collectors | Home">
   <meta property="og:description" content="Family-owned recycling and waste collection serving Estcourt and KwaZulu-Natal for 25+ years.">
-  <meta property="og:image"       content="https://www.estcourtwastecollectors.co.za/../assets/images/ewc_logo.png">
+  <meta property="og:image"       content="https://www.estcourtwastecollectors.co.za/assets/images/ewc_logo.png">
   <meta property="og:image:alt"   content="Estcourt Waste Collectors logo">
   <meta property="og:site_name"   content="Estcourt Waste Collectors">
   <meta property="og:locale"      content="en_ZA">
@@ -29,7 +29,7 @@
   <meta name="twitter:card"        content="summary_large_image">
   <meta name="twitter:title"       content="Estcourt Waste Collectors | Home">
   <meta name="twitter:description" content="Family-owned recycling and waste collection serving Estcourt and KwaZulu-Natal for 25+ years.">
-  <meta name="twitter:image"       content="https://www.estcourtwastecollectors.co.za/../assets/images/ewc_logo.png">
+  <meta name="twitter:image"       content="https://www.estcourtwastecollectors.co.za/assets/images/ewc_logo.png">
 
   <!-- ── Local Business JSON-LD Schema ─────────────────────── -->
   <script type="application/ld+json">
@@ -40,8 +40,8 @@
     "alternateName": "EWC",
     "description": "Family-owned recycling and waste collection company serving Estcourt and KwaZulu-Natal for over 25 years. Services include household and commercial waste collection, recycling, and salvaged goods.",
     "url": "https://www.estcourtwastecollectors.co.za",
-    "logo": "https://www.estcourtwastecollectors.co.za/../assets/images/ewc_logo.png",
-    "image": "https://www.estcourtwastecollectors.co.za/../assets/images/ewc_logo.png",
+    "logo": "https://www.estcourtwastecollectors.co.za/assets/images/ewc_logo.png",
+    "image": "https://www.estcourtwastecollectors.co.za/assets/images/ewc_logo.png",
     "telephone": "+27828497869",
     "email": "estcourtwaste@gmail.com",
     "address": {
@@ -110,7 +110,7 @@
   <header class="navbar">
     <div class="nav-logo">
       <a href="index.html">
-        <img src="../assets/images/ewc_logo.png" alt="Estcourt Waste Collectors logo" class="logo-icon">
+        <img src="assets/images/ewc_logo.png" alt="Estcourt Waste Collectors logo" class="logo-icon">
       </a>
     </div>
 
@@ -149,7 +149,7 @@
       </div>
 
       <div class="hero-image">
-        <img src="../assets/images/EWC_index_hero_2.jpeg" alt="Estcourt Waste Collectors — green recycling">
+        <img src="assets/images/EWC_index_hero_2.jpeg" alt="Estcourt Waste Collectors — green recycling">
       </div>
     </div>
   </section>
@@ -176,7 +176,7 @@
   <section class="about-section">
     <div class="about-inner">
       <div class="about-image" data-reveal>
-        <img src="../assets/images/EWC_index_hero.jpeg" alt="EWC team working in the community">
+        <img src="assets/images/EWC_index_hero.jpeg" alt="EWC team working in the community">
       </div>
       <div class="about-text" data-reveal>
         <span class="section-label">Who We Are</span>
@@ -195,32 +195,168 @@
     </div>
   </section>
 
+  
+  <!-- ═══════════════════════════════════════════════
+       SECTION: Recycling Education
+       Purpose: Tips and reasons to recycle — interactive tabs
+       ═══════════════════════════════════════════════ -->
+  <section class="recycle-edu-section">
+    <div class="recycle-edu-inner">
+
+      <div class="recycle-edu-header">
+        <span class="section-label">Recycling Matters</span>
+        <h2>Why Recycle — and <em>How to Do It Right</em></h2>
+        <p class="sub">Recycling is one of the most direct actions a household or business can take to reduce its environmental impact. Here is what you need to know.</p>
+      </div>
+
+      <!-- Tab navigation -->
+      <div class="recycle-tabs" role="tablist">
+        <button class="recycle-tab active" role="tab" aria-selected="true" data-tab="why">Why We Recycle</button>
+        <button class="recycle-tab" role="tab" aria-selected="false" data-tab="how">How to Sort Correctly</button>
+        <button class="recycle-tab" role="tab" aria-selected="false" data-tab="impact">The Impact</button>
+      </div>
+
+      <!-- Tab panels -->
+      <div class="recycle-panels">
+
+        <!-- WHY panel -->
+        <div class="recycle-panel active" id="panel-why">
+          <div class="recycle-cards">
+            <div class="recycle-card" data-reveal>
+              <div class="recycle-card-icon"><i class="fas fa-earth-africa"></i></div>
+              <h3>Protects Our Environment</h3>
+              <p>Recycling reduces the volume of waste sent to landfill, where decomposing materials release methane — a greenhouse gas far more potent than carbon dioxide. By recycling, we actively reduce our contribution to climate change.</p>
+            </div>
+            <div class="recycle-card" data-reveal>
+              <div class="recycle-card-icon"><i class="fas fa-bolt"></i></div>
+              <h3>Conserves Natural Resources</h3>
+              <p>Manufacturing products from recycled materials consumes significantly less energy and raw material than producing from virgin resources. Recycling one tonne of paper, for example, saves approximately 17 trees and 26 000 litres of water.</p>
+            </div>
+            <div class="recycle-card" data-reveal>
+              <div class="recycle-card-icon"><i class="fas fa-briefcase"></i></div>
+              <h3>Creates Local Employment</h3>
+              <p>The recycling industry supports a broad range of jobs — from collection crews and sorters to facility operators and logistics personnel. Every tonne recycled in Estcourt contributes to local economic activity and job creation.</p>
+            </div>
+            <div class="recycle-card" data-reveal>
+              <div class="recycle-card-icon"><i class="fas fa-water"></i></div>
+              <h3>Reduces Water and Air Pollution</h3>
+              <p>Landfill sites produce leachate that can contaminate groundwater, and incinerating waste releases harmful gases into the atmosphere. Recycling mitigates both risks and contributes to cleaner water and air for our communities.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- HOW panel -->
+        <div class="recycle-panel" id="panel-how">
+          <div class="recycle-sort-grid">
+            <div class="sort-card sort-paper" data-reveal>
+              <div class="sort-icon"><i class="fas fa-newspaper"></i></div>
+              <h3>Paper and Cardboard</h3>
+              <ul>
+                <li>Flatten all cardboard boxes before placing them in the recycling bin.</li>
+                <li>Remove any plastic liners, tape, or staples where possible.</li>
+                <li>Keep paper and cardboard dry. Wet paper is not recyclable.</li>
+                <li>Do not include wax-coated or food-contaminated cardboard.</li>
+              </ul>
+            </div>
+            <div class="sort-card sort-plastic" data-reveal>
+              <div class="sort-icon"><i class="fas fa-bottle-water"></i></div>
+              <h3>Plastics</h3>
+              <ul>
+                <li>Rinse containers thoroughly to remove food residue before recycling.</li>
+                <li>Check for the recycling symbol. Plastics numbered 1 (PET) and 2 (HDPE) are most widely accepted.</li>
+                <li>Remove lids where possible, as they are often a different plastic type.</li>
+                <li>Do not include plastic bags or cling wrap in standard recycling bins.</li>
+              </ul>
+            </div>
+            <div class="sort-card sort-metal" data-reveal>
+              <div class="sort-icon"><i class="fas fa-ring"></i></div>
+              <h3>Metals</h3>
+              <ul>
+                <li>Rinse all cans and tins to remove food residue.</li>
+                <li>Both aluminium and steel cans are recyclable. Aluminium is particularly valuable.</li>
+                <li>Crush cans to save space, but ensure they remain identifiable as metal.</li>
+                <li>Remove labels where possible, although this is not strictly required.</li>
+              </ul>
+            </div>
+            <div class="sort-card sort-glass" data-reveal>
+              <div class="sort-icon"><i class="fas fa-wine-bottle"></i></div>
+              <h3>Glass</h3>
+              <ul>
+                <li>Rinse all glass bottles and jars before recycling.</li>
+                <li>Separate glass by colour where facilities permit: clear, green, and brown.</li>
+                <li>Do not include broken glass, mirrors, window glass, or ceramics in standard recycling.</li>
+                <li>Remove metal lids and recycle them separately as metal.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- IMPACT panel -->
+        <div class="recycle-panel" id="panel-impact">
+          <div class="impact-facts-grid">
+            <div class="impact-fact" data-reveal>
+              <span class="fact-num">80%</span>
+              <p>of household waste can be recycled or composted, yet the majority still ends up in landfill.</p>
+            </div>
+            <div class="impact-fact" data-reveal>
+              <span class="fact-num">1 tonne</span>
+              <p>of recycled aluminium saves up to 14 000 kilowatt-hours of electricity — equivalent to the energy used by an average household for over a year.</p>
+            </div>
+            <div class="impact-fact" data-reveal>
+              <span class="fact-num">95%</span>
+              <p>less energy is required to produce aluminium from recycled material compared to raw bauxite ore.</p>
+            </div>
+            <div class="impact-fact" data-reveal>
+              <span class="fact-num">500 years</span>
+              <p>is how long a plastic bottle can take to decompose in a landfill — making responsible disposal and recycling critically important.</p>
+            </div>
+            <div class="impact-fact" data-reveal>
+              <span class="fact-num">10 000+</span>
+              <p>tonnes of recyclable material have been diverted from Estcourt's landfill by EWC over the course of our operations.</p>
+            </div>
+            <div class="impact-fact" data-reveal>
+              <span class="fact-num">R billions</span>
+              <p>worth of recyclable material is discarded in South Africa each year — representing a significant economic and environmental loss that responsible recycling helps prevent.</p>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- end recycle-panels -->
+
+      <div class="recycle-edu-cta">
+        <p>Estcourt Waste Collectors collects recyclables directly from your home or business. Contact us to arrange a collection schedule.</p>
+        <a href="contact.html" class="btn btn-primary">Arrange a Collection</a>
+      </div>
+
+    </div>
+  </section>
+
   <!-- ── Why Choose ──────────────────────────────────────────────── -->
   <section class="why-choose">
     <span class="section-label">Why EWC?</span>
     <h2>What Sets Us Apart</h2>
-    <p>We know Estcourt — and we know waste. Here's why families and businesses choose us.</p>
+    <p>With more than 25 years of experience in Estcourt, we understand the waste management needs of our community. Here is why households and businesses choose EWC.</p>
 
     <div class="features-grid">
       <div class="feature-card" data-reveal>
         <div class="icon"><i class="fa fa-heart"></i></div>
         <h3>Local Expertise</h3>
-        <p>Deep roots in Estcourt mean we understand the town's unique waste needs and serve with genuine community pride.</p>
+        <p>Our deep roots in Estcourt mean we understand the community's unique waste management needs and serve every client with genuine local pride.</p>
       </div>
       <div class="feature-card" data-reveal>
         <div class="icon"><i class="fa fa-truck"></i></div>
         <h3>Fast &amp; Reliable</h3>
-        <p>Our fleet ensures timely pickups every time — no missed collections, no excuses.</p>
+        <p>Our dedicated fleet ensures timely pickups on every scheduled collection day, without exception.</p>
       </div>
       <div class="feature-card" data-reveal>
         <div class="icon"><i class="fa fa-recycle"></i></div>
         <h3>Full Coverage</h3>
-        <p>From household recycling to large commercial waste streams — we handle it all.</p>
+        <p>From household recycling programmes to large-scale commercial waste streams, we provide a comprehensive solution for every client.</p>
       </div>
       <div class="feature-card" data-reveal>
         <div class="icon"><i class="fa fa-leaf"></i></div>
         <h3>Eco-Friendly</h3>
-        <p>Sustainable methods that protect our environment and keep Estcourt beautiful for future generations.</p>
+        <p>We employ environmentally responsible methods that protect our natural surroundings and preserve Estcourt for future generations.</p>
       </div>
     </div>
   </section>
@@ -229,7 +365,7 @@
        SECTION: Services preview
        Purpose: Three-card glance at what we do
        ═══════════════════════════════════════════════ -->
-  <section class="services-section" style="background: var(--cream);">
+  <section class="services-section" >
     <span class="section-label">What We Do</span>
     <h2>Services for Home, Business &amp; Industry</h2>
     <p class="sub">Regular collections, one-off removals, recycling programmes and salvaged goods — one reliable local partner for all of it.</p>
@@ -239,24 +375,23 @@
         <div class="icon"><i class="fas fa-trash-alt"></i></div>
         <h3>Residential Waste Collection</h3>
         <p>Scheduled weekly or bi-weekly pickups for households across Estcourt and nearby suburbs.</p>
-        <a href="services.html#residential" class="btn btn-outline" style="padding:.55rem 1.1rem; font-size:.85rem;">Learn More</a>
+        <a href="services.html#residential" class="btn btn-outline" >Learn More</a>
       </div>
       <div class="service-card" data-reveal>
         <div class="icon"><i class="fas fa-truck"></i></div>
         <h3>Commercial &amp; Industrial</h3>
         <p>Skip bins, bulk collections and tailored schedules for businesses, factories and estates.</p>
-        <a href="services.html#commercial" class="btn btn-outline" style="padding:.55rem 1.1rem; font-size:.85rem;">Learn More</a>
+        <a href="services.html#commercial" class="btn btn-outline" >Learn More</a>
       </div>
       <div class="service-card" data-reveal>
         <div class="icon"><i class="fas fa-recycle"></i></div>
         <h3>Recycling &amp; Salvage</h3>
         <p>Paper, plastic, metal and cardboard recycling plus affordable salvaged goods at our yard.</p>
-        <a href="salvage.html" class="btn btn-outline" style="padding:.55rem 1.1rem; font-size:.85rem;">Learn More</a>
+        <a href="salvage.html" class="btn btn-outline" >Learn More</a>
       </div>
     </div>
-  </section>
 
-    <div style="text-align:center; margin-top:1rem;">
+    <div class="text-center mt-1">
       <a href="services.html" class="btn btn-primary">View All Services</a>
     </div>
   </section>
@@ -269,7 +404,7 @@
 <section class="mission-section">
   <span class="section-label">Our Mission</span>
   <h2>Cleaner streets. <em>Stronger</em> community.</h2>
-  <p>We believe waste isn't waste — it's an opportunity. Every truckload sorted, every bale recycled and every salvaged item resold feeds back into Estcourt's economy and keeps our landscapes greener for the next generation.</p>
+  <p>We believe that what is commonly called waste represents an opportunity for renewal. Every sorted truckload, every recycled bale, and every resold salvaged item contributes directly to Estcourt's circular economy and supports a cleaner landscape for the next generation.</p>
 </section>
 
 
@@ -287,49 +422,48 @@
   <div class="reviews-grid">
     <div class="review-card" data-reveal>
       <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-      <p>"EWC has collected our bins for over 15 years — never missed a week. Friendly staff, fair prices, and they actually care about Estcourt."</p>
+      <p>"EWC has collected our bins for over 15 years without a single missed week. The staff are professional and courteous, and the pricing is fair and transparent."</p>
       <h3>Nomfundo M. <span class="date">· Estcourt Central</span></h3>
     </div>
     <div class="review-card" data-reveal>
       <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-      <p>"We switched our factory waste contract to EWC and saved nearly 30% — plus they handle the recycling side which makes our reporting so much easier."</p>
+      <p>"Switching our factory waste contract to EWC resulted in a saving of nearly 30 percent. Their recycling service also simplified our environmental reporting considerably."</p>
       <h3>Pieter V. <span class="date">· Industria Rd business</span></h3>
     </div>
     <div class="review-card" data-reveal>
       <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-      <p>"Bought a washing machine and two bookshelves from their salvage yard. Quality checked, half the price of new. Highly recommend."</p>
+      <p>"We purchased a washing machine and two bookshelves from the salvage yard. Each item was quality-checked and priced at a fraction of the retail cost."</p>
       <h3>The Dlamini Family <span class="date">· Wembezi</span></h3>
     </div>
     <div class="review-card" data-reveal>
       <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
-      <p>"Quick response on a bulk building-rubble clearance. Showed up same week, tidied up properly. Will use again."</p>
+      <p>"EWC responded promptly to our bulk building rubble clearance request, arrived within the same week, and left the site in excellent order."</p>
       <h3>Thabo R. <span class="date">· Frere Rd</span></h3>
     </div>
   </div>
 </section>
 
+
+
 <!-- ═══════════════════════════════════════════════
      SECTION: CTA banner
      ═══════════════════════════════════════════════ -->
-<div style="padding: 2rem 2rem 5rem;">
-  <div class="cta-section" data-reveal>
-    <h2>Ready to go greener?</h2>
-    <p>Get a free, no-obligation quote for your home or business. Most quotes come back within an hour on WhatsApp.</p>
-    <div style="display:flex; gap:.85rem; justify-content:center; flex-wrap:wrap;">
+<div class="cta-section cta-spaced" data-reveal>
+    <h2>Ready to Make the Switch to Responsible Waste Management?</h2>
+    <p>Request a free, no-obligation quote for your home or business. We aim to respond within one hour via WhatsApp.</p>
+    <div class="btn-row">
       <a href="https://wa.me/27828497869" target="_blank" rel="noopener" class="btn btn-primary">
         <i class="fab fa-whatsapp"></i> Get a Quote on WhatsApp
       </a>
       <a href="contact.html" class="btn btn-outline-white">Send a Message</a>
     </div>
-  </div>
 </div>
 
-  <!-- ── Footer ───────────────────────────────────────────────────────── -->
- <!-- ── Footer ───────────────────────────────────────────── -->
+  <!-- ── Footer ─────────────────────────────────────────── -->
 <footer class="footer">
   <div class="footer-container">
     <div class="footer-column footer-logo">
-      <img src="../assets/images/ewc_logo.png" alt="EWC Logo">
+      <img src="assets/images/ewc_logo.png" alt="EWC Logo">
       <p>Serving Estcourt and KwaZulu-Natal with reliable, eco-friendly waste collection and recycling.</p>
     </div>
 
@@ -367,14 +501,34 @@
 
   <div class="footer-bottom">
     <span>&copy; 2026 Estcourt Waste Collectors. All rights reserved.</span>
-    <!-- /<span class="credit">Developed by <a href="https://olideentech.co.za" target="_blank" rel="noopener">Olideen Technologies</a></span>
-  </div> -->
+    <!-- <span class="credit">Developed by <a href="https://olideentech.co.za" target="_blank" rel="noopener">Olideen Technologies</a></span> -->
+  </div>
 </footer>
 
 <a href="https://wa.me/27828497869" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
   <i class="fab fa-whatsapp"></i> Chat With Us
 </a>
 
+
+  <script>
+    /* ── Recycling Education Tabs ─────────────────────────── */
+    document.querySelectorAll('.recycle-tab').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var target = this.dataset.tab;
+        document.querySelectorAll('.recycle-tab').forEach(function(b) {
+          b.classList.remove('active');
+          b.setAttribute('aria-selected','false');
+        });
+        document.querySelectorAll('.recycle-panel').forEach(function(p) {
+          p.classList.remove('active');
+        });
+        this.classList.add('active');
+        this.setAttribute('aria-selected','true');
+        var panel = document.getElementById('panel-' + target);
+        if (panel) panel.classList.add('active');
+      });
+    });
+  </script>
 <script src="script.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="three.js"></script>
