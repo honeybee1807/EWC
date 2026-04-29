@@ -1147,8 +1147,8 @@ p:last-child { margin-bottom: 0; }
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr 1fr;
-  gap: 2.5rem;
+  grid-template-columns: 1.6fr 1fr 1.1fr .8fr 1fr;
+  gap: 1.75rem;
   padding-bottom: 3rem;
 }
 .footer-column h3 {
@@ -1277,7 +1277,7 @@ p:last-child { margin-bottom: 0; }
   .trust-bar ul { gap: 0; }
   .trust-bar li { flex: 1 1 40%; }
 
-  .footer-container { grid-template-columns: 1fr 1fr; }
+  .footer-container { grid-template-columns: 1fr 1fr 1fr; }
 
   .contact-info-grid { grid-template-columns: repeat(2, 1fr); }
 }
