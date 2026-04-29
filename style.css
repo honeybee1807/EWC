@@ -1174,7 +1174,7 @@ p:last-child { margin-bottom: 0; }
   background: rgba(255,255,255,.08);
   display: grid; place-items: center;
   font-size: .95rem;
-  color: #fff !important;
+  color: #2e7d32   !important;
   transition: background var(--t), transform var(--t);
   border: 1px solid rgba(255,255,255,.12);
 }
