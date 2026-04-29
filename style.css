@@ -665,7 +665,7 @@ p:last-child { margin-bottom: 0; }
 .impact-card .num {
   font-family: 'DM Serif Display', serif;
   font-size: 2.4rem;
-  color: var(--leaf);
+  color: var(--sand);
   display: block;
   line-height: 1.1;
   margin-bottom: .3rem;
